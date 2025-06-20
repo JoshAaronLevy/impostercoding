@@ -1,0 +1,50 @@
+<div class="about5-section-area sp1">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="img1"
+                    style="background-image: url(assets/img/all-images/bg/about-bg3.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                    <img src="assets/img/all-images/about/about-img9.png" alt="" class="about-img9">
+                    <img src="assets/img/all-images/about/about-img10.png" alt="" class="about-img10 aniamtion-key-1">
+                    <img src="assets/img/elements/elements47.png" alt="" class="elements47">
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6">
+                <div class="about5-header heading8">
+                    <h5 data-aos="fade-left" data-aos-duration="800">About Application Solution</h5>
+                    <div class="space18"></div>
+                    <h2 class="text-anime-style-3">Application Solutions A Grow Business Quickly</h2>
+                    <div class="space16"></div>
+                    <p data-aos="fade-left" data-aos-duration="900">We’re dedicated crafting cutting-edge mobile
+                        applications that elevate your business. Our skilled team of developers leverages latest
+                        technologies deliver seamless, scalable an secure apps iOS, Android cross-platform environments.
+                    </p>
+                    <div class="space32"></div>
+                    <div class="counter-boxarea">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-6" *ngFor="let counter of counters; let i = index"
+                                [attr.data-aos]="'zoom-in'" [attr.data-aos-duration]="counter.duration">
+                                <div class="space30 d-md-none d-block" *ngIf="i===2"></div>
+                                <div [ngClass]="['counter-box', counter.box2 ? 'box2' : '']">
+                                    <h2>
+                                        <span [countUp]="counter.value"></span>{{ counter.suffix }}
+                                    </h2>
+                                    <div class="space16"></div>
+                                    <p>{{ counter.label }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="space32"></div>
+                    <div class="btn-area1" data-aos="fade-left" data-aos-duration="1100">
+                        <a class="vl-btn6" routerLink="/pages/contact">Start Your Project Now <span class="arrow1"><i
+                                    class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

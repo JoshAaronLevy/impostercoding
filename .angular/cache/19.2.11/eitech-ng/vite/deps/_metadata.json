@@ -1,0 +1,235 @@
+{
+  "hash": "269f6dcd",
+  "configHash": "e448057b",
+  "lockfileHash": "b001bba6",
+  "browserHash": "1cf23de4",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "22ca65cb",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "a1db38ef",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "ec5e8f29",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
+      "file": "@angular_platform-browser_animations.js",
+      "fileHash": "8570eaee",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "3fa9879d",
+      "needsInterop": false
+    },
+    "@ng-bootstrap/ng-bootstrap": {
+      "src": "../../../../../../node_modules/@ng-bootstrap/ng-bootstrap/fesm2022/ng-bootstrap.mjs",
+      "file": "@ng-bootstrap_ng-bootstrap.js",
+      "fileHash": "59770dd7",
+      "needsInterop": false
+    },
+    "aos": {
+      "src": "../../../../../../node_modules/aos/dist/aos.js",
+      "file": "aos.js",
+      "fileHash": "b36d9122",
+      "needsInterop": true
+    },
+    "gsap": {
+      "src": "../../../../../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "aeb88698",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../../../../../node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "d476b252",
+      "needsInterop": false
+    },
+    "ng-circle-progress": {
+      "src": "../../../../../../node_modules/ng-circle-progress/fesm2020/ng-circle-progress.mjs",
+      "file": "ng-circle-progress.js",
+      "fileHash": "007fdf9a",
+      "needsInterop": false
+    },
+    "ngx-countup": {
+      "src": "../../../../../../node_modules/ngx-countup/fesm2020/ngx-countup.mjs",
+      "file": "ngx-countup.js",
+      "fileHash": "50245d6a",
+      "needsInterop": false
+    },
+    "ngx-owl-carousel-o": {
+      "src": "../../../../../../node_modules/ngx-owl-carousel-o/fesm2022/ngx-owl-carousel-o.mjs",
+      "file": "ngx-owl-carousel-o.js",
+      "fileHash": "6e74a17a",
+      "needsInterop": false
+    },
+    "ngx-slick-carousel": {
+      "src": "../../../../../../node_modules/ngx-slick-carousel/fesm2022/ngx-slick-carousel.mjs",
+      "file": "ngx-slick-carousel.js",
+      "fileHash": "f6228e9f",
+      "needsInterop": false
+    },
+    "rxjs": {
+      "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
+      "file": "rxjs.js",
+      "fileHash": "377b053b",
+      "needsInterop": false
+    },
+    "rxjs/operators": {
+      "src": "../../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
+      "file": "rxjs_operators.js",
+      "fileHash": "add56b04",
+      "needsInterop": false
+    },
+    "buttercms": {
+      "src": "../../../../../../node_modules/buttercms/dist/butter.esm.js",
+      "file": "buttercms.js",
+      "fileHash": "f595793b",
+      "needsInterop": false
+    },
+    "prismjs": {
+      "src": "../../../../../../node_modules/prismjs/prism.js",
+      "file": "prismjs.js",
+      "fileHash": "22957fa1",
+      "needsInterop": true
+    },
+    "prismjs/plugins/toolbar/prism-toolbar": {
+      "src": "../../../../../../node_modules/prismjs/plugins/toolbar/prism-toolbar.js",
+      "file": "prismjs_plugins_toolbar_prism-toolbar.js",
+      "fileHash": "c7253d45",
+      "needsInterop": true
+    },
+    "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard": {
+      "src": "../../../../../../node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.js",
+      "file": "prismjs_plugins_copy-to-clipboard_prism-copy-to-clipboard.js",
+      "fileHash": "54290892",
+      "needsInterop": true
+    },
+    "prismjs/plugins/line-numbers/prism-line-numbers": {
+      "src": "../../../../../../node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js",
+      "file": "prismjs_plugins_line-numbers_prism-line-numbers.js",
+      "fileHash": "c19e19de",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-bash": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-bash.js",
+      "file": "prismjs_components_prism-bash.js",
+      "fileHash": "1420ac1c",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-css": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-css.js",
+      "file": "prismjs_components_prism-css.js",
+      "fileHash": "d5f341ca",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-javascript": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-javascript.js",
+      "file": "prismjs_components_prism-javascript.js",
+      "fileHash": "ddc278f8",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-java": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-java.js",
+      "file": "prismjs_components_prism-java.js",
+      "fileHash": "4a03801b",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-markup": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-markup.js",
+      "file": "prismjs_components_prism-markup.js",
+      "fileHash": "606ef7a5",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-markdown": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-markdown.js",
+      "file": "prismjs_components_prism-markdown.js",
+      "fileHash": "2d00b4f1",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-git": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-git.js",
+      "file": "prismjs_components_prism-git.js",
+      "fileHash": "4da7f1ed",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-typescript": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-typescript.js",
+      "file": "prismjs_components_prism-typescript.js",
+      "fileHash": "01ff9f45",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-sass": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-sass.js",
+      "file": "prismjs_components_prism-sass.js",
+      "fileHash": "3e110a25",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-scss": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-scss.js",
+      "file": "prismjs_components_prism-scss.js",
+      "fileHash": "bc280b67",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-pug": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-pug.js",
+      "file": "prismjs_components_prism-pug.js",
+      "fileHash": "59aaa490",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-sql": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-sql.js",
+      "file": "prismjs_components_prism-sql.js",
+      "fileHash": "9fe4e434",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-5CT7UJXX": {
+      "file": "chunk-5CT7UJXX.js"
+    },
+    "chunk-SB4Z7QVC": {
+      "file": "chunk-SB4Z7QVC.js"
+    },
+    "chunk-ICQFAY72": {
+      "file": "chunk-ICQFAY72.js"
+    },
+    "chunk-CILGPIRX": {
+      "file": "chunk-CILGPIRX.js"
+    },
+    "chunk-LBDARVCP": {
+      "file": "chunk-LBDARVCP.js"
+    },
+    "chunk-SE2FGOL3": {
+      "file": "chunk-SE2FGOL3.js"
+    },
+    "chunk-6QNI6B3L": {
+      "file": "chunk-6QNI6B3L.js"
+    },
+    "chunk-WPM5VTLQ": {
+      "file": "chunk-WPM5VTLQ.js"
+    },
+    "chunk-PEBH6BBU": {
+      "file": "chunk-PEBH6BBU.js"
+    },
+    "chunk-4S3KYZTJ": {
+      "file": "chunk-4S3KYZTJ.js"
+    },
+    "chunk-3OV72XIM": {
+      "file": "chunk-3OV72XIM.js"
+    }
+  }
+}

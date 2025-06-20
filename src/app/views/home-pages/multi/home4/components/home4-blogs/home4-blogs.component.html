@@ -1,0 +1,35 @@
+<div class="vl-blog-4-area sp2">
+    <img src="assets/img/elements/elements39.png" alt="" class="elements39">
+  <div class="container">
+     <div class="row">
+        <div class="col-lg-6 m-auto">
+           <div class="vl-blog-1-section-box heading6 text-center space-margin60">
+              <h5 class="vl-section-subtitle"><span><img src="assets/img/icons/sub-logo4.svg" alt=""></span>Our Blog</h5>
+              <div class="space20"></div>
+              <h2 class="vl-section-title text-anime-style-3">Our Latest Blog & News</h2>
+           </div>
+        </div>
+     </div>
+   <div class="row">
+  <div *ngFor="let post of blogPosts" class="col-lg-4 col-md-6" [attr.data-aos]="post.aosClass" data-aos-duration="900">
+    <div class="vl-blog-1-item">
+      <div class="vl-blog-1-thumb image-anime">
+        <img [src]="post.image" alt="">
+      </div>
+      <div class="vl-blog-1-content">
+        <div class="vl-blog-meta">
+          <ul>
+            <li><a href="javascript:void(0)"><img src="assets/img/icons/calender2.svg" alt=""> {{ post.date }}</a></li>
+          </ul>
+        </div>
+        <div class="space16"></div>
+        <h4 class="vl-blog-1-title"><a [routerLink]="post.link">{{ post.title }}</a></h4>
+        <div class="space20"></div>
+        <a [routerLink]="post.link" class="readmore">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>

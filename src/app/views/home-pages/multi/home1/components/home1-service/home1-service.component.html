@@ -1,0 +1,22 @@
+<div class="service1-section-area sp2"
+    style="background-image: url(assets/img/all-images/bg/service-bg1.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 m-auto">
+                <div class="service-header text-center heading2 space-margin60">
+                    <h5><span><img src="assets/img/icons/sub-logo1.svg" alt=""></span>Our Services</h5>
+                    <div class="space24"></div>
+                    <h2 class="text-anime-style-3">Expert IT Services Designed <br class="d-lg-block d-none"> To Elevate
+                        Your Business</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let service of services.slice(0,6);let i =index" class="col-lg-4 col-md-6" data-aos="zoom-in"
+                [attr.data-aos-duration]="(800 + i * 100)">
+                <app-service-card [service]="service" />
+            </div>
+        </div>
+    </div>
+</div>

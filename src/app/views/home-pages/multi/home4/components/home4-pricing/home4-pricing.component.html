@@ -1,0 +1,49 @@
+<div class="pricing4-section-area sp2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 m-auto">
+                <div class="pricing-header text-center heading6 space-margin60">
+                    <h5><img src="assets/img/icons/sub-logo4.svg" alt="">Pricing Plan</h5>
+                    <div class="space18"></div>
+                    <h2 class="text-anime-style-3">Tailored Pricing Plans For <br class="d-lg-block d-none"> Your IT
+                        Requirements</h2>
+                </div>
+            </div>
+        </div>
+        <div class="space100"></div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6" *ngFor="let plan of pricingPlans; let i = index"
+                [attr.data-aos]="i % 2 === 0 ? 'flip-right' : 'flip-left'" [attr.data-aos-duration]="800 + (i * 200)">
+                <div *ngIf="plan.isPopular" class="space100 d-lg-none d-md-none d-block"></div>
+                <div class="pricing-single-boxarea" [ngClass]="plan.isPopular ? 'box2':''">
+                    <div class="price">
+                        <h2>${{plan.monthlyPrice}}</h2>
+                        <div class="space14"></div>
+                        <p>Per Month</p>
+                        <img src="assets/img/elements/elements43.png" alt="">
+                    </div>
+                    <p>{{plan.name}} Packages</p>
+                    <div class="space16"></div>
+                    <h3>{{plan.name}} Plan</h3>
+                    <ul>
+                        @if (plan.isPopular) {
+                        <li *ngFor="let feature of plan.features"><img src="assets/img/icons/check7.svg"
+                                alt="">{{feature}}</li>
+                        }
+                        @if (!plan.isPopular) {
+                        <li *ngFor="let feature of plan.features"><img src="assets/img/icons/check6.svg"
+                                alt="">{{feature}}</li>
+                        }
+
+
+                    </ul>
+                    <div class="space32"></div>
+                    <div class="btn-area1">
+                        <a href="javascript:void(0)" class="vl-btn5"><span class="demo">Choose A Plan</span><span class="arrow"><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

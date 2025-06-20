@@ -1,0 +1,43 @@
+<div class="service4-section-area sp1"
+    style="background-image: url(assets/img/all-images/bg/service-bg1.png); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <img src="assets/img/elements/elements42.png" alt="" class="elements42">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="service-header space-margin60">
+                    <div class="heading6">
+                        <h5><img src="assets/img/icons/sub-logo4.svg" alt="">Our IT Solution Services</h5>
+                        <div class="space18"></div>
+                        <h2 class="text-anime-style-3">Tailored IT Services For <br class="d-lg-block d-none"> Your
+                            Unique Business</h2>
+                    </div>
+                    <div class="btn-area1">
+                        <a routerLink="/services" class="vl-btn5"><span class="demo">View More Services</span><span
+                                class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6" *ngFor="let service of services; let i = index" [attr.data-aos]="'zoom-in'"
+                [attr.data-aos-duration]="700 + (i * 100)">
+                <div class="service-single-boxarea">
+                    <div class="icons">
+                        <img [src]="service.icon" alt="">
+                    </div>
+                    <div class="space28"></div>
+                    <div class="content-area">
+                        <a routerLink="/services/single">{{ service.title }}</a>
+                        <div class="space16"></div>
+                        <p>{{ service.description }}</p>
+                        <div class="space24"></div>
+                        <div class="btn-area">
+                            <a routerLink="/services/single" class="service-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
