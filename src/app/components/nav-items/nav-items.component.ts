@@ -17,7 +17,7 @@ export class NavItemsComponent {
     @Input() btnSpace?: boolean = false
 
     menuItems: MenuItem[] = [
-        { title: 'Posts', link: '' },
+        { title: 'Posts', link: '/posts' },
         { title: 'Categories', link: '/categories' },
         { title: 'Tags', link: '' },
         {

@@ -1,5 +1,5 @@
 <app-layout>
-  <app-hero />
+  <app-hero [title]="pageTitle" />
   <div class="vl-blog-4-area-inner sp1">
     <div class="container">
       <div class="row">
@@ -12,7 +12,7 @@
               <div class="vl-blog-meta">
                 <ul>
                   <li>
-                    <img src="assets/img/icons/calender3.svg" alt=""> {{ post.published }}
+                    <img src="assets/img/icons/calender3.svg" alt=""> {{ post.published ? (post.published | date: 'MM/dd/yyyy') : 'Date Unknown' }}
                   </li>
                 </ul>
               </div>

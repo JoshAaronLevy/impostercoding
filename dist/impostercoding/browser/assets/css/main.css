@@ -231,6 +231,10 @@ img {
   height: 100px;
 }
 
+.space120 {
+  height: 120px;
+}
+
 @keyframes animation-5 {
   0% {
     transform: scale(1);

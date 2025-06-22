@@ -5,7 +5,6 @@ import { Component, signal, effect, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { HeroComponent } from '@app/components/hero/hero.component';
 import { PageHeaderComponent } from "@app/components/page-header/page-header.component";
-import { PaginationComponent } from "@app/components/pagination/pagination.component";
 import { LayoutComponent } from "@layouts/layout.component";
 
 interface Post {
@@ -18,11 +17,12 @@ interface Post {
 
 @Component({
   selector: 'app-posts',
-  imports: [PageHeaderComponent, CommonModule, PaginationComponent, RouterLink, LayoutComponent, HeroComponent],
+  imports: [PageHeaderComponent, CommonModule, RouterLink, LayoutComponent, HeroComponent],
   templateUrl: './posts.component.html',
   styles: ``
 })
 export class PostsComponent {
+  pageTitle: string = 'Posts';
   blogs = blogs2;
 
   posts = signal<Post[]>([]);

@@ -1,12 +1,11 @@
-import { blogs2 } from '@/assets/data';
 import { Component, signal, effect, inject } from '@angular/core';
 import { LayoutComponent } from "@layouts/layout.component";
-import { BlogSidebarComponent } from '@views/blog-pages/blog-sidebar/components/blog-sidebar/blog-sidebar.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { butterService } from '@/app/services';
 import { HeroComponent } from '@app/components/hero/hero.component';
+import { SidebarComponent } from '@app/components/sidebar/sidebar.component';
 
 interface Post {
   title: string;
@@ -18,13 +17,12 @@ interface Post {
 
 @Component({
   selector: 'app-home',
-  imports: [LayoutComponent, HeroComponent, BlogSidebarComponent, CommonModule, RouterLink],
+  imports: [LayoutComponent, HeroComponent, SidebarComponent, CommonModule, RouterLink],
   templateUrl: './home.component.html',
   styles: ``
 })
 export class HomeComponent {
-  blogs = blogs2;
-
+  pageTitle: string = 'Imposter Coding';
   posts = signal<Post[]>([]);
   page = signal(1);
   pageSize = signal(10);

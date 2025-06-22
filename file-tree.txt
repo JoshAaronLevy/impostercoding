@@ -2,6 +2,387 @@
 ├── README.md
 ├── angular.json
 ├── bun.lock
+├── dist
+|  └── impostercoding
+|     ├── 3rdpartylicenses.txt
+|     ├── browser
+|     |  ├── assets
+|     |  |  ├── css
+|     |  |  |  ├── main.css
+|     |  |  |  ├── main.css.map
+|     |  |  |  ├── plugins
+|     |  |  |  |  ├── aos.css
+|     |  |  |  |  ├── bootstrap.min.css
+|     |  |  |  |  ├── fontawesome.css
+|     |  |  |  |  ├── magnific-popup.css
+|     |  |  |  |  ├── mobile.css
+|     |  |  |  |  ├── nice-select.css
+|     |  |  |  |  ├── owlcarousel.min.css
+|     |  |  |  |  ├── sidebar.css
+|     |  |  |  |  └── slick-slider.css
+|     |  |  |  └── prismjs.css
+|     |  |  ├── data.ts
+|     |  |  ├── img
+|     |  |  |  ├── all-images
+|     |  |  |  |  ├── about
+|     |  |  |  |  |  ├── about-img1.png
+|     |  |  |  |  |  ├── about-img10.png
+|     |  |  |  |  |  ├── about-img11.png
+|     |  |  |  |  |  ├── about-img12.png
+|     |  |  |  |  |  ├── about-img13.png
+|     |  |  |  |  |  ├── about-img14.png
+|     |  |  |  |  |  ├── about-img15.png
+|     |  |  |  |  |  ├── about-img2.png
+|     |  |  |  |  |  ├── about-img3.png
+|     |  |  |  |  |  ├── about-img4.png
+|     |  |  |  |  |  ├── about-img5.png
+|     |  |  |  |  |  ├── about-img6.png
+|     |  |  |  |  |  ├── about-img7.png
+|     |  |  |  |  |  ├── about-img8.png
+|     |  |  |  |  |  └── about-img9.png
+|     |  |  |  |  ├── bg
+|     |  |  |  |  |  ├── about-bg1.png
+|     |  |  |  |  |  ├── about-bg2.png
+|     |  |  |  |  |  ├── about-bg3.png
+|     |  |  |  |  |  ├── cta-bg1.png
+|     |  |  |  |  |  ├── footer-bg1.png
+|     |  |  |  |  |  ├── footer-bg2.png
+|     |  |  |  |  |  ├── hero-bg1.png
+|     |  |  |  |  |  ├── hero-bg2.png
+|     |  |  |  |  |  ├── hero-bg3.png
+|     |  |  |  |  |  ├── hero-bg4.png
+|     |  |  |  |  |  ├── hero-bg5.png
+|     |  |  |  |  |  ├── hero-bg6.png
+|     |  |  |  |  |  ├── img-bg1.png
+|     |  |  |  |  |  ├── service-bg1.png
+|     |  |  |  |  |  ├── service-bg2.png
+|     |  |  |  |  |  └── team-bg1.png
+|     |  |  |  |  ├── blog
+|     |  |  |  |  |  ├── blog-img1.png
+|     |  |  |  |  |  ├── blog-img10.png
+|     |  |  |  |  |  ├── blog-img11.png
+|     |  |  |  |  |  ├── blog-img12.png
+|     |  |  |  |  |  ├── blog-img13.png
+|     |  |  |  |  |  ├── blog-img14.png
+|     |  |  |  |  |  ├── blog-img15.png
+|     |  |  |  |  |  ├── blog-img16.png
+|     |  |  |  |  |  ├── blog-img17.png
+|     |  |  |  |  |  ├── blog-img18.png
+|     |  |  |  |  |  ├── blog-img19.png
+|     |  |  |  |  |  ├── blog-img2.png
+|     |  |  |  |  |  ├── blog-img20.png
+|     |  |  |  |  |  ├── blog-img21.png
+|     |  |  |  |  |  ├── blog-img22.png
+|     |  |  |  |  |  ├── blog-img23.png
+|     |  |  |  |  |  ├── blog-img24.png
+|     |  |  |  |  |  ├── blog-img25.png
+|     |  |  |  |  |  ├── blog-img26.png
+|     |  |  |  |  |  ├── blog-img27.png
+|     |  |  |  |  |  ├── blog-img28.png
+|     |  |  |  |  |  ├── blog-img3.png
+|     |  |  |  |  |  ├── blog-img4.png
+|     |  |  |  |  |  ├── blog-img5.png
+|     |  |  |  |  |  ├── blog-img6.png
+|     |  |  |  |  |  ├── blog-img7.png
+|     |  |  |  |  |  ├── blog-img8.png
+|     |  |  |  |  |  └── blog-img9.png
+|     |  |  |  |  ├── case
+|     |  |  |  |  |  ├── case-img1.png
+|     |  |  |  |  |  ├── case-img10.png
+|     |  |  |  |  |  ├── case-img11.png
+|     |  |  |  |  |  ├── case-img12.png
+|     |  |  |  |  |  ├── case-img2.png
+|     |  |  |  |  |  ├── case-img3.png
+|     |  |  |  |  |  ├── case-img4.png
+|     |  |  |  |  |  ├── case-img5.png
+|     |  |  |  |  |  ├── case-img6.png
+|     |  |  |  |  |  ├── case-img7.png
+|     |  |  |  |  |  ├── case-img8.png
+|     |  |  |  |  |  └── case-img9.png
+|     |  |  |  |  ├── cta
+|     |  |  |  |  |  ├── cta-img1.png
+|     |  |  |  |  |  ├── cta-img2.png
+|     |  |  |  |  |  └── cta-img3.png
+|     |  |  |  |  ├── demo
+|     |  |  |  |  |  ├── demo-img1.png
+|     |  |  |  |  |  ├── demo-img2.png
+|     |  |  |  |  |  ├── demo-img3.png
+|     |  |  |  |  |  ├── demo-img4.png
+|     |  |  |  |  |  └── demo-img5.png
+|     |  |  |  |  ├── faq
+|     |  |  |  |  |  └── faq-img1.png
+|     |  |  |  |  ├── hero
+|     |  |  |  |  |  ├── hero-img1.png
+|     |  |  |  |  |  ├── hero-img2.png
+|     |  |  |  |  |  ├── hero-img3.png
+|     |  |  |  |  |  ├── hero-img4.png
+|     |  |  |  |  |  ├── hero-img5.png
+|     |  |  |  |  |  ├── hero-img6.png
+|     |  |  |  |  |  └── hero-img7.png
+|     |  |  |  |  ├── others
+|     |  |  |  |  |  ├── author-img1.png
+|     |  |  |  |  |  ├── author-img2.png
+|     |  |  |  |  |  ├── author-img3.png
+|     |  |  |  |  |  ├── author-img4.png
+|     |  |  |  |  |  ├── author-img5.png
+|     |  |  |  |  |  ├── author-img6.png
+|     |  |  |  |  |  ├── author-img7.png
+|     |  |  |  |  |  ├── author-img8.png
+|     |  |  |  |  |  ├── download-img1.png
+|     |  |  |  |  |  ├── error.png
+|     |  |  |  |  |  ├── others-img1.png
+|     |  |  |  |  |  └── others-img2.png
+|     |  |  |  |  ├── service
+|     |  |  |  |  |  ├── service-img1.png
+|     |  |  |  |  |  ├── service-img2.png
+|     |  |  |  |  |  ├── service-img3.png
+|     |  |  |  |  |  └── service-img4.png
+|     |  |  |  |  ├── team
+|     |  |  |  |  |  ├── team-img1.png
+|     |  |  |  |  |  ├── team-img10.png
+|     |  |  |  |  |  ├── team-img11.png
+|     |  |  |  |  |  ├── team-img12.png
+|     |  |  |  |  |  ├── team-img13.png
+|     |  |  |  |  |  ├── team-img14.png
+|     |  |  |  |  |  ├── team-img15.png
+|     |  |  |  |  |  ├── team-img16.png
+|     |  |  |  |  |  ├── team-img2.png
+|     |  |  |  |  |  ├── team-img3.png
+|     |  |  |  |  |  ├── team-img4.png
+|     |  |  |  |  |  ├── team-img5.png
+|     |  |  |  |  |  ├── team-img6.png
+|     |  |  |  |  |  ├── team-img7.png
+|     |  |  |  |  |  ├── team-img8.png
+|     |  |  |  |  |  └── team-img9.png
+|     |  |  |  |  ├── testimonial
+|     |  |  |  |  |  ├── testimonial-img1.png
+|     |  |  |  |  |  ├── testimonial-img2.png
+|     |  |  |  |  |  ├── testimonial-img3.png
+|     |  |  |  |  |  ├── testimonial-img4.png
+|     |  |  |  |  |  ├── testimonial-img5.png
+|     |  |  |  |  |  ├── testimonial-img6.png
+|     |  |  |  |  |  ├── testimonial-img7.png
+|     |  |  |  |  |  ├── testimonial-img8.png
+|     |  |  |  |  |  └── testimonial-img9.png
+|     |  |  |  |  └── work
+|     |  |  |  |     ├── work-img1.png
+|     |  |  |  |     ├── work-img2.png
+|     |  |  |  |     ├── work-img3.png
+|     |  |  |  |     └── work-img4.png
+|     |  |  |  ├── elements
+|     |  |  |  |  ├── elements1.png
+|     |  |  |  |  ├── elements10.png
+|     |  |  |  |  ├── elements11.png
+|     |  |  |  |  ├── elements12.png
+|     |  |  |  |  ├── elements13.png
+|     |  |  |  |  ├── elements14.png
+|     |  |  |  |  ├── elements15.png
+|     |  |  |  |  ├── elements16.png
+|     |  |  |  |  ├── elements17.png
+|     |  |  |  |  ├── elements18.png
+|     |  |  |  |  ├── elements19.png
+|     |  |  |  |  ├── elements2.png
+|     |  |  |  |  ├── elements20.png
+|     |  |  |  |  ├── elements21.png
+|     |  |  |  |  ├── elements22.png
+|     |  |  |  |  ├── elements23.png
+|     |  |  |  |  ├── elements24.png
+|     |  |  |  |  ├── elements25.png
+|     |  |  |  |  ├── elements26.png
+|     |  |  |  |  ├── elements27.png
+|     |  |  |  |  ├── elements28.png
+|     |  |  |  |  ├── elements29.png
+|     |  |  |  |  ├── elements3.png
+|     |  |  |  |  ├── elements30.png
+|     |  |  |  |  ├── elements31.png
+|     |  |  |  |  ├── elements32.png
+|     |  |  |  |  ├── elements33.png
+|     |  |  |  |  ├── elements34.png
+|     |  |  |  |  ├── elements35.png
+|     |  |  |  |  ├── elements36.png
+|     |  |  |  |  ├── elements37.png
+|     |  |  |  |  ├── elements38.png
+|     |  |  |  |  ├── elements39.png
+|     |  |  |  |  ├── elements4.png
+|     |  |  |  |  ├── elements40.png
+|     |  |  |  |  ├── elements41.png
+|     |  |  |  |  ├── elements42.png
+|     |  |  |  |  ├── elements43.png
+|     |  |  |  |  ├── elements44.png
+|     |  |  |  |  ├── elements45.png
+|     |  |  |  |  ├── elements46.png
+|     |  |  |  |  ├── elements47.png
+|     |  |  |  |  ├── elements48.png
+|     |  |  |  |  ├── elements5.png
+|     |  |  |  |  ├── elements6.png
+|     |  |  |  |  ├── elements7.png
+|     |  |  |  |  ├── elements8.png
+|     |  |  |  |  └── elements9.png
+|     |  |  |  ├── icons
+|     |  |  |  |  ├── arrow1.svg
+|     |  |  |  |  ├── calender1.svg
+|     |  |  |  |  ├── calender2.svg
+|     |  |  |  |  ├── calender3.svg
+|     |  |  |  |  ├── check1.svg
+|     |  |  |  |  ├── check2.svg
+|     |  |  |  |  ├── check3.svg
+|     |  |  |  |  ├── check4.svg
+|     |  |  |  |  ├── check5.svg
+|     |  |  |  |  ├── check6.svg
+|     |  |  |  |  ├── check7.svg
+|     |  |  |  |  ├── comments1.svg
+|     |  |  |  |  ├── email1.svg
+|     |  |  |  |  ├── global1.svg
+|     |  |  |  |  ├── location1.svg
+|     |  |  |  |  ├── mail2.svg
+|     |  |  |  |  ├── phn1.svg
+|     |  |  |  |  ├── phn2.svg
+|     |  |  |  |  ├── quito1.svg
+|     |  |  |  |  ├── quito2.svg
+|     |  |  |  |  ├── s-icon1.svg
+|     |  |  |  |  ├── s-icon10.svg
+|     |  |  |  |  ├── s-icon11.svg
+|     |  |  |  |  ├── s-icon2.svg
+|     |  |  |  |  ├── s-icon3.svg
+|     |  |  |  |  ├── s-icon4.svg
+|     |  |  |  |  ├── s-icon5.svg
+|     |  |  |  |  ├── s-icon6.svg
+|     |  |  |  |  ├── s-icon7.svg
+|     |  |  |  |  ├── s-icon8.svg
+|     |  |  |  |  ├── s-icon9.svg
+|     |  |  |  |  ├── service-icon1.svg
+|     |  |  |  |  ├── service-icon10.svg
+|     |  |  |  |  ├── service-icon11.svg
+|     |  |  |  |  ├── service-icon12.svg
+|     |  |  |  |  ├── service-icon13.svg
+|     |  |  |  |  ├── service-icon14.svg
+|     |  |  |  |  ├── service-icon15.svg
+|     |  |  |  |  ├── service-icon16.svg
+|     |  |  |  |  ├── service-icon17.svg
+|     |  |  |  |  ├── service-icon2.svg
+|     |  |  |  |  ├── service-icon3.svg
+|     |  |  |  |  ├── service-icon4.svg
+|     |  |  |  |  ├── service-icon5.svg
+|     |  |  |  |  ├── service-icon6.svg
+|     |  |  |  |  ├── service-icon7.svg
+|     |  |  |  |  ├── service-icon8.svg
+|     |  |  |  |  ├── service-icon9.svg
+|     |  |  |  |  ├── share1.svg
+|     |  |  |  |  ├── sub-logo1.svg
+|     |  |  |  |  ├── sub-logo2.svg
+|     |  |  |  |  ├── sub-logo3.svg
+|     |  |  |  |  ├── sub-logo4.svg
+|     |  |  |  |  ├── time2.svg
+|     |  |  |  |  ├── user1.svg
+|     |  |  |  |  ├── work-icon1.svg
+|     |  |  |  |  ├── work-icon2.svg
+|     |  |  |  |  ├── work-icon3.svg
+|     |  |  |  |  ├── work1.svg
+|     |  |  |  |  ├── work2.svg
+|     |  |  |  |  ├── work3.svg
+|     |  |  |  |  └── work4.svg
+|     |  |  |  └── logo
+|     |  |  |     ├── Imposter-Coding-Logo.png
+|     |  |  |     ├── fav-logo1.png
+|     |  |  |     ├── fav-logo2.png
+|     |  |  |     ├── fav-logo3.png
+|     |  |  |     ├── fav-logo4.png
+|     |  |  |     ├── imposter_coding_logo-transparent-cropped.png
+|     |  |  |     ├── imposter_coding_logo-transparent-square.png
+|     |  |  |     ├── logo1.png
+|     |  |  |     ├── logo2.png
+|     |  |  |     ├── logo3.png
+|     |  |  |     ├── logo4.png
+|     |  |  |     ├── logo5.png
+|     |  |  |     ├── logo6.png
+|     |  |  |     └── preloader.png
+|     |  |  └── scss
+|     |  |     ├── components
+|     |  |     |  ├── _about.scss
+|     |  |     |  ├── _hero.scss
+|     |  |     |  ├── _index.scss
+|     |  |     |  ├── _mobile-menu.scss
+|     |  |     |  └── _service.scss
+|     |  |     ├── layout
+|     |  |     |  ├── _index.scss
+|     |  |     |  ├── blog
+|     |  |     |  |  ├── _blog.scss
+|     |  |     |  |  └── _index.scss
+|     |  |     |  ├── footer
+|     |  |     |  |  ├── _footer-1.scss
+|     |  |     |  |  └── _index.scss
+|     |  |     |  ├── header
+|     |  |     |  |  ├── _header-1.scss
+|     |  |     |  |  └── _index.scss
+|     |  |     |  ├── menu
+|     |  |     |  |  ├── _index.scss
+|     |  |     |  |  └── _menu-1.scss
+|     |  |     |  └── pages
+|     |  |     |     ├── _about.scss
+|     |  |     |     ├── _case.scss
+|     |  |     |     ├── _contact.scss
+|     |  |     |     ├── _cta.scss
+|     |  |     |     ├── _faq.scss
+|     |  |     |     ├── _index.scss
+|     |  |     |     ├── _others.scss
+|     |  |     |     ├── _team.scss
+|     |  |     |     ├── _testimonial.scss
+|     |  |     |     └── _work.scss
+|     |  |     ├── main.scss
+|     |  |     ├── theme
+|     |  |     |  ├── _comon.scss
+|     |  |     |  ├── _index.scss
+|     |  |     |  ├── _spacing.scss
+|     |  |     |  └── _theme.scss
+|     |  |     └── utils
+|     |  |        ├── _breakpoints.scss
+|     |  |        ├── _colors.scss
+|     |  |        ├── _extends.scss
+|     |  |        ├── _fonts-s.scss
+|     |  |        ├── _index.scss
+|     |  |        ├── _mixins.scss
+|     |  |        ├── _root.scss
+|     |  |        ├── _typography.scss
+|     |  |        └── _variable.scss
+|     |  ├── chunk-I6INSWAO.js
+|     |  ├── chunk-M2KITS4D.js
+|     |  ├── chunk-MSAGRSIT.js
+|     |  ├── chunk-OMEOFWVD.js
+|     |  ├── chunk-QEGI42EZ.js
+|     |  ├── chunk-UNXHNBL5.js
+|     |  ├── chunk-UVN5WZY4.js
+|     |  ├── chunk-ZK7PQEBY.js
+|     |  ├── favicon.ico
+|     |  ├── index.html
+|     |  ├── main-5RG7GQKU.js
+|     |  ├── media
+|     |  |  ├── ajax-loader-BOAPMZMT.gif
+|     |  |  ├── cta-bg1-W2W5ROUL.png
+|     |  |  ├── fa-brands-400-Q3XCMWHQ.woff2
+|     |  |  ├── fa-brands-400-R2XQZCET.ttf
+|     |  |  ├── fa-regular-400-QSNYFYRT.woff2
+|     |  |  ├── fa-regular-400-XUOPSR7E.ttf
+|     |  |  ├── fa-solid-900-5ZUYHGA7.woff2
+|     |  |  ├── fa-solid-900-PJNKLK6W.ttf
+|     |  |  ├── fa-v4compatibility-LFEHZI6Y.woff2
+|     |  |  ├── fa-v4compatibility-YY67RJWG.ttf
+|     |  |  ├── footer-bg1-G4MBYJ6N.png
+|     |  |  ├── footer-bg2-CDOM32LY.png
+|     |  |  ├── hero-bg1-N4FMTVPE.png
+|     |  |  ├── hero-bg2-Q6AJZBIG.png
+|     |  |  ├── hero-bg3-GMOHYTKG.png
+|     |  |  ├── hero-bg5-UYTZ3XEB.png
+|     |  |  ├── service-bg1-F3SGQDCJ.png
+|     |  |  ├── service-bg2-OEBRRLRM.png
+|     |  |  ├── slick-7CK47X3J.svg
+|     |  |  ├── slick-EVLS6IWX.eot
+|     |  |  ├── slick-MU5EZO5G.woff
+|     |  |  ├── slick-NKQ64RRA.ttf
+|     |  |  └── team-bg1-LIBAOREH.png
+|     |  ├── polyfills-FFHMD2TL.js
+|     |  ├── scripts-CWJO5AXB.js
+|     |  └── styles-JJOJAHVQ.css
+|     └── prerendered-routes.json
 ├── package-lock.json
 ├── package.json
 ├── public
@@ -32,6 +413,9 @@
 |  |  |  |  ├── header.component.html
 |  |  |  |  ├── header.component.spec.ts
 |  |  |  |  └── header.component.ts
+|  |  |  ├── hero
+|  |  |  |  ├── hero.component.html
+|  |  |  |  └── hero.component.ts
 |  |  |  ├── mobile-menu
 |  |  |  |  ├── mobile-menu.component.html
 |  |  |  |  ├── mobile-menu.component.spec.ts
@@ -105,454 +489,10 @@
 |  |     |        ├── blog-one.component.html
 |  |     |        ├── blog-one.component.spec.ts
 |  |     |        └── blog-one.component.ts
-|  |     ├── home-pages
-|  |     |  ├── home-pages.route.ts
-|  |     |  ├── multi
-|  |     |  |  ├── home1
-|  |     |  |  |  ├── components
-|  |     |  |  |  |  ├── home1-about
-|  |     |  |  |  |  |  ├── home1-about.component.html
-|  |     |  |  |  |  |  ├── home1-about.component.spec.ts
-|  |     |  |  |  |  |  └── home1-about.component.ts
-|  |     |  |  |  |  ├── home1-blogs
-|  |     |  |  |  |  |  ├── home1-blogs.component.html
-|  |     |  |  |  |  |  ├── home1-blogs.component.spec.ts
-|  |     |  |  |  |  |  └── home1-blogs.component.ts
-|  |     |  |  |  |  ├── home1-case-studies
-|  |     |  |  |  |  |  ├── home1-case-studies.component.html
-|  |     |  |  |  |  |  ├── home1-case-studies.component.spec.ts
-|  |     |  |  |  |  |  └── home1-case-studies.component.ts
-|  |     |  |  |  |  ├── home1-hero
-|  |     |  |  |  |  |  ├── home1-hero.component.html
-|  |     |  |  |  |  |  ├── home1-hero.component.spec.ts
-|  |     |  |  |  |  |  └── home1-hero.component.ts
-|  |     |  |  |  |  ├── home1-service
-|  |     |  |  |  |  |  ├── home1-service.component.html
-|  |     |  |  |  |  |  ├── home1-service.component.spec.ts
-|  |     |  |  |  |  |  └── home1-service.component.ts
-|  |     |  |  |  |  ├── home1-team
-|  |     |  |  |  |  |  ├── home1-team.component.html
-|  |     |  |  |  |  |  ├── home1-team.component.spec.ts
-|  |     |  |  |  |  |  └── home1-team.component.ts
-|  |     |  |  |  |  ├── home1-testimonial
-|  |     |  |  |  |  |  ├── home1-testimonial.component.html
-|  |     |  |  |  |  |  ├── home1-testimonial.component.spec.ts
-|  |     |  |  |  |  |  └── home1-testimonial.component.ts
-|  |     |  |  |  |  └── home1-work
-|  |     |  |  |  |     ├── home1-work.component.html
-|  |     |  |  |  |     ├── home1-work.component.spec.ts
-|  |     |  |  |  |     └── home1-work.component.ts
-|  |     |  |  |  ├── home1.component.html
-|  |     |  |  |  ├── home1.component.spec.ts
-|  |     |  |  |  └── home1.component.ts
-|  |     |  |  ├── home2
-|  |     |  |  |  ├── components
-|  |     |  |  |  |  ├── home2-about
-|  |     |  |  |  |  |  ├── home2-about.component.html
-|  |     |  |  |  |  |  ├── home2-about.component.spec.ts
-|  |     |  |  |  |  |  └── home2-about.component.ts
-|  |     |  |  |  |  ├── home2-blogs
-|  |     |  |  |  |  |  ├── home2-blogs.component.html
-|  |     |  |  |  |  |  ├── home2-blogs.component.spec.ts
-|  |     |  |  |  |  |  └── home2-blogs.component.ts
-|  |     |  |  |  |  ├── home2-cta
-|  |     |  |  |  |  |  ├── home2-cta.component.html
-|  |     |  |  |  |  |  ├── home2-cta.component.spec.ts
-|  |     |  |  |  |  |  └── home2-cta.component.ts
-|  |     |  |  |  |  ├── home2-header
-|  |     |  |  |  |  |  ├── home2-header.component.html
-|  |     |  |  |  |  |  ├── home2-header.component.spec.ts
-|  |     |  |  |  |  |  └── home2-header.component.ts
-|  |     |  |  |  |  ├── home2-hero
-|  |     |  |  |  |  |  ├── home2-hero.component.html
-|  |     |  |  |  |  |  ├── home2-hero.component.spec.ts
-|  |     |  |  |  |  |  └── home2-hero.component.ts
-|  |     |  |  |  |  ├── home2-services
-|  |     |  |  |  |  |  ├── home2-services.component.html
-|  |     |  |  |  |  |  ├── home2-services.component.spec.ts
-|  |     |  |  |  |  |  └── home2-services.component.ts
-|  |     |  |  |  |  ├── home2-team
-|  |     |  |  |  |  |  ├── home2-team.component.html
-|  |     |  |  |  |  |  ├── home2-team.component.spec.ts
-|  |     |  |  |  |  |  └── home2-team.component.ts
-|  |     |  |  |  |  ├── home2-testimonial
-|  |     |  |  |  |  |  ├── home2-testimonial.component.html
-|  |     |  |  |  |  |  ├── home2-testimonial.component.spec.ts
-|  |     |  |  |  |  |  └── home2-testimonial.component.ts
-|  |     |  |  |  |  └── home2-work
-|  |     |  |  |  |     ├── home2-work.component.html
-|  |     |  |  |  |     ├── home2-work.component.spec.ts
-|  |     |  |  |  |     └── home2-work.component.ts
-|  |     |  |  |  ├── home2.component.html
-|  |     |  |  |  ├── home2.component.spec.ts
-|  |     |  |  |  └── home2.component.ts
-|  |     |  |  ├── home3
-|  |     |  |  |  ├── components
-|  |     |  |  |  |  ├── home3-about
-|  |     |  |  |  |  |  ├── home3-about.component.html
-|  |     |  |  |  |  |  ├── home3-about.component.spec.ts
-|  |     |  |  |  |  |  └── home3-about.component.ts
-|  |     |  |  |  |  ├── home3-cta
-|  |     |  |  |  |  |  ├── home3-cta.component.html
-|  |     |  |  |  |  |  ├── home3-cta.component.spec.ts
-|  |     |  |  |  |  |  └── home3-cta.component.ts
-|  |     |  |  |  |  ├── home3-faq
-|  |     |  |  |  |  |  ├── home3-faq.component.html
-|  |     |  |  |  |  |  ├── home3-faq.component.spec.ts
-|  |     |  |  |  |  |  └── home3-faq.component.ts
-|  |     |  |  |  |  ├── home3-features
-|  |     |  |  |  |  |  ├── home3-features.component.html
-|  |     |  |  |  |  |  ├── home3-features.component.spec.ts
-|  |     |  |  |  |  |  └── home3-features.component.ts
-|  |     |  |  |  |  ├── home3-header
-|  |     |  |  |  |  |  ├── home3-header.component.html
-|  |     |  |  |  |  |  ├── home3-header.component.spec.ts
-|  |     |  |  |  |  |  └── home3-header.component.ts
-|  |     |  |  |  |  ├── home3-hero
-|  |     |  |  |  |  |  ├── home3-hero.component.html
-|  |     |  |  |  |  |  ├── home3-hero.component.spec.ts
-|  |     |  |  |  |  |  └── home3-hero.component.ts
-|  |     |  |  |  |  ├── home3-pricing
-|  |     |  |  |  |  |  ├── home3-pricing.component.html
-|  |     |  |  |  |  |  ├── home3-pricing.component.spec.ts
-|  |     |  |  |  |  |  └── home3-pricing.component.ts
-|  |     |  |  |  |  ├── home3-support
-|  |     |  |  |  |  |  ├── home3-support.component.html
-|  |     |  |  |  |  |  ├── home3-support.component.spec.ts
-|  |     |  |  |  |  |  └── home3-support.component.ts
-|  |     |  |  |  |  └── home3-work
-|  |     |  |  |  |     ├── home3-work.component.html
-|  |     |  |  |  |     ├── home3-work.component.spec.ts
-|  |     |  |  |  |     └── home3-work.component.ts
-|  |     |  |  |  ├── home3.component.html
-|  |     |  |  |  ├── home3.component.spec.ts
-|  |     |  |  |  └── home3.component.ts
-|  |     |  |  ├── home4
-|  |     |  |  |  ├── components
-|  |     |  |  |  |  ├── home4-about
-|  |     |  |  |  |  |  ├── home4-about.component.html
-|  |     |  |  |  |  |  ├── home4-about.component.spec.ts
-|  |     |  |  |  |  |  └── home4-about.component.ts
-|  |     |  |  |  |  ├── home4-blogs
-|  |     |  |  |  |  |  ├── home4-blogs.component.html
-|  |     |  |  |  |  |  ├── home4-blogs.component.spec.ts
-|  |     |  |  |  |  |  └── home4-blogs.component.ts
-|  |     |  |  |  |  ├── home4-case-studies
-|  |     |  |  |  |  |  ├── home4-case-studies.component.html
-|  |     |  |  |  |  |  ├── home4-case-studies.component.spec.ts
-|  |     |  |  |  |  |  └── home4-case-studies.component.ts
-|  |     |  |  |  |  ├── home4-cta
-|  |     |  |  |  |  |  ├── home4-cta.component.html
-|  |     |  |  |  |  |  ├── home4-cta.component.spec.ts
-|  |     |  |  |  |  |  └── home4-cta.component.ts
-|  |     |  |  |  |  ├── home4-header
-|  |     |  |  |  |  |  ├── home4-header.component.html
-|  |     |  |  |  |  |  ├── home4-header.component.spec.ts
-|  |     |  |  |  |  |  └── home4-header.component.ts
-|  |     |  |  |  |  ├── home4-hero
-|  |     |  |  |  |  |  ├── home4-hero.component.html
-|  |     |  |  |  |  |  ├── home4-hero.component.spec.ts
-|  |     |  |  |  |  |  └── home4-hero.component.ts
-|  |     |  |  |  |  ├── home4-pricing
-|  |     |  |  |  |  |  ├── home4-pricing.component.html
-|  |     |  |  |  |  |  ├── home4-pricing.component.spec.ts
-|  |     |  |  |  |  |  └── home4-pricing.component.ts
-|  |     |  |  |  |  ├── home4-services
-|  |     |  |  |  |  |  ├── home4-services.component.html
-|  |     |  |  |  |  |  ├── home4-services.component.spec.ts
-|  |     |  |  |  |  |  └── home4-services.component.ts
-|  |     |  |  |  |  ├── home4-testimonial
-|  |     |  |  |  |  |  ├── home4-testimonial.component.html
-|  |     |  |  |  |  |  ├── home4-testimonial.component.spec.ts
-|  |     |  |  |  |  |  └── home4-testimonial.component.ts
-|  |     |  |  |  |  └── home4-work
-|  |     |  |  |  |     ├── home4-work.component.html
-|  |     |  |  |  |     ├── home4-work.component.spec.ts
-|  |     |  |  |  |     └── home4-work.component.ts
-|  |     |  |  |  ├── home4.component.html
-|  |     |  |  |  ├── home4.component.spec.ts
-|  |     |  |  |  └── home4.component.ts
-|  |     |  |  └── home5
-|  |     |  |     ├── components
-|  |     |  |     |  ├── home5-about
-|  |     |  |     |  |  ├── home5-about.component.html
-|  |     |  |     |  |  ├── home5-about.component.spec.ts
-|  |     |  |     |  |  └── home5-about.component.ts
-|  |     |  |     |  ├── home5-about-2
-|  |     |  |     |  |  ├── home5-about-2.component.html
-|  |     |  |     |  |  ├── home5-about-2.component.spec.ts
-|  |     |  |     |  |  └── home5-about-2.component.ts
-|  |     |  |     |  ├── home5-cta
-|  |     |  |     |  |  ├── home5-cta.component.html
-|  |     |  |     |  |  ├── home5-cta.component.spec.ts
-|  |     |  |     |  |  └── home5-cta.component.ts
-|  |     |  |     |  ├── home5-faq
-|  |     |  |     |  |  ├── home5-faq.component.html
-|  |     |  |     |  |  ├── home5-faq.component.spec.ts
-|  |     |  |     |  |  └── home5-faq.component.ts
-|  |     |  |     |  ├── home5-header
-|  |     |  |     |  |  ├── home5-header.component.html
-|  |     |  |     |  |  ├── home5-header.component.spec.ts
-|  |     |  |     |  |  └── home5-header.component.ts
-|  |     |  |     |  ├── home5-hero
-|  |     |  |     |  |  ├── home5-hero.component.html
-|  |     |  |     |  |  ├── home5-hero.component.spec.ts
-|  |     |  |     |  |  └── home5-hero.component.ts
-|  |     |  |     |  ├── home5-services
-|  |     |  |     |  |  ├── home5-services.component.html
-|  |     |  |     |  |  ├── home5-services.component.spec.ts
-|  |     |  |     |  |  └── home5-services.component.ts
-|  |     |  |     |  ├── home5-testimonial
-|  |     |  |     |  |  ├── home5-testimonial.component.html
-|  |     |  |     |  |  ├── home5-testimonial.component.spec.ts
-|  |     |  |     |  |  └── home5-testimonial.component.ts
-|  |     |  |     |  └── home5-work
-|  |     |  |     |     ├── home5-work.component.html
-|  |     |  |     |     ├── home5-work.component.spec.ts
-|  |     |  |     |     └── home5-work.component.ts
-|  |     |  |     ├── home5.component.html
-|  |     |  |     ├── home5.component.spec.ts
-|  |     |  |     └── home5.component.ts
-|  |     |  └── single
-|  |     |     ├── single-home1
-|  |     |     |  ├── components
-|  |     |     |  |  ├── home1-about
-|  |     |     |  |  |  ├── home1-about.component.html
-|  |     |     |  |  |  ├── home1-about.component.spec.ts
-|  |     |     |  |  |  └── home1-about.component.ts
-|  |     |     |  |  ├── home1-blogs
-|  |     |     |  |  |  ├── home1-blogs.component.html
-|  |     |     |  |  |  ├── home1-blogs.component.spec.ts
-|  |     |     |  |  |  └── home1-blogs.component.ts
-|  |     |     |  |  ├── home1-case-studies
-|  |     |     |  |  |  ├── home1-case-studies.component.html
-|  |     |     |  |  |  ├── home1-case-studies.component.spec.ts
-|  |     |     |  |  |  └── home1-case-studies.component.ts
-|  |     |     |  |  ├── home1-hero
-|  |     |     |  |  |  ├── home1-hero.component.html
-|  |     |     |  |  |  ├── home1-hero.component.spec.ts
-|  |     |     |  |  |  └── home1-hero.component.ts
-|  |     |     |  |  ├── home1-service
-|  |     |     |  |  |  ├── home1-service.component.html
-|  |     |     |  |  |  ├── home1-service.component.spec.ts
-|  |     |     |  |  |  └── home1-service.component.ts
-|  |     |     |  |  ├── home1-team
-|  |     |     |  |  |  ├── home1-team.component.html
-|  |     |     |  |  |  ├── home1-team.component.spec.ts
-|  |     |     |  |  |  └── home1-team.component.ts
-|  |     |     |  |  ├── home1-testimonial
-|  |     |     |  |  |  ├── home1-testimonial.component.html
-|  |     |     |  |  |  ├── home1-testimonial.component.spec.ts
-|  |     |     |  |  |  └── home1-testimonial.component.ts
-|  |     |     |  |  ├── home1-work
-|  |     |     |  |  |  ├── home1-work.component.html
-|  |     |     |  |  |  ├── home1-work.component.spec.ts
-|  |     |     |  |  |  └── home1-work.component.ts
-|  |     |     |  |  └── single-header1
-|  |     |     |  |     ├── single-header1.component.html
-|  |     |     |  |     ├── single-header1.component.spec.ts
-|  |     |     |  |     └── single-header1.component.ts
-|  |     |     |  ├── single-home1.component.html
-|  |     |     |  ├── single-home1.component.spec.ts
-|  |     |     |  └── single-home1.component.ts
-|  |     |     ├── single-home2
-|  |     |     |  ├── components
-|  |     |     |  |  ├── home2-about
-|  |     |     |  |  |  ├── home2-about.component.html
-|  |     |     |  |  |  ├── home2-about.component.spec.ts
-|  |     |     |  |  |  └── home2-about.component.ts
-|  |     |     |  |  ├── home2-blogs
-|  |     |     |  |  |  ├── home2-blogs.component.html
-|  |     |     |  |  |  ├── home2-blogs.component.spec.ts
-|  |     |     |  |  |  └── home2-blogs.component.ts
-|  |     |     |  |  ├── home2-cta
-|  |     |     |  |  |  ├── home2-cta.component.html
-|  |     |     |  |  |  ├── home2-cta.component.spec.ts
-|  |     |     |  |  |  └── home2-cta.component.ts
-|  |     |     |  |  ├── home2-hero
-|  |     |     |  |  |  ├── home2-hero.component.html
-|  |     |     |  |  |  ├── home2-hero.component.spec.ts
-|  |     |     |  |  |  └── home2-hero.component.ts
-|  |     |     |  |  ├── home2-services
-|  |     |     |  |  |  ├── home2-services.component.html
-|  |     |     |  |  |  ├── home2-services.component.spec.ts
-|  |     |     |  |  |  └── home2-services.component.ts
-|  |     |     |  |  ├── home2-team
-|  |     |     |  |  |  ├── home2-team.component.html
-|  |     |     |  |  |  ├── home2-team.component.spec.ts
-|  |     |     |  |  |  └── home2-team.component.ts
-|  |     |     |  |  ├── home2-testimonial
-|  |     |     |  |  |  ├── home2-testimonial.component.html
-|  |     |     |  |  |  ├── home2-testimonial.component.spec.ts
-|  |     |     |  |  |  └── home2-testimonial.component.ts
-|  |     |     |  |  ├── home2-work
-|  |     |     |  |  |  ├── home2-work.component.html
-|  |     |     |  |  |  ├── home2-work.component.spec.ts
-|  |     |     |  |  |  └── home2-work.component.ts
-|  |     |     |  |  └── single-header2
-|  |     |     |  |     ├── single-header2.component.html
-|  |     |     |  |     ├── single-header2.component.spec.ts
-|  |     |     |  |     └── single-header2.component.ts
-|  |     |     |  ├── single-home2.component.html
-|  |     |     |  ├── single-home2.component.spec.ts
-|  |     |     |  └── single-home2.component.ts
-|  |     |     ├── single-home3
-|  |     |     |  ├── components
-|  |     |     |  |  ├── home3-about
-|  |     |     |  |  |  ├── home3-about.component.html
-|  |     |     |  |  |  ├── home3-about.component.spec.ts
-|  |     |     |  |  |  └── home3-about.component.ts
-|  |     |     |  |  ├── home3-cta
-|  |     |     |  |  |  ├── home3-cta.component.html
-|  |     |     |  |  |  ├── home3-cta.component.spec.ts
-|  |     |     |  |  |  └── home3-cta.component.ts
-|  |     |     |  |  ├── home3-faq
-|  |     |     |  |  |  ├── home3-faq.component.html
-|  |     |     |  |  |  ├── home3-faq.component.spec.ts
-|  |     |     |  |  |  └── home3-faq.component.ts
-|  |     |     |  |  ├── home3-features
-|  |     |     |  |  |  ├── home3-features.component.html
-|  |     |     |  |  |  ├── home3-features.component.spec.ts
-|  |     |     |  |  |  └── home3-features.component.ts
-|  |     |     |  |  ├── home3-hero
-|  |     |     |  |  |  ├── home3-hero.component.html
-|  |     |     |  |  |  ├── home3-hero.component.spec.ts
-|  |     |     |  |  |  └── home3-hero.component.ts
-|  |     |     |  |  ├── home3-pricing
-|  |     |     |  |  |  ├── home3-pricing.component.html
-|  |     |     |  |  |  ├── home3-pricing.component.spec.ts
-|  |     |     |  |  |  └── home3-pricing.component.ts
-|  |     |     |  |  ├── home3-support
-|  |     |     |  |  |  ├── home3-support.component.html
-|  |     |     |  |  |  ├── home3-support.component.spec.ts
-|  |     |     |  |  |  └── home3-support.component.ts
-|  |     |     |  |  ├── home3-work
-|  |     |     |  |  |  ├── home3-work.component.html
-|  |     |     |  |  |  ├── home3-work.component.spec.ts
-|  |     |     |  |  |  └── home3-work.component.ts
-|  |     |     |  |  └── single-header3
-|  |     |     |  |     ├── single-header3.component.html
-|  |     |     |  |     ├── single-header3.component.spec.ts
-|  |     |     |  |     └── single-header3.component.ts
-|  |     |     |  ├── single-home3.component.html
-|  |     |     |  ├── single-home3.component.spec.ts
-|  |     |     |  └── single-home3.component.ts
-|  |     |     ├── single-home4
-|  |     |     |  ├── components
-|  |     |     |  |  ├── home4-about
-|  |     |     |  |  |  ├── home4-about.component.html
-|  |     |     |  |  |  ├── home4-about.component.spec.ts
-|  |     |     |  |  |  └── home4-about.component.ts
-|  |     |     |  |  ├── home4-blogs
-|  |     |     |  |  |  ├── home4-blogs.component.html
-|  |     |     |  |  |  ├── home4-blogs.component.spec.ts
-|  |     |     |  |  |  └── home4-blogs.component.ts
-|  |     |     |  |  ├── home4-case-studies
-|  |     |     |  |  |  ├── home4-case-studies.component.html
-|  |     |     |  |  |  ├── home4-case-studies.component.spec.ts
-|  |     |     |  |  |  └── home4-case-studies.component.ts
-|  |     |     |  |  ├── home4-cta
-|  |     |     |  |  |  ├── home4-cta.component.html
-|  |     |     |  |  |  ├── home4-cta.component.spec.ts
-|  |     |     |  |  |  └── home4-cta.component.ts
-|  |     |     |  |  ├── home4-hero
-|  |     |     |  |  |  ├── home4-hero.component.html
-|  |     |     |  |  |  ├── home4-hero.component.spec.ts
-|  |     |     |  |  |  └── home4-hero.component.ts
-|  |     |     |  |  ├── home4-pricing
-|  |     |     |  |  |  ├── home4-pricing.component.html
-|  |     |     |  |  |  ├── home4-pricing.component.spec.ts
-|  |     |     |  |  |  └── home4-pricing.component.ts
-|  |     |     |  |  ├── home4-services
-|  |     |     |  |  |  ├── home4-services.component.html
-|  |     |     |  |  |  ├── home4-services.component.spec.ts
-|  |     |     |  |  |  └── home4-services.component.ts
-|  |     |     |  |  ├── home4-testimonial
-|  |     |     |  |  |  ├── home4-testimonial.component.html
-|  |     |     |  |  |  ├── home4-testimonial.component.spec.ts
-|  |     |     |  |  |  └── home4-testimonial.component.ts
-|  |     |     |  |  ├── home4-work
-|  |     |     |  |  |  ├── home4-work.component.html
-|  |     |     |  |  |  ├── home4-work.component.spec.ts
-|  |     |     |  |  |  └── home4-work.component.ts
-|  |     |     |  |  └── single-header4
-|  |     |     |  |     ├── single-header4.component.html
-|  |     |     |  |     ├── single-header4.component.spec.ts
-|  |     |     |  |     └── single-header4.component.ts
-|  |     |     |  ├── single-home4.component.html
-|  |     |     |  ├── single-home4.component.spec.ts
-|  |     |     |  └── single-home4.component.ts
-|  |     |     └── single-home5
-|  |     |        ├── components
-|  |     |        |  ├── home5-about
-|  |     |        |  |  ├── home5-about.component.html
-|  |     |        |  |  ├── home5-about.component.spec.ts
-|  |     |        |  |  └── home5-about.component.ts
-|  |     |        |  ├── home5-about-2
-|  |     |        |  |  ├── home5-about-2.component.html
-|  |     |        |  |  ├── home5-about-2.component.spec.ts
-|  |     |        |  |  └── home5-about-2.component.ts
-|  |     |        |  ├── home5-cta
-|  |     |        |  |  ├── home5-cta.component.html
-|  |     |        |  |  ├── home5-cta.component.spec.ts
-|  |     |        |  |  └── home5-cta.component.ts
-|  |     |        |  ├── home5-faq
-|  |     |        |  |  ├── home5-faq.component.html
-|  |     |        |  |  ├── home5-faq.component.spec.ts
-|  |     |        |  |  └── home5-faq.component.ts
-|  |     |        |  ├── home5-hero
-|  |     |        |  |  ├── home5-hero.component.html
-|  |     |        |  |  ├── home5-hero.component.spec.ts
-|  |     |        |  |  └── home5-hero.component.ts
-|  |     |        |  ├── home5-services
-|  |     |        |  |  ├── home5-services.component.html
-|  |     |        |  |  ├── home5-services.component.spec.ts
-|  |     |        |  |  └── home5-services.component.ts
-|  |     |        |  ├── home5-testimonial
-|  |     |        |  |  ├── home5-testimonial.component.html
-|  |     |        |  |  ├── home5-testimonial.component.spec.ts
-|  |     |        |  |  └── home5-testimonial.component.ts
-|  |     |        |  ├── home5-work
-|  |     |        |  |  ├── home5-work.component.html
-|  |     |        |  |  ├── home5-work.component.spec.ts
-|  |     |        |  |  └── home5-work.component.ts
-|  |     |        |  └── single-header5
-|  |     |        |     ├── single-header5.component.html
-|  |     |        |     ├── single-header5.component.spec.ts
-|  |     |        |     └── single-header5.component.ts
-|  |     |        ├── single-home5.component.html
-|  |     |        ├── single-home5.component.spec.ts
-|  |     |        └── single-home5.component.ts
 |  |     ├── pages
-|  |     |  ├── about
-|  |     |  |  ├── about.component.html
-|  |     |  |  ├── about.component.spec.ts
-|  |     |  |  ├── about.component.ts
-|  |     |  |  └── components
-|  |     |  |     ├── about-content
-|  |     |  |     |  ├── about-content.component.html
-|  |     |  |     |  ├── about-content.component.spec.ts
-|  |     |  |     |  └── about-content.component.ts
-|  |     |  |     ├── about-content-2
-|  |     |  |     |  ├── about-content-2.component.html
-|  |     |  |     |  ├── about-content-2.component.spec.ts
-|  |     |  |     |  └── about-content-2.component.ts
-|  |     |  |     ├── about1
-|  |     |  |     |  ├── about1.component.html
-|  |     |  |     |  ├── about1.component.spec.ts
-|  |     |  |     |  └── about1.component.ts
-|  |     |  |     ├── home1-team
-|  |     |  |     |  ├── home1-team.component.html
-|  |     |  |     |  ├── home1-team.component.spec.ts
-|  |     |  |     |  └── home1-team.component.ts
-|  |     |  |     ├── home1-testimonial
-|  |     |  |     |  ├── home1-testimonial.component.html
-|  |     |  |     |  ├── home1-testimonial.component.spec.ts
-|  |     |  |     |  └── home1-testimonial.component.ts
-|  |     |  |     └── work
-|  |     |  |        ├── work.component.html
-|  |     |  |        ├── work.component.spec.ts
-|  |     |  |        └── work.component.ts
+|  |     |  ├── categories
+|  |     |  |  ├── categories.component.html
+|  |     |  |  └── categories.component.ts
 |  |     |  ├── contact
 |  |     |  |  ├── contact.component.html
 |  |     |  |  ├── contact.component.spec.ts
@@ -565,24 +505,16 @@
 |  |     |  |  ├── faq.component.html
 |  |     |  |  ├── faq.component.spec.ts
 |  |     |  |  └── faq.component.ts
-|  |     |  ├── our-team
-|  |     |  |  ├── our-team.component.html
-|  |     |  |  ├── our-team.component.spec.ts
-|  |     |  |  └── our-team.component.ts
+|  |     |  ├── home
+|  |     |  |  ├── home.component.html
+|  |     |  |  └── home.component.ts
 |  |     |  ├── pages.route.ts
-|  |     |  └── testimonial
-|  |     |     ├── components
-|  |     |     |  ├── testimonial1
-|  |     |     |  |  ├── testimonial1.component.html
-|  |     |     |  |  ├── testimonial1.component.spec.ts
-|  |     |     |  |  └── testimonial1.component.ts
-|  |     |     |  └── testimonial2
-|  |     |     |     ├── testimonial2.component.html
-|  |     |     |     ├── testimonial2.component.spec.ts
-|  |     |     |     └── testimonial2.component.ts
-|  |     |     ├── testimonial.component.html
-|  |     |     ├── testimonial.component.spec.ts
-|  |     |     └── testimonial.component.ts
+|  |     |  ├── post
+|  |     |  |  ├── post.component.html
+|  |     |  |  └── post.component.ts
+|  |     |  └── posts
+|  |     |     ├── posts.component.html
+|  |     |     └── posts.component.ts
 |  |     ├── services-pages
 |  |     |  ├── components
 |  |     |  |  ├── service-content
@@ -966,6 +898,6 @@
 ├── tsconfig.spec.json
 └── yarn.lock
 
-directory: 3948 file: 31706
+directory: 3861 file: 31725
 
 ignored: directory (99)

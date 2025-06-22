@@ -4,6 +4,7 @@ import { FaqComponent } from './faq/faq.component';
 import { Error404Component } from './error-404/error-404.component';
 import { HomeComponent } from './home/home.component';
 import { PostsComponent } from './posts/posts.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 export const PAGES_ROUTES: Routes = [
     {
@@ -15,6 +16,11 @@ export const PAGES_ROUTES: Routes = [
         path: 'posts',
         component: PostsComponent,
         data: { title: "Posts" }
+    },
+    {
+        path: 'categories',
+        component: CategoriesComponent,
+        data: { title: "Categories" }
     },
     {
         path: 'pages/contact',

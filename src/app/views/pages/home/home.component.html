@@ -1,10 +1,10 @@
 <app-layout>
-  <app-hero />
+  <app-hero [title]="pageTitle" />
   <div class="vl-blog-v1-area sp1">
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <app-blog-sidebar />
+          <app-sidebar />
           <div class="space30 d-lg-none d-block"></div>
         </div>
 
@@ -21,7 +21,7 @@
                       <li>
                         <a href="javascript:void(0)">
                           <img src="assets/img/icons/calender3.svg" alt="">
-                          {{ post.published || 'Date Unknown' }}
+                          {{ post.published ? (post.published | date: 'MM/dd/yyyy') : 'Date Unknown' }}
                         </a>
                       </li>
                     </ul>
