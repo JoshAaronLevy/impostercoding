@@ -19,11 +19,6 @@ export const VIEWS_ROUTES: Routes = [
     {
         path: '',
         component: LayoutComponent,
-        loadChildren: () => import('./case-study-pages/case-study.route').then((mod) => mod.CASE_STUDY_PAGES_ROUTES)
-    },
-    {
-        path: '',
-        component: LayoutComponent,
         loadChildren: () => import('./blog-pages/blog-pages.route').then((mod) => mod.BLOG_PAGES_ROUTES)
     },
 

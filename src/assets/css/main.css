@@ -5997,6 +5997,7 @@ Location:
   border-radius: 8px;
   transition: all 0.4s;
   position: relative;
+  padding: 50px;
 }
 .vl-blog-v1-area .vl-blog-1-item .vl-blog-1-thumb img {
   height: 75%;

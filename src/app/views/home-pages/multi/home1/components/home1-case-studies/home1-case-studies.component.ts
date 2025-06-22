@@ -2,12 +2,11 @@ import { caseStudies } from '@/assets/data';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { CaseStudyCardComponent } from "@app/components/cards/case-study-card/case-study-card.component";
 import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-home1-case-studies',
-    imports: [CarouselModule, CommonModule, CaseStudyCardComponent,RouterLink],
+    imports: [CarouselModule, CommonModule ,RouterLink],
     templateUrl: './home1-case-studies.component.html',
     styles: ``
 })

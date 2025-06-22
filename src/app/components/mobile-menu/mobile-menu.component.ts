@@ -52,73 +52,48 @@ export class MobileMenuComponent {
     ];
 
     menu: MenuItem[] = [
+        { title: 'Posts', link: '' },
+        { title: 'Categories', link: '/categories' },
+        { title: 'Tags', link: '' },
         {
-            "title": "Pages",
-            "icon": 'fa-regular fa-angle-down',
-            "isOpen": false,
-            "subMenu": [
-                { title: 'About Us', link: '/about' },
-                { title: 'Our Team', link: '/our-team' },
-                { title: 'Testimonials', link: '/testimonials' },
-                { title: 'FAQ', link: '/faq' },
-                { title: '404', link: '/error' },
-            ]
+            title: 'Pages',
+            icon: 'fa-solid fa-angle-down',
+            subMenu: [
+                { title: 'FAQ', link: '/pages/faq' },
+                { title: '404', link: '/pages/error-404' },
+            ],
         },
         {
-            "title": "Services",
-            "isOpen": false,
-            "icon": 'fa-angle-down',
-            "subMenu": [
-                { title: "Service Details Left", link: '/service-details/left' },
-                { title: "Service Details Right", link: '/service-details/right' },
-                { title: "Service Details", link: '/service-details' }
-            ]
-        },
-        {
-            "title": "Case Study",
-            "isOpen": false,
-            "icon": 'fa-angle-down',
-            "subMenu": [
-                { title: "Case Details Left", link: '/case-details/left' },
-                { title: "Case Details Right", link: '/case-details/right' },
-                { title: "Case Single", link: '/case-details/single' }
-            ]
+            title: 'Services',
+            icon: 'fa-solid fa-angle-down',
+            subMenu: [
+                { title: 'Our Services', link: '/our-services' },
+                {
+                    title: 'Service Details',
+                    subMenu: [
+                        { title: "Service Single", link: '/services/single' }
+                    ]
+                },
+            ],
         },
         {
             title: 'Blogs',
-            isOpen: false,
             icon: 'fa-solid fa-angle-down',
             subMenu: [
-                {
-                    title: 'Our Blogs',
-                    subMenu: [
-                        { title: 'Blog One', link: '/blogs/one' },
-                        { title: 'Blog Two', link: '/blogs/two' },
-                    ],
-                },
                 {
                     title: 'Blog Sidebar',
                     subMenu: [
                         { title: 'Blog Left V1', link: '/blog-sidebar/left-1' },
-                        { title: 'Blog Left V2', link: '/blog-sidebar/left-2' },
-                        { title: 'Blog Right V1', link: '/blog-sidebar/right-1' },
-                        { title: 'Blog Right V2', link: '/blog-sidebar/right-2' },
                     ],
                 },
                 {
                     title: 'Blog Details',
                     subMenu: [
-                        { title: 'Blog  Left', link: '/blog-details/left' },
-                        { title: 'Blog  Right', link: '/blog-details/right' },
                         { title: 'Blog Single', link: '/blog-details/single' },
                     ],
                 },
             ],
         },
-        {
-            "title": "Contact ",
-            "link": "/pages/contact",
-        }
     ]
 
 }

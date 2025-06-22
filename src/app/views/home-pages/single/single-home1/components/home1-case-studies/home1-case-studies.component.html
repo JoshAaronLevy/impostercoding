@@ -79,14 +79,5 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12">
-            <owl-carousel-o [options]="sliderOptions" class="case-slider-widget">
-                <ng-container *ngFor="let caseStudy of caseStudySlides.slice(0,3)">
-                    <ng-template carouselSlide>
-                        <app-case-study-card [case]="caseStudy"/>
-                    </ng-template>
-                </ng-container>
-            </owl-carousel-o>
-        </div>
     </div>
 </div>

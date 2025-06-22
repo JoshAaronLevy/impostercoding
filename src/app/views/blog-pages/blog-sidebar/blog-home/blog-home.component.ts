@@ -3,11 +3,9 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { butterService } from '@/app/services';
 
-// You should define the shape of your posts more concretely in a real app
 interface Post {
     title: string;
     summary: string;
-    // image: string;
     slug: string;
 }
 
@@ -26,7 +24,6 @@ interface Post {
     `,
 })
 export class BlogHomeComponent {
-    // --- Signals (State)
     posts = signal<Post[]>([]);
     page = signal(1);
     pageSize = signal(10);
@@ -35,13 +32,11 @@ export class BlogHomeComponent {
     private readonly router = inject(Router);
 
     constructor() {
-        // Automatically run fetch logic when the page number changes
         effect(() => {
             this.fetchPosts(this.page());
         });
     }
 
-    // --- Fetch Data
     private fetchPosts(page: number): void {
         butterService.post
             .list({ page, page_size: this.pageSize() })
@@ -62,7 +57,6 @@ export class BlogHomeComponent {
             });
     }
 
-    // --- Triggered on button click
     loadMore(): void {
         this.page.update((p) => p + 1);
     }
