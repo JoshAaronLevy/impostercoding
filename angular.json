@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "eitech-ng": {
+        "impostercoding": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/eitech-ng",
+                        "outputPath": "dist/impostercoding",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": [
@@ -25,14 +25,14 @@
                         ],
                         "stylePreprocessorOptions": {
                             "sass": {
-                              "silenceDeprecations": [
-                                "color-functions",
-                                "global-builtin",
-                                "import",
-                                "mixed-decls"
-                              ]
+                                "silenceDeprecations": [
+                                    "color-functions",
+                                    "global-builtin",
+                                    "import",
+                                    "mixed-decls"
+                                ]
                             }
-                          },
+                        },
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
@@ -42,11 +42,16 @@
                             },
                             "src/assets"
                         ],
-                        "allowedCommonJsDependencies": ["aos"],
+                        "allowedCommonJsDependencies": [
+                            "aos"
+                        ],
                         "styles": [
                             "src/styles.scss"
                         ],
-                       "scripts": [ "node_modules/jquery/dist/jquery.min.js", "node_modules/slick-carousel/slick/slick.min.js"]
+                        "scripts": [
+                            "node_modules/jquery/dist/jquery.min.js",
+                            "node_modules/slick-carousel/slick/slick.min.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
@@ -55,13 +60,13 @@
                                     "type": "initial",
                                     "maximumWarning": "2MB",
                                     "maximumError": "3MB"
-                                  },
-                                  {
+                                },
+                                {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "2MB",
                                     "maximumError": "3MB"
-                                  }
-                              ],
+                                }
+                            ],
                             "outputHashing": "all"
                         },
                         "development": {
@@ -76,10 +81,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "eitech-ng:build:production"
+                            "buildTarget": "impostercoding:build:production"
                         },
                         "development": {
-                            "buildTarget": "eitech-ng:build:development"
+                            "buildTarget": "impostercoding:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -112,6 +117,6 @@
         }
     },
     "cli": {
-      "analytics": "0d758c2a-75ca-4b05-a233-33fab3fd8eb8"
+        "analytics": "0d758c2a-75ca-4b05-a233-33fab3fd8eb8"
     }
 }
