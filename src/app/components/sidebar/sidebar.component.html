@@ -2,11 +2,13 @@
   <div class="category-list-area">
     <h3>Categories</h3>
     <div class="space10"></div>
-    <ul>
-      <li *ngFor="let category of categories">
-        <a href="javascript:void(0)">{{ category }} <span><i class="fa-solid fa-angle-right"></i></span></a>
-      </li>
-    </ul>
+    @if (categories) {
+      <ul>
+        <li *ngFor="let category of categories">
+          <a href="javascript:void(0)">{{ category.name }} <span><i class="fa-solid fa-angle-right"></i></span></a>
+        </li>
+      </ul>
+    }
   </div>
 
   <div class="space30"></div>

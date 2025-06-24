@@ -66,7 +66,6 @@ export class CategoriesComponent {
   getCategories() {
     butterService.category.list()
       .then((res: any) => {
-        console.log("Categories: ", res?.data?.data);
         this.categories.set(res?.data?.data || []);
         this.step.set(3);
         this.progressLoaderTwo();

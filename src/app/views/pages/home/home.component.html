@@ -11,9 +11,11 @@
         <div class="row">
           <div *ngFor="let post of posts()" class="col-lg-6 col-md-6">
             <div class="vl-blog-1-item">
-              <div class="vl-blog-1-thumb image-anime">
-                <img [src]="post.featured_image">
-              </div>
+              <a [routerLink]="['/', post.slug]">
+                <div class="vl-blog-1-thumb image-anime">
+                  <img [src]="post.featured_image">
+                </div>
+              </a>
               <div class="vl-blog-1-content">
                 <div class="vl-blog-meta">
                   <ul>
@@ -32,7 +34,7 @@
                 </h4>
                 <div class="space20"></div>
                 <a [routerLink]="['/', post.slug]" class="readmore">
-                  Learn More <i class="fa-solid fa-arrow-right"></i>
+                  Read More <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
