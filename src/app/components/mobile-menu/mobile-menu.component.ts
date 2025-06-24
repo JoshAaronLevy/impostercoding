@@ -54,8 +54,8 @@ export class MobileMenuComponent {
     menu: MenuItem[] = [
         { title: 'Posts', link: '/posts' },
         { title: 'Categories', link: '/categories' },
-        { title: 'Tags', link: '/categories' },
-        { title: 'Contact', link: '/posts' },
+        // { title: 'Tags', link: '/categories' },
+        // { title: 'Contact', link: '/posts' },
     ]
 
 }

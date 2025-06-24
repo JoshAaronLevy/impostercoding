@@ -1,3 +1,4 @@
+import { butterService } from '@/app/services';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
@@ -8,15 +9,23 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class SidebarComponent {
-  categories: string[] = [
-    'Cyber Security Solution',
-    'Scalable Cloud Solution',
-    'Data Protection Services',
-    'Optimization Management',
-    'HelpDesk 360 Solutions',
-    'Software Development',
-    'Custom App Development',
-    'It Infrastructure Networking',
-    'Business Consulting'
-  ];
+  categories: any;
+
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    this.getCategories();
+  }
+
+  getCategories() {
+    butterService.category.list()
+      .then((res: any) => {
+        this.categories = (res?.data?.data || []);
+      })
+      .catch((err) => {
+        console.error('Error fetching categories:', err);
+      });
+  }
 }
