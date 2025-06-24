@@ -462,37 +462,6 @@
 |  |  |  ├── highlight.service.ts
 |  |  |  └── index.ts
 |  |  └── views
-|  |     ├── blog-pages
-|  |     |  ├── blog-details
-|  |     |  |  ├── blog-single
-|  |     |  |  |  ├── blog-single.component.html
-|  |     |  |  |  ├── blog-single.component.spec.ts
-|  |     |  |  |  └── blog-single.component.ts
-|  |     |  |  └── components
-|  |     |  |     ├── blog-detail-content
-|  |     |  |     |  ├── blog-detail-content.component.html
-|  |     |  |     |  ├── blog-detail-content.component.spec.ts
-|  |     |  |     |  └── blog-detail-content.component.ts
-|  |     |  |     └── view-more-blog
-|  |     |  |        ├── view-more-blog.component.html
-|  |     |  |        ├── view-more-blog.component.spec.ts
-|  |     |  |        └── view-more-blog.component.ts
-|  |     |  ├── blog-pages.route.ts
-|  |     |  ├── blog-sidebar
-|  |     |  |  ├── blog-home
-|  |     |  |  |  ├── blog-home.component.html
-|  |     |  |  |  ├── blog-home.component.spec.ts
-|  |     |  |  |  └── blog-home.component.ts
-|  |     |  |  └── components
-|  |     |  |     └── blog-sidebar
-|  |     |  |        ├── blog-sidebar.component.html
-|  |     |  |        ├── blog-sidebar.component.spec.ts
-|  |     |  |        └── blog-sidebar.component.ts
-|  |     |  └── blogs
-|  |     |     └── blog-one
-|  |     |        ├── blog-one.component.html
-|  |     |        ├── blog-one.component.spec.ts
-|  |     |        └── blog-one.component.ts
 |  |     ├── pages
 |  |     |  ├── categories
 |  |     |  |  ├── categories.component.html
@@ -515,6 +484,7 @@
 |  |     |  ├── pages.route.ts
 |  |     |  ├── post
 |  |     |  |  ├── post.component.html
+|  |     |  |  ├── post.component.scss
 |  |     |  |  └── post.component.ts
 |  |     |  └── posts
 |  |     |     ├── posts.component.html
@@ -538,22 +508,6 @@
 |  |  ├── data.ts
 |  |  ├── img
 |  |  |  ├── all-images
-|  |  |  |  ├── about
-|  |  |  |  |  ├── about-img1.png
-|  |  |  |  |  ├── about-img10.png
-|  |  |  |  |  ├── about-img11.png
-|  |  |  |  |  ├── about-img12.png
-|  |  |  |  |  ├── about-img13.png
-|  |  |  |  |  ├── about-img14.png
-|  |  |  |  |  ├── about-img15.png
-|  |  |  |  |  ├── about-img2.png
-|  |  |  |  |  ├── about-img3.png
-|  |  |  |  |  ├── about-img4.png
-|  |  |  |  |  ├── about-img5.png
-|  |  |  |  |  ├── about-img6.png
-|  |  |  |  |  ├── about-img7.png
-|  |  |  |  |  ├── about-img8.png
-|  |  |  |  |  └── about-img9.png
 |  |  |  |  ├── bg
 |  |  |  |  |  ├── about-bg1.png
 |  |  |  |  |  ├── about-bg2.png
@@ -606,8 +560,6 @@
 |  |  |  |  |  ├── demo-img3.png
 |  |  |  |  |  ├── demo-img4.png
 |  |  |  |  |  └── demo-img5.png
-|  |  |  |  ├── faq
-|  |  |  |  |  └── faq-img1.png
 |  |  |  |  ├── hero
 |  |  |  |  |  ├── hero-img1.png
 |  |  |  |  |  ├── hero-img2.png
@@ -617,18 +569,8 @@
 |  |  |  |  |  ├── hero-img6.png
 |  |  |  |  |  └── hero-img7.png
 |  |  |  |  ├── others
-|  |  |  |  |  ├── author-img1.png
-|  |  |  |  |  ├── author-img2.png
-|  |  |  |  |  ├── author-img3.png
-|  |  |  |  |  ├── author-img4.png
-|  |  |  |  |  ├── author-img5.png
-|  |  |  |  |  ├── author-img6.png
-|  |  |  |  |  ├── author-img7.png
-|  |  |  |  |  ├── author-img8.png
 |  |  |  |  |  ├── download-img1.png
-|  |  |  |  |  ├── error.png
-|  |  |  |  |  ├── others-img1.png
-|  |  |  |  |  └── others-img2.png
+|  |  |  |  |  └── error.png
 |  |  |  |  └── service
 |  |  |  |     ├── service-img1.png
 |  |  |  |     ├── service-img2.png
@@ -636,53 +578,9 @@
 |  |  |  |     └── service-img4.png
 |  |  |  ├── elements
 |  |  |  |  ├── elements1.png
-|  |  |  |  ├── elements10.png
-|  |  |  |  ├── elements11.png
-|  |  |  |  ├── elements12.png
-|  |  |  |  ├── elements13.png
-|  |  |  |  ├── elements14.png
-|  |  |  |  ├── elements15.png
 |  |  |  |  ├── elements16.png
-|  |  |  |  ├── elements17.png
-|  |  |  |  ├── elements18.png
-|  |  |  |  ├── elements19.png
-|  |  |  |  ├── elements2.png
-|  |  |  |  ├── elements20.png
-|  |  |  |  ├── elements21.png
-|  |  |  |  ├── elements22.png
-|  |  |  |  ├── elements23.png
-|  |  |  |  ├── elements24.png
-|  |  |  |  ├── elements25.png
-|  |  |  |  ├── elements26.png
-|  |  |  |  ├── elements27.png
-|  |  |  |  ├── elements28.png
-|  |  |  |  ├── elements29.png
-|  |  |  |  ├── elements3.png
-|  |  |  |  ├── elements30.png
-|  |  |  |  ├── elements31.png
-|  |  |  |  ├── elements32.png
-|  |  |  |  ├── elements33.png
-|  |  |  |  ├── elements34.png
-|  |  |  |  ├── elements35.png
-|  |  |  |  ├── elements36.png
-|  |  |  |  ├── elements37.png
-|  |  |  |  ├── elements38.png
-|  |  |  |  ├── elements39.png
 |  |  |  |  ├── elements4.png
-|  |  |  |  ├── elements40.png
-|  |  |  |  ├── elements41.png
-|  |  |  |  ├── elements42.png
-|  |  |  |  ├── elements43.png
-|  |  |  |  ├── elements44.png
-|  |  |  |  ├── elements45.png
-|  |  |  |  ├── elements46.png
-|  |  |  |  ├── elements47.png
-|  |  |  |  ├── elements48.png
-|  |  |  |  ├── elements5.png
-|  |  |  |  ├── elements6.png
-|  |  |  |  ├── elements7.png
-|  |  |  |  ├── elements8.png
-|  |  |  |  └── elements9.png
+|  |  |  |  └── elements5.png
 |  |  |  ├── icons
 |  |  |  |  ├── arrow1.svg
 |  |  |  |  ├── calender1.svg
@@ -748,18 +646,8 @@
 |  |  |  |  └── work4.svg
 |  |  |  └── logo
 |  |  |     ├── Imposter-Coding-Logo.png
-|  |  |     ├── fav-logo1.png
-|  |  |     ├── fav-logo2.png
-|  |  |     ├── fav-logo3.png
-|  |  |     ├── fav-logo4.png
 |  |  |     ├── imposter_coding_logo-transparent-cropped.png
 |  |  |     ├── imposter_coding_logo-transparent-square.png
-|  |  |     ├── logo1.png
-|  |  |     ├── logo2.png
-|  |  |     ├── logo3.png
-|  |  |     ├── logo4.png
-|  |  |     ├── logo5.png
-|  |  |     ├── logo6.png
 |  |  |     └── preloader.png
 |  |  └── scss
 |  |     ├── components
@@ -829,6 +717,6 @@
 ├── tsconfig.spec.json
 └── yarn.lock
 
-directory: 3849 file: 31668
+directory: 3835 file: 31570
 
 ignored: directory (99)
