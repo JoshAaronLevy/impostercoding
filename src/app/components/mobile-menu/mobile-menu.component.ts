@@ -52,73 +52,10 @@ export class MobileMenuComponent {
     ];
 
     menu: MenuItem[] = [
-        {
-            "title": "Pages",
-            "icon": 'fa-regular fa-angle-down',
-            "isOpen": false,
-            "subMenu": [
-                { title: 'About Us', link: '/about' },
-                { title: 'Our Team', link: '/our-team' },
-                { title: 'Testimonials', link: '/testimonials' },
-                { title: 'FAQ', link: '/faq' },
-                { title: '404', link: '/error' },
-            ]
-        },
-        {
-            "title": "Services",
-            "isOpen": false,
-            "icon": 'fa-angle-down',
-            "subMenu": [
-                { title: "Service Details Left", link: '/service-details/left' },
-                { title: "Service Details Right", link: '/service-details/right' },
-                { title: "Service Details", link: '/service-details' }
-            ]
-        },
-        {
-            "title": "Case Study",
-            "isOpen": false,
-            "icon": 'fa-angle-down',
-            "subMenu": [
-                { title: "Case Details Left", link: '/case-details/left' },
-                { title: "Case Details Right", link: '/case-details/right' },
-                { title: "Case Single", link: '/case-details/single' }
-            ]
-        },
-        {
-            title: 'Blogs',
-            isOpen: false,
-            icon: 'fa-solid fa-angle-down',
-            subMenu: [
-                {
-                    title: 'Our Blogs',
-                    subMenu: [
-                        { title: 'Blog One', link: '/blogs/one' },
-                        { title: 'Blog Two', link: '/blogs/two' },
-                    ],
-                },
-                {
-                    title: 'Blog Sidebar',
-                    subMenu: [
-                        { title: 'Blog Left V1', link: '/blog-sidebar/left-1' },
-                        { title: 'Blog Left V2', link: '/blog-sidebar/left-2' },
-                        { title: 'Blog Right V1', link: '/blog-sidebar/right-1' },
-                        { title: 'Blog Right V2', link: '/blog-sidebar/right-2' },
-                    ],
-                },
-                {
-                    title: 'Blog Details',
-                    subMenu: [
-                        { title: 'Blog  Left', link: '/blog-details/left' },
-                        { title: 'Blog  Right', link: '/blog-details/right' },
-                        { title: 'Blog Single', link: '/blog-details/single' },
-                    ],
-                },
-            ],
-        },
-        {
-            "title": "Contact ",
-            "link": "/pages/contact",
-        }
+        { title: 'Posts', link: '/posts' },
+        { title: 'Categories', link: '/categories' },
+        { title: 'Tags', link: '/categories' },
+        { title: 'Contact', link: '/posts' },
     ]
 
 }

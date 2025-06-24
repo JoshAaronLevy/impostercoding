@@ -1,0 +1,479 @@
+/* ============ Custom Post Styling ============ */
+
+.post-img {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 650px !important;
+  }
+}
+
+.post-content {
+  padding: 10px 25px !important;
+}
+
+.post-content h2 {
+  margin-bottom: -20px !important;
+  font-weight: 600 !important;
+}
+
+.post-content h2.indented {
+  margin-bottom: -20px !important;
+  margin-left: 30px !important;
+  font-weight: 600 !important;
+}
+
+.post-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 40px 30px;
+}
+
+.post-content ol li {
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+}
+
+.post-content ul li {
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+}
+
+.post-content p.embedded-image {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.post-content p img {
+  width: 100% !important;
+}
+
+.code-toolbar>.toolbar {
+  top: 0em !important;
+  right: 0em !important;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.code-toolbar>.toolbar button {
+  padding: 0.15em 0.5em !important;
+  font-size: 1em !important;
+  color: #ffffff !important;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.code-toolbar>.toolbar button:hover {
+  color: #2D2D2D !important;
+  background-color: #F4F5F7 !important;
+}
+
+.code-toolbar>.toolbar a {
+  padding-top: 0.45rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* ============ PrismJS v1.22.0 Styling ============ */
+/*
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash+c+csharp+cpp+coffeescript+diff+docker+git+go+graphql+handlebars+http+java+js-extras+json+json5+jsonp+js-templates+kotlin+less+makefile+markdown+markup-templating+mongodb+objectivec+php+php-extras+plsql+powershell+pug+python+r+jsx+tsx+regex+ruby+sass+scss+scala+shell-session+splunk-spl+sql+stylus+swift+typescript+typoscript+vim+xml-doc+yaml&plugins=line-highlight+line-numbers+custom-class+file-highlight+show-language+jsonp-highlight+highlight-keywords+keep-markup+command-line+unescaped-markup+data-uri-highlight+toolbar+copy-to-clipboard+download-button+match-braces+diff-highlight
+*/
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #f4f5f7;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+:not(pre)>code[class*='language-'],
+pre[class*='language-'] {
+  background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre)>code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+}
+
+.token.punctuation {
+  color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+  color: #e2777a;
+}
+
+.token.function-name {
+  color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+  color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.inserted {
+  color: green;
+}
+
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prism’s padding-top */
+
+  background: hsla(24, 20%, 50%, 0.08);
+  background: linear-gradient(to right,
+      hsla(24, 20%, 50%, 0.1) 70%,
+      hsla(24, 20%, 50%, 0));
+
+  pointer-events: none;
+
+  line-height: inherit;
+  white-space: pre;
+}
+
+@media print {
+  .line-highlight {
+    /*
+      * This will prevent browsers from replacing the background color with white.
+      * It's necessary because the element is layered on top of the displayed code.
+    */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: hsla(24, 20%, 50%, 0.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+  content: none;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows {
+  pointer-events: all;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows>span:before {
+  cursor: pointer;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows>span:hover:before {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+pre[class*='language-'].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*='language-'].line-numbers>code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows>span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows>span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar>.toolbar {
+  position: absolute;
+  top: 0.3em;
+  right: 0.2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover>.toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+      IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within>.toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar>.toolbar .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar>.toolbar a {
+  cursor: pointer;
+}
+
+div.code-toolbar>.toolbar button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar>.toolbar a,
+div.code-toolbar>.toolbar button,
+div.code-toolbar>.toolbar span {
+  color: #bbb;
+  font-size: 0.8em;
+  padding: 0 0.5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.2);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+}
+
+div.code-toolbar>.toolbar a:hover,
+div.code-toolbar>.toolbar a:focus,
+div.code-toolbar>.toolbar button:hover,
+div.code-toolbar>.toolbar button:focus,
+div.code-toolbar>.toolbar span:hover,
+div.code-toolbar>.toolbar span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.command-line-prompt {
+  border-right: 1px solid #999;
+  display: block;
+  float: left;
+  font-size: 100%;
+  letter-spacing: -1px;
+  margin-right: 1em;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.command-line-prompt>span:before {
+  color: #999;
+  content: ' ';
+  display: block;
+  padding-right: 0.8em;
+}
+
+.command-line-prompt>span[data-user]:before {
+  content: '[' attr(data-user) '@' attr(data-host) '] $';
+}
+
+.command-line-prompt>span[data-user='root']:before {
+  content: '[' attr(data-user) '@' attr(data-host) '] #';
+}
+
+.command-line-prompt>span[data-prompt]:before {
+  content: attr(data-prompt);
+}
+
+/* Fallback, in case JS does not run, to ensure the code is at least visible */
+[class*='lang-'] script[type='text/plain'],
+[class*='language-'] script[type='text/plain'],
+script[type='text/plain'][class*='lang-'],
+script[type='text/plain'][class*='language-'] {
+  display: block;
+  font: 100% Consolas, Monaco, monospace;
+  white-space: pre;
+  overflow: auto;
+}
+
+.token.punctuation.brace-hover,
+.token.punctuation.brace-selected {
+  outline: solid 1px;
+}
+
+.rainbow-braces .token.punctuation.brace-level-1,
+.rainbow-braces .token.punctuation.brace-level-5,
+.rainbow-braces .token.punctuation.brace-level-9 {
+  color: #e50;
+  opacity: 1;
+}
+
+.rainbow-braces .token.punctuation.brace-level-2,
+.rainbow-braces .token.punctuation.brace-level-6,
+.rainbow-braces .token.punctuation.brace-level-10 {
+  color: #0b3;
+  opacity: 1;
+}
+
+.rainbow-braces .token.punctuation.brace-level-3,
+.rainbow-braces .token.punctuation.brace-level-7,
+.rainbow-braces .token.punctuation.brace-level-11 {
+  color: #26f;
+  opacity: 1;
+}
+
+.rainbow-braces .token.punctuation.brace-level-4,
+.rainbow-braces .token.punctuation.brace-level-8,
+.rainbow-braces .token.punctuation.brace-level-12 {
+  color: #e0e;
+  opacity: 1;
+}
+
+pre.diff-highlight>code .token.deleted:not(.prefix),
+pre>code.diff-highlight .token.deleted:not(.prefix) {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: inherit;
+  display: block;
+}
+
+pre.diff-highlight>code .token.inserted:not(.prefix),
+pre>code.diff-highlight .token.inserted:not(.prefix) {
+  background-color: rgba(0, 255, 128, 0.1);
+  color: inherit;
+  display: block;
+}

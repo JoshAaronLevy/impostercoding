@@ -4,7 +4,7 @@
         <a [routerLink]="item.link" (click)="$event.preventDefault()">
             {{ item.title }}
             @if (item.icon) {
-            <span><i class="{{ item.icon }}"></i></span>
+                <span><i class="{{ item.icon }}"></i></span>
             }
         </a>
 
@@ -46,7 +46,7 @@
                                     @if (arrow) {
                                     <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
                                     }
-                                      @if (arrow2) {
+                                    @if (arrow2) {
                                     <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span>
                                     <span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
                                     }
