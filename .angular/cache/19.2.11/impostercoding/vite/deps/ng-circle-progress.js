@@ -3,7 +3,7 @@ import {
   DOCUMENT,
   NgForOf,
   NgIf
-} from "./chunk-5RUEN5NA.js";
+} from "./chunk-DC2P7RUN.js";
 import {
   Component,
   ElementRef,
@@ -37,10 +37,12 @@ import {
   ɵɵtemplate,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-N3GH2MWP.js";
+} from "./chunk-I7AWDIQA.js";
+import "./chunk-WCYHURJF.js";
+import "./chunk-AUREPRPG.js";
 import {
   timer
-} from "./chunk-P6U2JBMQ.js";
+} from "./chunk-3TXA6K3X.js";
 import "./chunk-3OV72XIM.js";
 
 // node_modules/ng-circle-progress/fesm2020/ng-circle-progress.mjs

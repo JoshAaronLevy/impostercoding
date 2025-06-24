@@ -1,5 +1,4 @@
 import { Component, signal, effect, inject } from '@angular/core';
-import { LayoutComponent } from "@layouts/layout.component";
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
@@ -17,7 +16,7 @@ interface Post {
 
 @Component({
   selector: 'app-home',
-  imports: [LayoutComponent, HeroComponent, SidebarComponent, CommonModule, RouterLink],
+  imports: [HeroComponent, SidebarComponent, CommonModule, RouterLink],
   templateUrl: './home.component.html',
   styles: ``
 })
@@ -40,8 +39,7 @@ export class HomeComponent {
     butterService.post
       .list({ page, page_size: this.pageSize() })
       .then((res: any) => {
-        console.log('Fetched posts: ', res.data.data);
-        const newPosts: Post[] = res.data.data;
+        const newPosts: Post[] = res?.data?.data;
 
         if (page === 1) {
           this.posts.set(newPosts);

@@ -7,10 +7,4 @@ export const VIEWS_ROUTES: Routes = [
         component: LayoutComponent,
         loadChildren: () => import('./pages/pages.route').then((mod) => mod.PAGES_ROUTES)
     },
-    {
-        path: '',
-        component: LayoutComponent,
-        loadChildren: () => import('./blog-pages/blog-pages.route').then((mod) => mod.BLOG_PAGES_ROUTES)
-    },
-
 ];

@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { Component, signal, effect, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { HeroComponent } from '@app/components/hero/hero.component';
-import { PageHeaderComponent } from "@app/components/page-header/page-header.component";
-import { LayoutComponent } from "@layouts/layout.component";
 
 interface Post {
   title: string;
@@ -17,7 +15,7 @@ interface Post {
 
 @Component({
   selector: 'app-posts',
-  imports: [PageHeaderComponent, CommonModule, RouterLink, LayoutComponent, HeroComponent],
+  imports: [CommonModule, RouterLink, HeroComponent],
   templateUrl: './posts.component.html',
   styles: ``
 })
@@ -42,8 +40,7 @@ export class PostsComponent {
     butterService.post
       .list({ page, page_size: this.pageSize() })
       .then((res: any) => {
-        console.log('Fetched posts: ', res.data.data);
-        const newPosts: Post[] = res.data.data;
+        const newPosts: Post[] = res?.data?.data;
 
         if (page === 1) {
           this.posts.set(newPosts);
@@ -64,6 +61,7 @@ export class PostsComponent {
   }
 
   viewPost(post: Post): void {
+    console.log('Navigating to post:', post.slug);
     this.router.navigate([`/${post.slug}`]);
   }
 }

@@ -54,46 +54,8 @@ export class MobileMenuComponent {
     menu: MenuItem[] = [
         { title: 'Posts', link: '/posts' },
         { title: 'Categories', link: '/categories' },
-        { title: 'Tags', link: '' },
-        {
-            title: 'Pages',
-            icon: 'fa-solid fa-angle-down',
-            subMenu: [
-                { title: 'FAQ', link: '/pages/faq' },
-                { title: '404', link: '/pages/error-404' },
-            ],
-        },
-        {
-            title: 'Services',
-            icon: 'fa-solid fa-angle-down',
-            subMenu: [
-                { title: 'Our Services', link: '/our-services' },
-                {
-                    title: 'Service Details',
-                    subMenu: [
-                        { title: "Service Single", link: '/services/single' }
-                    ]
-                },
-            ],
-        },
-        {
-            title: 'Blogs',
-            icon: 'fa-solid fa-angle-down',
-            subMenu: [
-                {
-                    title: 'Blog Sidebar',
-                    subMenu: [
-                        { title: 'Blog Left V1', link: '/blog-sidebar/left-1' },
-                    ],
-                },
-                {
-                    title: 'Blog Details',
-                    subMenu: [
-                        { title: 'Blog Single', link: '/blog-details/single' },
-                    ],
-                },
-            ],
-        },
+        { title: 'Tags', link: '/categories' },
+        { title: 'Contact', link: '/posts' },
     ]
 
 }

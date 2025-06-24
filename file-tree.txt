@@ -383,6 +383,7 @@
 |     |  ├── scripts-CWJO5AXB.js
 |     |  └── styles-JJOJAHVQ.css
 |     └── prerendered-routes.json
+├── file-tree.txt
 ├── package-lock.json
 ├── package.json
 ├── public
@@ -440,6 +441,9 @@
 |  |  |  |  ├── scroll-to-top.component.html
 |  |  |  |  ├── scroll-to-top.component.spec.ts
 |  |  |  |  └── scroll-to-top.component.ts
+|  |  |  ├── sidebar
+|  |  |  |  ├── sidebar.component.html
+|  |  |  |  └── sidebar.component.ts
 |  |  |  ├── single-mobile-menu
 |  |  |  |  ├── single-mobile-menu.component.html
 |  |  |  |  ├── single-mobile-menu.component.spec.ts
@@ -515,30 +519,6 @@
 |  |     |  └── posts
 |  |     |     ├── posts.component.html
 |  |     |     └── posts.component.ts
-|  |     ├── services-pages
-|  |     |  ├── components
-|  |     |  |  ├── service-content
-|  |     |  |  |  ├── service-content.component.html
-|  |     |  |  |  ├── service-content.component.spec.ts
-|  |     |  |  |  └── service-content.component.ts
-|  |     |  |  ├── service-sidebar
-|  |     |  |  |  ├── service-sidebar.component.html
-|  |     |  |  |  ├── service-sidebar.component.spec.ts
-|  |     |  |  |  └── service-sidebar.component.ts
-|  |     |  |  └── view-more-services
-|  |     |  |     ├── view-more-services.component.html
-|  |     |  |     ├── view-more-services.component.spec.ts
-|  |     |  |     └── view-more-services.component.ts
-|  |     |  ├── services
-|  |     |  |  ├── components
-|  |     |  |  |  └── service-about
-|  |     |  |  |     ├── service-about.component.html
-|  |     |  |  |     ├── service-about.component.spec.ts
-|  |     |  |  |     └── service-about.component.ts
-|  |     |  |  ├── services.component.html
-|  |     |  |  ├── services.component.spec.ts
-|  |     |  |  └── services.component.ts
-|  |     |  └── services-pages.route.ts
 |  |     └── views.route.ts
 |  ├── assets
 |  |  ├── css
@@ -620,23 +600,6 @@
 |  |  |  |  |  ├── blog-img7.png
 |  |  |  |  |  ├── blog-img8.png
 |  |  |  |  |  └── blog-img9.png
-|  |  |  |  ├── case
-|  |  |  |  |  ├── case-img1.png
-|  |  |  |  |  ├── case-img10.png
-|  |  |  |  |  ├── case-img11.png
-|  |  |  |  |  ├── case-img12.png
-|  |  |  |  |  ├── case-img2.png
-|  |  |  |  |  ├── case-img3.png
-|  |  |  |  |  ├── case-img4.png
-|  |  |  |  |  ├── case-img5.png
-|  |  |  |  |  ├── case-img6.png
-|  |  |  |  |  ├── case-img7.png
-|  |  |  |  |  ├── case-img8.png
-|  |  |  |  |  └── case-img9.png
-|  |  |  |  ├── cta
-|  |  |  |  |  ├── cta-img1.png
-|  |  |  |  |  ├── cta-img2.png
-|  |  |  |  |  └── cta-img3.png
 |  |  |  |  ├── demo
 |  |  |  |  |  ├── demo-img1.png
 |  |  |  |  |  ├── demo-img2.png
@@ -666,43 +629,11 @@
 |  |  |  |  |  ├── error.png
 |  |  |  |  |  ├── others-img1.png
 |  |  |  |  |  └── others-img2.png
-|  |  |  |  ├── service
-|  |  |  |  |  ├── service-img1.png
-|  |  |  |  |  ├── service-img2.png
-|  |  |  |  |  ├── service-img3.png
-|  |  |  |  |  └── service-img4.png
-|  |  |  |  ├── team
-|  |  |  |  |  ├── team-img1.png
-|  |  |  |  |  ├── team-img10.png
-|  |  |  |  |  ├── team-img11.png
-|  |  |  |  |  ├── team-img12.png
-|  |  |  |  |  ├── team-img13.png
-|  |  |  |  |  ├── team-img14.png
-|  |  |  |  |  ├── team-img15.png
-|  |  |  |  |  ├── team-img16.png
-|  |  |  |  |  ├── team-img2.png
-|  |  |  |  |  ├── team-img3.png
-|  |  |  |  |  ├── team-img4.png
-|  |  |  |  |  ├── team-img5.png
-|  |  |  |  |  ├── team-img6.png
-|  |  |  |  |  ├── team-img7.png
-|  |  |  |  |  ├── team-img8.png
-|  |  |  |  |  └── team-img9.png
-|  |  |  |  ├── testimonial
-|  |  |  |  |  ├── testimonial-img1.png
-|  |  |  |  |  ├── testimonial-img2.png
-|  |  |  |  |  ├── testimonial-img3.png
-|  |  |  |  |  ├── testimonial-img4.png
-|  |  |  |  |  ├── testimonial-img5.png
-|  |  |  |  |  ├── testimonial-img6.png
-|  |  |  |  |  ├── testimonial-img7.png
-|  |  |  |  |  ├── testimonial-img8.png
-|  |  |  |  |  └── testimonial-img9.png
-|  |  |  |  └── work
-|  |  |  |     ├── work-img1.png
-|  |  |  |     ├── work-img2.png
-|  |  |  |     ├── work-img3.png
-|  |  |  |     └── work-img4.png
+|  |  |  |  └── service
+|  |  |  |     ├── service-img1.png
+|  |  |  |     ├── service-img2.png
+|  |  |  |     ├── service-img3.png
+|  |  |  |     └── service-img4.png
 |  |  |  ├── elements
 |  |  |  |  ├── elements1.png
 |  |  |  |  ├── elements10.png
@@ -898,6 +829,6 @@
 ├── tsconfig.spec.json
 └── yarn.lock
 
-directory: 3861 file: 31725
+directory: 3849 file: 31668
 
 ignored: directory (99)

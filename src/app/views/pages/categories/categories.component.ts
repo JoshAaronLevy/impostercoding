@@ -4,12 +4,11 @@ import { ServiceCardComponent } from "@app/components/cards/service-card/service
 import { Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { butterService } from '@/app/services';
-import { LayoutComponent } from '@layouts/layout.component';
 import { HeroComponent } from '@app/components/hero/hero.component';
 
 @Component({
   selector: 'app-categories',
-  imports: [CommonModule, LayoutComponent, HeroComponent, ServiceCardComponent],
+  imports: [CommonModule, HeroComponent, ServiceCardComponent],
   templateUrl: './categories.component.html',
   styles: ``
 })
