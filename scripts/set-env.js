@@ -1,7 +1,5 @@
-import { writeFileSync } from 'fs';
-import * as dotenv from 'dotenv';
-
-dotenv.config();
+const fs = require('fs');
+require('dotenv').config();
 
 const targetPath = './src/environments/environment.ts';
 const envConfigFile = `
@@ -11,5 +9,5 @@ export const environment = {
 };
 `;
 
-writeFileSync(targetPath, envConfigFile);
+fs.writeFileSync(targetPath, envConfigFile);
 console.log(`✅ Environment file generated at ${targetPath}`);
