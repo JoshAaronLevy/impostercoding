@@ -40,7 +40,6 @@ export class HomeComponent {
       .list({ page, page_size: this.pageSize() })
       .then((res: any) => {
         const newPosts: Post[] = res?.data?.data;
-        console.log('Fetched posts:', newPosts);
 
         if (page === 1) {
           this.posts.set(newPosts);
