@@ -1,7 +1,6 @@
 import {
   Component,
   ViewEncapsulation,
-  AfterViewChecked,
   OnDestroy,
   OnInit,
   signal,
@@ -24,7 +23,7 @@ import { HeroComponent } from '@app/components/hero/hero.component';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
 })
-export class PostComponent implements OnInit, AfterViewChecked, OnDestroy {
+export class PostComponent implements OnInit, OnDestroy {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private highlightService = inject(HighlightService);
@@ -34,7 +33,6 @@ export class PostComponent implements OnInit, AfterViewChecked, OnDestroy {
   post: any;
   tags: any[] = [];
   tag: any;
-  highlighted = signal(false);
   loading = signal(true);
   showData = signal(false);
 
@@ -48,13 +46,6 @@ export class PostComponent implements OnInit, AfterViewChecked, OnDestroy {
     this.showData.set(false);
     this.step1.set(true);
     this.progressLoaderOne();
-  }
-
-  ngAfterViewChecked() {
-    if (!this.highlighted()) {
-      this.highlightService.highlightAll();
-      this.highlighted.set(true);
-    }
   }
 
   ngOnDestroy() {
@@ -114,6 +105,7 @@ export class PostComponent implements OnInit, AfterViewChecked, OnDestroy {
       this.step4.set(false);
       this.loading.set(false);
       this.showData.set(true);
+      setTimeout(() => this.highlightService.highlightAll(), 50);
     }
   }
 
