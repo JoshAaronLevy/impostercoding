@@ -21,6 +21,11 @@ export const PAGES_ROUTES: Routes = [
         data: { title: "Categories" }
     },
     {
+        path: 'posts/:categorySlug',
+        component: PostsComponent,
+        data: { title: "Posts by Category" }
+    },
+    {
         path: ':slug',
         component: PostComponent
     },

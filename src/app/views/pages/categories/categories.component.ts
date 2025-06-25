@@ -35,7 +35,6 @@ export class CategoriesComponent {
   }
 
   getCategories() {
-    console.log('Fetching categories...');
     butterService.category.list()
       .then((res: any) => {
         const newCategories: Category[] = res?.data?.data || [];
@@ -47,6 +46,6 @@ export class CategoriesComponent {
   }
 
   viewCategory(category: Category): void {
-    this.router.navigate([`/${category.slug}`]);
+    this.router.navigate(['/posts', category.slug]);
   }
 }
