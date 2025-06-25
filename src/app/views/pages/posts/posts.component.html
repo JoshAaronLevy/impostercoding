@@ -4,23 +4,25 @@
     <div class="row">
       <div *ngFor="let post of posts()" class="col-lg-4 col-md-6">
         <div class="vl-blog-1-item">
-          <div class="vl-blog-1-thumb image-anime">
-            <img [src]="post.featured_image" alt="">
-          </div>
-          <div class="vl-blog-1-content">
-            <div class="vl-blog-meta">
-              <ul>
-                <li>
-                  <img src="assets/img/icons/calender3.svg" alt=""> {{ post.published ? (post.published | date: 'MM/dd/yyyy') : 'Date Unknown' }}
-                </li>
-              </ul>
+          <a [routerLink]="['/', post.slug]">
+            <div class="vl-blog-1-thumb image-anime">
+              <img [src]="post.featured_image" alt="">
             </div>
-            <div class="space16"></div>
-            <h4 class="vl-blog-1-title">
-              <a [routerLink]="['/', post.slug]">{{post.title}}</a></h4>
-            <div class="space20"></div>
-            <a [routerLink]="['/', post.slug]" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
+            <div class="vl-blog-1-content">
+              <div class="vl-blog-meta">
+                <ul>
+                  <li>
+                    <img src="assets/img/icons/calender3.svg" alt=""> {{ post.published ? (post.published | date: 'MM/dd/yyyy') : 'Date Unknown' }}
+                  </li>
+                </ul>
+              </div>
+              <div class="space16"></div>
+              <h4 class="vl-blog-1-title">
+                <a [routerLink]="['/', post.slug]">{{post.title}}</a></h4>
+              <div class="space20"></div>
+              <a [routerLink]="['/', post.slug]" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </a>
         </div>
       </div>
 
