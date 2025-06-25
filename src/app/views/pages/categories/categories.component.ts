@@ -1,10 +1,15 @@
-import { Component, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ServiceCardComponent } from "@app/components/cards/service-card/service-card.component";
-import { Router } from '@angular/router';
-import { Meta, Title } from '@angular/platform-browser';
 import { butterService } from '@/app/services';
+import { ServiceCardComponent } from "@app/components/cards/service-card/service-card.component";
+import { blogs2 } from '@/assets/data';
+import { CommonModule } from '@angular/common';
+import { Component, signal, effect, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { HeroComponent } from '@app/components/hero/hero.component';
+
+interface Category {
+  name: string;
+  slug: string;
+}
 
 @Component({
   selector: 'app-categories',
@@ -14,81 +19,34 @@ import { HeroComponent } from '@app/components/hero/hero.component';
 })
 export class CategoriesComponent {
   pageTitle: string = 'Categories';
-  private router = inject(Router);
-  private title = inject(Title);
-  private meta = inject(Meta);
+  blogs = blogs2;
 
-  loading = signal(false);
-  loadError = signal(false);
-  categories = signal<any[]>([]);
-  category = signal<any>(null);
-  showData = signal(false);
-  step = signal(1);
+  categories = signal<Category[]>([]);
+  page = signal(1);
+  pageSize = signal(10);
+  moreAvailable = signal(false);
+
+  private readonly router = inject(Router);
 
   constructor() {
-    this.init();
-  }
-
-  init() {
-    this.loading.set(true);
-    this.updateMetaData();
-    this.progressLoaderOne();
-  }
-
-  updateMetaData() {
-    this.title.setTitle(`Categories - Impostor Coding`);
-    this.meta.updateTag({
-      name: 'description',
-      content: `Categories - Impostor Coding`
+    effect(() => {
+      this.getCategories();
     });
   }
 
-  progressLoaderOne() {
-    setTimeout(() => {
-      this.step.set(2);
-      this.getCategories();
-    }, 50);
-  }
-
-  progressLoaderTwo() {
-    setTimeout(() => {
-      this.step.set(4);
-      this.progressLoaderThree();
-    }, 50);
-  }
-
-  progressLoaderThree() {
-    setTimeout(() => {
-      this.displayData();
-    }, 50);
-  }
-
   getCategories() {
+    console.log('Fetching categories...');
     butterService.category.list()
       .then((res: any) => {
-        this.categories.set(res?.data?.data || []);
-        this.step.set(3);
-        this.progressLoaderTwo();
+        const newCategories: Category[] = res?.data?.data || [];
+        this.categories.set(newCategories);
       })
-      .catch(() => {
-        this.loading.set(false);
-        this.loadError.set(true);
+      .catch((err) => {
+        console.error(`Error fetching categories: ${err}`);
       });
   }
 
-  displayData() {
-    if (this.categories().length > 0) {
-      this.loading.set(false);
-      this.showData.set(true);
-    } else {
-      this.loading.set(false);
-      this.loadError.set(true);
-    }
-  }
-
-  viewCategory(category: any) {
-    this.category.set(category.slug);
-    console.log(category.slug);
-    this.router.navigate(['/category', category.slug]);
+  viewCategory(category: Category): void {
+    this.router.navigate([`/${category.slug}`]);
   }
 }

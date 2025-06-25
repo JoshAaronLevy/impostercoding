@@ -16,15 +16,12 @@ export const PAGES_ROUTES: Routes = [
         data: { title: "Posts" }
     },
     {
-        path: ':slug',
-        component: PostComponent
-    },
-    {
         path: 'categories',
         component: CategoriesComponent,
         data: { title: "Categories" }
     },
+    {
+        path: ':slug',
+        component: PostComponent
+    },
 ];
-
-
-
