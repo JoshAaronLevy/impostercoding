@@ -1,12 +1,14 @@
-<div class="service1-boxarea">
-    <div class="arrow">
+<a [routerLink]="['/categories', category.slug]">
+    <div class="service1-boxarea">
+        <div class="arrow">
+            <a [routerLink]="['/categories', category.slug]">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="space24"></div>
         <a [routerLink]="['/categories', category.slug]">
-            <i class="fa-solid fa-arrow-right"></i>
+            {{ category.name }}
         </a>
+        <div class="space16"></div>
     </div>
-    <div class="space24"></div>
-    <a [routerLink]="['/categories', category.slug]">
-        {{ category.name }}
-    </a>
-    <div class="space16"></div>
-</div>  
+</a>

@@ -61,7 +61,6 @@ export class PostsComponent {
   }
 
   viewPost(post: Post): void {
-    console.log('Navigating to post:', post.slug);
     this.router.navigate([`/${post.slug}`]);
   }
 }
