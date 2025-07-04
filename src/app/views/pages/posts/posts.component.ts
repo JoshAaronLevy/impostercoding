@@ -1,5 +1,4 @@
 import { butterService } from '@/app/services';
-import { blogs2 } from '@/assets/data';
 import { CommonModule } from '@angular/common';
 import { Component, signal, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
@@ -22,7 +21,6 @@ interface Post {
 })
 export class PostsComponent implements OnInit {
   pageTitle: string = 'Posts';
-  blogs = blogs2;
 
   posts = signal<Post[]>([]);
   page = signal(1);

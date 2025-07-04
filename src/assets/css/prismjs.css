@@ -372,68 +372,8 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
 	opacity: 1;
 }
 
-.prism-previewer-angle:before {
-	border-radius: 50%;
-	background: #fff;
-}
-.prism-previewer-angle:after {
-	margin-top: 4px;
-}
-.prism-previewer-angle svg {
-	width: 32px;
-	height: 32px;
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	transform: rotate(-90deg);
-}
-.prism-previewer-angle[data-negative] svg {
-	-webkit-transform: scaleX(-1) rotate(-90deg);
-	-moz-transform: scaleX(-1) rotate(-90deg);
-	-ms-transform: scaleX(-1) rotate(-90deg);
-	-o-transform: scaleX(-1) rotate(-90deg);
-	transform: scaleX(-1) rotate(-90deg);
-}
-.prism-previewer-angle circle {
-	fill: transparent;
-	stroke: hsl(200, 10%, 20%);
-	stroke-opacity: 0.9;
-	stroke-width: 32;
-	stroke-dasharray: 0, 500;
-}
 
-.prism-previewer-gradient {
-	background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
-	background-size: 10px 10px;
-	background-position: 0 0, 5px 5px;
 
-	width: 64px;
-	margin-left: -32px;
-}
-.prism-previewer-gradient:before {
-	content: none;
-}
-.prism-previewer-gradient div {
-	position: absolute;
-	top: -5px;
-	left: -5px;
-	right: -5px;
-	bottom: -5px;
-	border-radius: 10px;
-	border: 5px solid #fff;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
-}
-
-.prism-previewer-color {
-	background-image: linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb), linear-gradient(45deg, #bbb 25%, #eee 25%, #eee 75%, #bbb 75%, #bbb);
-	background-size: 10px 10px;
-	background-position: 0 0, 5px 5px;
-}
-.prism-previewer-color:before {
-	background-color: inherit;
-	background-clip: padding-box;
-}
 
 .prism-previewer-easing {
 	margin-top: -76px;
@@ -525,34 +465,6 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
 	}
 }
 
-.prism-previewer-time:before {
-	border-radius: 50%;
-	background: #fff;
-}
-.prism-previewer-time:after {
-	margin-top: 4px;
-}
-.prism-previewer-time svg {
-	width: 32px;
-	height: 32px;
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	transform: rotate(-90deg);
-}
-.prism-previewer-time circle {
-	fill: transparent;
-	stroke: hsl(200, 10%, 20%);
-	stroke-opacity: 0.9;
-	stroke-width: 32;
-	stroke-dasharray: 0, 500;
-	stroke-dashoffset: 0;
-	-webkit-animation: prism-previewer-time linear infinite 3s;
-	-moz-animation: prism-previewer-time linear infinite 3s;
-	-o-animation: prism-previewer-time linear infinite 3s;
-	animation: prism-previewer-time linear infinite 3s;
-}
 .command-line-prompt {
 	border-right: 1px solid #999;
 	display: block;
