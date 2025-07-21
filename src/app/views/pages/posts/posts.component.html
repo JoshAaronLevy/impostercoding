@@ -1,6 +1,6 @@
 <div class="row">
   @for (post of posts(); track post.slug) {
-    <div class="col-lg-4 col-md-6">
+    <div class="col-lg-6 col-md-6">
       <div class="vl-blog-1-item">
         <a [routerLink]="['/', post.slug]">
           <div class="vl-blog-1-thumb image-anime">
@@ -10,11 +10,13 @@
         <div class="vl-blog-1-content">
           <div class="vl-blog-meta">
             <ul>
+              @if (post.readingTime) {
+                <li class="list-item-reading-time">
+                  🕒 {{ post.readingTime }}
+                </li>
+              }
               <li>
-                <a href="javascript:void(0)">
-                  <img src="assets/img/icons/calender3.svg" alt="">
-                  {{ post.published ? (post.published | date: 'MM/dd/yyyy') : 'Date Unknown' }}
-                </a>
+                🗓️ {{ post.published ? (post.published | date: 'MM/dd/yy') : 'Date Unknown' }}
               </li>
             </ul>
           </div>

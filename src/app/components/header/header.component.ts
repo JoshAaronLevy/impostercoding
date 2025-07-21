@@ -9,7 +9,7 @@ import { NavItemsComponent } from "../nav-items/nav-items.component";
   selector: 'app-header',
   imports: [RouterLink, NavItemsComponent, StickyScrollDirective, CommonModule, MobileMenuComponent],
   templateUrl: './header.component.html',
-  styles: ``
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
     isMobileMenuOpen = false;

@@ -17,7 +17,7 @@ export type FooterSection = {
     selector: 'app-footer',
     imports: [CommonModule,RouterLink],
     templateUrl: './footer.component.html',
-    styles: ``
+    styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
     @Input() logo: string = 'assets/img/logo/Imposter-Coding-Logo.png'

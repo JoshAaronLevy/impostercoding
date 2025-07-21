@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-hero',
   standalone: true,
   templateUrl: './hero.component.html',
-  styles: ``
+  styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
   @Input() title: string = '';

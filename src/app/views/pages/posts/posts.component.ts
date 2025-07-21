@@ -2,6 +2,7 @@ import { Component, OnInit, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { butterService } from '@/app/services';
+import { estimateReadingTime } from '@/app/helpers/utils';
 
 interface Post {
   title: string;
@@ -9,6 +10,7 @@ interface Post {
   featured_image: string;
   summary: string;
   slug: string;
+  readingTime?: string;
 }
 
 @Component({
@@ -16,7 +18,7 @@ interface Post {
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './posts.component.html',
-  styles: ``
+  styleUrl: './posts.component.scss',
 })
 export class PostsComponent implements OnInit {
   readonly posts = signal<Post[]>([]);
@@ -50,7 +52,10 @@ export class PostsComponent implements OnInit {
     butterService.post
       .list(options)
       .then((res: any) => {
-        const newPosts: Post[] = res.data?.data ?? [];
+        const newPosts: Post[] = (res.data?.data ?? []).map((post: any) => ({
+          ...post,
+          readingTime: estimateReadingTime(post.body)
+        }));
 
         if (page === 1) {
           this.posts.set(newPosts);

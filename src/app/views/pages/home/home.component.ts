@@ -18,7 +18,7 @@ interface Post {
   selector: 'app-home',
   imports: [HeroComponent, SidebarComponent, CommonModule, PostsComponent],
   templateUrl: './home.component.html',
-  styles: ``
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
   pageTitle: string = 'Imposter Coding';

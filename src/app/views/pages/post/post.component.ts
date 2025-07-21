@@ -13,6 +13,7 @@ import { firstValueFrom } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { butterService, HighlightService } from '@/app/services';
 import { HeroComponent } from '@app/components/hero/hero.component';
+import { estimateReadingTime } from '@/app/helpers/utils';
 
 @Component({
   selector: 'app-post',
@@ -52,9 +53,10 @@ export class PostComponent implements OnInit, OnDestroy {
       if (!slug) return;
 
       const res = await butterService.post.retrieve(slug);
-      const data = res?.data?.data;
+      const data = res?.data?.data as any;
 
       if (data) {
+        data.readingTime = estimateReadingTime(data.body);
         this.post.set(data);
         this.updateMetaData(data);
         this.loading.set(false);

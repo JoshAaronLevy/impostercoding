@@ -1,3 +1,27 @@
+.container {
+  max-width: 1500px !important;
+}
+
+@media (min-width: 1400px) {
+
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1500px !important;
+  }
+}
+
+.list-item-reading-time {
+  margin-right: 10px;
+}
+
+.list-item-date {
+  margin-right: 10px;
+}
+
 /* ============ Custom Post Styling ============ */
 
 .code-toolbar>.toolbar {
