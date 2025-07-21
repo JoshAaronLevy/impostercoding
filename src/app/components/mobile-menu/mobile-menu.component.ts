@@ -12,13 +12,12 @@ import { RouterLink } from '@angular/router';
 export class MobileMenuComponent {
     @Input() isMobileMenuOpen!: boolean
 
-
     toggleMobileMenu() {
         this.isMobileMenuOpen = !this.isMobileMenuOpen
     }
 
     @Input() themeBtn: string = 'vl-btn1'
-    @Input() mobileMenuClass: string = 'homepage1-body'
+    @Input() mobileMenuClass: string = 'homepage3-body'
     @Input() arrow?: boolean = false
     @Input() arrow2?: boolean = false
 
