@@ -10,6 +10,7 @@ interface Post {
   featured_image: string;
   summary: string;
   slug: string;
+  body?: string;
   readingTime?: string;
 }
 
@@ -38,9 +39,21 @@ export class PostsComponent implements OnInit {
       this.page.set(1);
       this.fetchPosts(1, slug);
     });
+
+    this.route.queryParamMap.subscribe(params => {
+      const searchQuery = params.get('q')?.toLowerCase() ?? '';
+      const slug = this.route.snapshot.paramMap.get('categorySlug');
+      this.categorySlug.set(slug);
+      this.page.set(1);
+      this.fetchPosts(1, slug, searchQuery);
+    });
   }
 
-  private fetchPosts(page: number, categorySlug: string | null = null): void {
+  private fetchPosts(
+    page: number,
+    categorySlug: string | null = null,
+    searchQuery: string = ''
+  ): void {
     this.loading.set(true);
 
     const options = {
@@ -52,10 +65,18 @@ export class PostsComponent implements OnInit {
     butterService.post
       .list(options)
       .then((res: any) => {
-        const newPosts: Post[] = (res.data?.data ?? []).map((post: any) => ({
+        let newPosts: Post[] = (res.data?.data ?? []).map((post: any) => ({
           ...post,
           readingTime: estimateReadingTime(post.body)
         }));
+
+        if (searchQuery) {
+          newPosts = newPosts.filter(post =>
+            post.title.toLowerCase().includes(searchQuery) ||
+            post.summary.toLowerCase().includes(searchQuery) ||
+            (post['body']?.toLowerCase?.().includes(searchQuery))
+          );
+        }
 
         if (page === 1) {
           this.posts.set(newPosts);

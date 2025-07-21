@@ -12,3 +12,25 @@
     max-width: 1500px !important;
   }
 }
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-input {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-btn {
+  border: none;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.search-btn i {
+  font-size: 1.2rem;
+}

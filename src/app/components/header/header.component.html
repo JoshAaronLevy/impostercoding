@@ -7,11 +7,27 @@
             <a routerLink="/"><img src="assets/img/logo/imposter_coding_logo-transparent-cropped.png" alt=""></a>
           </div>
         </div>
+
         <div class="col-lg-10 d-flex justify-content-end align-items-center">
           <div class="main-menu text-center">
             <nav class="mobile-menu-active">
               <app-nav-items themeBtn="btn4" />
             </nav>
+          </div>
+
+          <div class="search-wrapper d-flex align-items-center ms-3">
+            <button
+              (click)="toggleSearch()"
+              class="search-btn"
+              aria-label="Toggle Search"
+            >
+              <i class="fa fa-search"></i>
+            </button>
+
+            @if (searchOpen) {
+              <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="submitSearch()" placeholder="Search posts..."
+                class="search-input ms-2" />
+            }
           </div>
         </div>
       </div>
