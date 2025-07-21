@@ -16,7 +16,7 @@ export class MobileMenuComponent {
         this.isMobileMenuOpen = !this.isMobileMenuOpen
     }
 
-    @Input() themeBtn: string = 'vl-btn1'
+    @Input() themeBtn: string = 'btn1'
     @Input() mobileMenuClass: string = 'homepage3-body'
     @Input() arrow?: boolean = false
     @Input() arrow2?: boolean = false

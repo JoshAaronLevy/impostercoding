@@ -529,7 +529,7 @@
 }
 
 // BTN AREA //
-.vl-btn1 {
+.btn1 {
     position: relative;
     display: inline-block;
     padding: 18px 24px;
@@ -583,7 +583,7 @@
     }
 }
 
-.vl-menu-btn {
+.menu-btn {
     background-color: var(--ztc-bg-bg-5);
     color: var(--ztc-text-text-1);
     width: 140px;
@@ -600,12 +600,12 @@
     z-index: 9;
 
     &:hover {
-        color: var(--vl-common-white);
-        background-color: var(--vl-common-black);
+        color: var(--common-white);
+        background-color: var(--common-black);
     }
 }
 
-.vl-btn2 {
+.btn2 {
     position: relative;
     display: inline-block;
     padding: 18px 24px;
@@ -661,7 +661,7 @@
     }
 }
 
-.vl-btn3 {
+.btn3 {
     color: var(--ztc-text-text-6);
     font-family: var(--ztc-family-font1);
     font-size: var(--ztc-font-size-font-s18);
@@ -709,7 +709,7 @@
     }
 }
 
-.vl-btn4 {
+.btn4 {
     color: var(--ztc-text-text-1);
     font-family: var(--ztc-family-font1);
     font-size: var(--ztc-font-size-font-s18);
@@ -774,7 +774,7 @@
     }
 }
 
-.vl-btn5 {
+.btn5 {
     color: var(--ztc-text-text-1);
     font-family: var(--ztc-family-font1);
     font-size: var(--ztc-font-size-font-s18);
@@ -822,7 +822,7 @@
     }
 }
 
-.vl-btn6 {
+.btn6 {
     display: inline-block;
     padding: 20px 10px 20px 24px;
     color: var(--ztc-text-text-1);

@@ -1,23 +1,22 @@
 <header class="homepage3-body">
-    <div id="vl-header-sticky" class="vl-header-area vl-transparent-header" stickyScroll>
-        <div class="container headerfix">
-            <div class="row row-bg">
-                <div class="col-lg-2 col-md-6 col-6">
-                    <div class="logo">
-                        <a routerLink="/"><img src="assets/img/logo/imposter_coding_logo-transparent-cropped.png"
-                                alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-10 d-flex justify-content-end align-items-center">
-                    <div class="vl-main-menu text-center">
-                        <nav class="vl-mobile-menu-active">
-                            <app-nav-items themeBtn="vl-btn4" />
-                        </nav>
-                    </div>
-                </div>
-            </div>
+  <div id="header-sticky" class="header-area transparent-header" stickyScroll>
+    <div class="container headerfix">
+      <div class="row row-bg">
+        <div class="col-lg-2 col-md-6 col-6">
+          <div class="logo">
+            <a routerLink="/"><img src="assets/img/logo/imposter_coding_logo-transparent-cropped.png" alt=""></a>
+          </div>
         </div>
+        <div class="col-lg-10 d-flex justify-content-end align-items-center">
+          <div class="main-menu text-center">
+            <nav class="mobile-menu-active">
+              <app-nav-items themeBtn="btn4" />
+            </nav>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </header>
 
-<app-mobile-menu [isMobileMenuOpen]="isMobileMenuOpen" themeBtn="vl-btn1"/>
+<app-mobile-menu [isMobileMenuOpen]="isMobileMenuOpen" themeBtn="btn1" />

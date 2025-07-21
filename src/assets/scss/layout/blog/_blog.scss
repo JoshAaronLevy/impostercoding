@@ -2,11 +2,11 @@
 
 /*============= BLOG CSS AREA ===============*/
 // Homepage 01 //
-.vl-blog-1-area {
+.blog-1-area {
     position: relative;
     z-index: 1;
 
-    .vl-blog-1-item {
+    .blog-1-item {
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -14,7 +14,7 @@
         margin-bottom: 30px;
 
         &:hover {
-            .vl-blog-1-thumb {
+            .blog-1-thumb {
                 img {
                     transform: scale(1.1) rotate(-4deg);
                     transition: all .4s;
@@ -23,7 +23,7 @@
             }
         }
 
-        .vl-blog-1-thumb {
+        .blog-1-thumb {
             overflow: hidden;
             border-radius: 8px;
             transition: all .4s;
@@ -46,7 +46,7 @@
             }
         }
 
-        .vl-blog-1-content {
+        .blog-1-content {
             position: absolute;
             z-index: 2;
             padding: 32px;
@@ -131,7 +131,7 @@
                 line-height: 24px;
             }
 
-            .vl-blog-1-icon {
+            .blog-1-icon {
                 position: absolute;
                 right: -20px;
                 top: -20px;
@@ -155,7 +155,7 @@
 }
 
 // Homepage 02 //
-.vl-blog-2-area {
+.blog-2-area {
     position: relative;
     z-index: 1;
     // background-image: url(../../../img/all-images/bg/footer-bg2.png);
@@ -163,7 +163,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    .vl-blog-1-item {
+    .blog-1-item {
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -171,7 +171,7 @@
         margin-bottom: 30px;
 
         &:hover {
-            .vl-blog-1-thumb {
+            .blog-1-thumb {
                 img {
                     transform: scale(1.1) rotate(-4deg);
                     transition: all .4s;
@@ -180,7 +180,7 @@
             }
         }
 
-        .vl-blog-1-thumb {
+        .blog-1-thumb {
             overflow: hidden;
             border-radius: 8px;
             transition: all .4s;
@@ -195,7 +195,7 @@
             }
         }
 
-        .vl-blog-1-content {
+        .blog-1-content {
             position: relative;
             z-index: 2;
             padding: 24px;
@@ -365,7 +365,7 @@
 }
 
 // Homepage 04 //
-.vl-blog-4-area {
+.blog-4-area {
     position: relative;
     z-index: 1;
 
@@ -375,7 +375,7 @@
         top: 0;
     }
 
-    .vl-blog-1-item {
+    .blog-1-item {
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -383,7 +383,7 @@
         margin-bottom: 30px;
 
         &:hover {
-            .vl-blog-1-thumb {
+            .blog-1-thumb {
                 img {
                     transform: scale(1.1) rotate(-4deg);
                     transition: all .4s;
@@ -392,7 +392,7 @@
             }
         }
 
-        .vl-blog-1-thumb {
+        .blog-1-thumb {
             overflow: hidden;
             border-radius: 8px;
             transition: all .4s;
@@ -407,7 +407,7 @@
             }
         }
 
-        .vl-blog-1-content {
+        .blog-1-content {
             position: relative;
             z-index: 2;
             padding: 24px;
@@ -491,7 +491,7 @@
 
 
 // Inner Pages//
-.vl-blog-4-area-inner {
+.blog-4-area-inner {
     position: relative;
     z-index: 1;
 
@@ -501,7 +501,7 @@
         top: 0;
     }
 
-    .vl-blog-1-item {
+    .blog-1-item {
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -509,7 +509,7 @@
         margin-bottom: 30px;
 
         &:hover {
-            .vl-blog-1-thumb {
+            .blog-1-thumb {
                 img {
                     transform: scale(1.1) rotate(-4deg);
                     transition: all .4s;
@@ -518,7 +518,7 @@
             }
         }
 
-        .vl-blog-1-thumb {
+        .blog-1-thumb {
             overflow: hidden;
             border-radius: 8px;
             transition: all .4s;
@@ -533,7 +533,7 @@
             }
         }
 
-        .vl-blog-1-content {
+        .blog-1-content {
             position: relative;
             z-index: 2;
             padding: 24px;
@@ -615,7 +615,7 @@
     }
 }
 
-.vl-blog-v1-area {
+.blog-v1-area {
     position: relative;
     z-index: 1;
 
@@ -806,7 +806,7 @@
         }
     }
 
-    .vl-blog-1-item {
+    .blog-1-item {
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -814,14 +814,14 @@
         margin-bottom: 30px;
 
         &:hover {
-            .vl-blog-1-thumb {
+            .blog-1-thumb {
                 img {
                     transform: scale(1.1) rotate(-4deg);
                     transition: all .4s;
                     filter: grayscale(1);
                 }
 
-                .vl-blog-1-content {
+                .blog-1-content {
                     ul {
                         li {
                             a {
@@ -840,7 +840,7 @@
             }
         }
 
-        .vl-blog-1-thumb {
+        .blog-1-thumb {
             overflow: hidden;
             border-radius: 8px;
             transition: all .4s;
@@ -855,7 +855,7 @@
             }
         }
 
-        .vl-blog-1-content {
+        .blog-1-content {
             position: relative;
             z-index: 2;
             padding: 24px;
@@ -937,7 +937,7 @@
         }
     }
 
-    .vl-blog-1-item1 {
+    .blog-1-item1 {
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -945,7 +945,7 @@
         margin-bottom: 30px;
 
         &:hover {
-            .vl-blog-1-thumb {
+            .blog-1-thumb {
                 img {
                     transform: scale(1.1) rotate(-4deg);
                     transition: all .4s;
@@ -954,7 +954,7 @@
             }
         }
 
-        .vl-blog-1-thumb {
+        .blog-1-thumb {
             overflow: hidden;
             border-radius: 8px;
             transition: all .4s;
@@ -977,7 +977,7 @@
             }
         }
 
-        .vl-blog-1-content {
+        .blog-1-content {
             position: absolute;
             z-index: 2;
             padding: 32px;
@@ -1062,7 +1062,7 @@
                 line-height: 24px;
             }
 
-            .vl-blog-1-icon {
+            .blog-1-icon {
                 position: absolute;
                 right: -20px;
                 top: -20px;
@@ -1085,7 +1085,7 @@
     }
 }
 
-.vl-blog-details-section {
+.blog-details-section {
     position: relative;
     z-index: 1;
 
@@ -1831,11 +1831,11 @@
     }
 }
 
-.vl-blog-bottom-area {
+.blog-bottom-area {
     position: relative;
     z-index: 1;
 
-    .vl-blog-1-item {
+    .blog-1-item {
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -1843,7 +1843,7 @@
         margin-bottom: 30px;
 
         &:hover {
-            .vl-blog-1-thumb {
+            .blog-1-thumb {
                 img {
                     transform: scale(1.1) rotate(-4deg);
                     transition: all .4s;
@@ -1852,7 +1852,7 @@
             }
         }
 
-        .vl-blog-1-thumb {
+        .blog-1-thumb {
             overflow: hidden;
             border-radius: 8px;
             transition: all .4s;
@@ -1867,7 +1867,7 @@
             }
         }
 
-        .vl-blog-1-content {
+        .blog-1-content {
             position: relative;
             z-index: 2;
             padding: 24px;

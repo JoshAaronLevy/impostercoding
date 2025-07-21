@@ -1,7 +1,7 @@
 @use '../utils' as *;
 
 /*============= MOBILE MENU CSS AREA ===============*/
-.vl-header-action-item {
+.header-action-item {
     float: right;
     border: 1px solid var(--ztc-text-text-1);
     padding: 6px;
@@ -18,7 +18,7 @@
     }
 }
 
-.vl-offcanvas {
+.offcanvas {
     position: fixed;
     background: var(--Main-Color, linear-gradient(90deg, #2E0797 0%, #726EFC 100%));
     width: 450px;
@@ -47,7 +47,7 @@
 
     &-close-toggle {
         font-size: var(--ztc-font-size-font-s30);
-        color: var(--vl-heading-color);
+        color: var(--heading-color);
     }
 
     &-header {
@@ -113,13 +113,13 @@
         }
     }
 
-    .vl-offcanvas-logo {
+    .offcanvas-logo {
         height: 50px;
         width: 122px;
         object-fit: contain;
     }
 
-    .vl-offcanvas-close {
+    .offcanvas-close {
         button {
             border: none;
             background: none;
@@ -129,7 +129,7 @@
     }
 }
 
-.vl-offcanvas-menu ul {
+.offcanvas-menu ul {
     list-style: none;
 
     & li {
@@ -157,7 +157,7 @@
                 color: var(--ztc-text-text-1);
             }
 
-            &>.vl-menu-close {
+            &>.menu-close {
                 & i {
                     transform: rotate(90deg);
                 }
@@ -171,7 +171,7 @@
     }
 }
 
-.vl-menu-close {
+.menu-close {
     position: absolute;
     right: 0;
     top: 7px;
@@ -192,7 +192,7 @@
 
 // Homepage 02 //
 .homepage2-body {
-    .vl-header-action-item {
+    .header-action-item {
         float: right;
         border: 1px solid var(--ztc-text-text-1);
         padding: 6px;
@@ -209,7 +209,7 @@
         }
     }
 
-    .vl-offcanvas {
+    .offcanvas {
         position: fixed;
         background: var(--ztc-text-text-6);
         width: 450px;
@@ -238,7 +238,7 @@
 
         &-close-toggle {
             font-size: var(--ztc-font-size-font-s30);
-            color: var(--vl-heading-color);
+            color: var(--heading-color);
         }
 
         &-header {
@@ -304,13 +304,13 @@
             }
         }
 
-        .vl-offcanvas-logo {
+        .offcanvas-logo {
             height: 50px;
             width: 122px;
             object-fit: contain;
         }
 
-        .vl-offcanvas-close {
+        .offcanvas-close {
             button {
                 border: none;
                 background: none;
@@ -320,7 +320,7 @@
         }
     }
 
-    .vl-offcanvas-menu ul {
+    .offcanvas-menu ul {
         list-style: none;
 
         & li {
@@ -348,7 +348,7 @@
                     color: var(--ztc-text-text-1);
                 }
 
-                &>.vl-menu-close {
+                &>.menu-close {
                     & i {
                         transform: rotate(90deg);
                     }
@@ -362,7 +362,7 @@
         }
     }
 
-    .vl-menu-close {
+    .menu-close {
         position: absolute;
         right: 0;
         top: 7px;
@@ -385,7 +385,7 @@
 
 // Homepage 02 //
 .homepage3-body {
-    .vl-header-action-item {
+    .header-action-item {
         float: right;
         border: 1px solid var(--ztc-text-text-7);
         padding: 6px;
@@ -402,7 +402,7 @@
         }
     }
 
-    .vl-offcanvas {
+    .offcanvas {
         position: fixed;
         background: var(--ztc-text-text-9);
         width: 450px;
@@ -431,7 +431,7 @@
 
         &-close-toggle {
             font-size: var(--ztc-font-size-font-s30);
-            color: var(--vl-heading-color);
+            color: var(--heading-color);
         }
 
         &-header {
@@ -497,13 +497,13 @@
             }
         }
 
-        .vl-offcanvas-logo {
+        .offcanvas-logo {
             height: 50px;
             width: 122px;
             object-fit: contain;
         }
 
-        .vl-offcanvas-close {
+        .offcanvas-close {
             button {
                 border: none;
                 background: none;
@@ -513,7 +513,7 @@
         }
     }
 
-    .vl-offcanvas-menu ul {
+    .offcanvas-menu ul {
         list-style: none;
 
         & li {
@@ -541,7 +541,7 @@
                     color: var(--ztc-text-text-1);
                 }
 
-                &>.vl-menu-close {
+                &>.menu-close {
                     & i {
                         transform: rotate(90deg);
                     }
@@ -555,7 +555,7 @@
         }
     }
 
-    .vl-menu-close {
+    .menu-close {
         position: absolute;
         right: 0;
         top: 7px;
@@ -578,7 +578,7 @@
 
 // Homepage 04 //
 .homepage4-body {
-    .vl-header-action-item {
+    .header-action-item {
         float: right;
         border: 1px solid var(--ztc-text-text-1);
         padding: 6px;
@@ -595,7 +595,7 @@
         }
     }
 
-    .vl-offcanvas {
+    .offcanvas {
         position: fixed;
         background: var(--ztc-bg-bg-10);
         width: 450px;
@@ -624,7 +624,7 @@
 
         &-close-toggle {
             font-size: var(--ztc-font-size-font-s30);
-            color: var(--vl-heading-color);
+            color: var(--heading-color);
         }
 
         &-header {
@@ -690,13 +690,13 @@
             }
         }
 
-        .vl-offcanvas-logo {
+        .offcanvas-logo {
             height: 50px;
             width: 122px;
             object-fit: contain;
         }
 
-        .vl-offcanvas-close {
+        .offcanvas-close {
             button {
                 border: none;
                 background: none;
@@ -706,7 +706,7 @@
         }
     }
 
-    .vl-offcanvas-menu ul {
+    .offcanvas-menu ul {
         list-style: none;
 
         & li {
@@ -734,7 +734,7 @@
                     color: var(--ztc-text-text-1);
                 }
 
-                &>.vl-menu-close {
+                &>.menu-close {
                     & i {
                         transform: rotate(90deg);
                     }
@@ -748,7 +748,7 @@
         }
     }
 
-    .vl-menu-close {
+    .menu-close {
         position: absolute;
         right: 0;
         top: 7px;
@@ -772,7 +772,7 @@
 
 // Homepage 05 //
 .homepage5-body {
-    .vl-header-action-item {
+    .header-action-item {
         float: right;
         border: 1px solid var(--ztc-text-text-14);
         padding: 6px;
@@ -789,7 +789,7 @@
         }
     }
 
-    .vl-offcanvas {
+    .offcanvas {
         position: fixed;
         background: var(--ztc-bg-bg-12);
         width: 450px;
@@ -818,7 +818,7 @@
 
         &-close-toggle {
             font-size: var(--ztc-font-size-font-s30);
-            color: var(--vl-heading-color);
+            color: var(--heading-color);
         }
 
         &-header {
@@ -884,13 +884,13 @@
             }
         }
 
-        .vl-offcanvas-logo {
+        .offcanvas-logo {
             height: 50px;
             width: 122px;
             object-fit: contain;
         }
 
-        .vl-offcanvas-close {
+        .offcanvas-close {
             button {
                 border: none;
                 background: none;
@@ -900,7 +900,7 @@
         }
     }
 
-    .vl-offcanvas-menu ul {
+    .offcanvas-menu ul {
         list-style: none;
 
         & li {
@@ -928,7 +928,7 @@
                     color: var(--ztc-text-text-1);
                 }
 
-                &>.vl-menu-close {
+                &>.menu-close {
                     & i {
                         transform: rotate(90deg);
                     }
@@ -942,7 +942,7 @@
         }
     }
 
-    .vl-menu-close {
+    .menu-close {
         position: absolute;
         right: 0;
         top: 7px;

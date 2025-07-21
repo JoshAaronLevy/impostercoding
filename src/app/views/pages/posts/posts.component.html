@@ -1,14 +1,14 @@
 <div class="row">
   @for (post of posts(); track post.slug) {
     <div class="col-lg-6 col-md-6">
-      <div class="vl-blog-1-item">
+      <div class="blog-1-item">
         <a [routerLink]="['/', post.slug]">
-          <div class="vl-blog-1-thumb image-anime">
+          <div class="blog-1-thumb image-anime">
             <img [src]="post.featured_image">
           </div>
         </a>
-        <div class="vl-blog-1-content">
-          <div class="vl-blog-meta">
+        <div class="blog-1-content">
+          <div class="blog-meta">
             <ul>
               @if (post.readingTime) {
                 <li class="list-item-reading-time">
@@ -21,7 +21,7 @@
             </ul>
           </div>
           <div class="space16"></div>
-          <h4 class="vl-blog-1-title">
+          <h4 class="blog-1-title">
             <a [routerLink]="['/', post.slug]">{{ post.title }}</a>
           </h4>
           <div class="space20"></div>

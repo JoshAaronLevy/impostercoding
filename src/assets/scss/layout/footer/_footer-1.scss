@@ -2,7 +2,7 @@
 
 /*============= FOOTER CSS AREA ===============*/
 // Homepage 01 //
-.vl-footer1-section-area {
+.footer1-section-area {
     .footer-logo1 {
         img {
             width: 122px;
@@ -46,7 +46,7 @@
         }
     }
 
-    .vl-footer-widget {
+    .footer-widget {
         padding-left: 70px;
 
         @media #{$xs} {
@@ -94,7 +94,7 @@
         }
     }
 
-    .vl-copyright-area {
+    .copyright-area {
         p {
             color: var(--ztc-text-text-3);
             font-family: var(--ztc-family-font1);
@@ -113,7 +113,7 @@
 }
 
 // Homepage 02 //
-.vl-footer2-section-area {
+.footer2-section-area {
     position: relative;
     z-index: 1;
     // background-image: url(../../../img/all-images/bg/footer-bg1.png);
@@ -166,7 +166,7 @@
         }
     }
 
-    .vl-footer-widget {
+    .footer-widget {
         padding-left: 70px;
 
         @media #{$xs} {
@@ -216,7 +216,7 @@
         }
     }
 
-    .vl-copyright-area {
+    .copyright-area {
         p {
             color: var(--ztc-text-text-1);
             font-family: var(--ztc-family-font1);
@@ -236,7 +236,7 @@
 }
 
 // Homepage 03 //
-.vl-footer3-section-area {
+.footer3-section-area {
     position: relative;
     z-index: 1;
     background: #EFF1FF;
@@ -285,7 +285,7 @@
         }
     }
 
-    .vl-footer-widget {
+    .footer-widget {
         padding-left: 70px;
 
         @media #{$xs} {
@@ -334,7 +334,7 @@
         }
     }
 
-    .vl-copyright-area {
+    .copyright-area {
         p {
             color: var(--ztc-text-text-8);
             font-family: var(--ztc-family-font1);
@@ -353,7 +353,7 @@
 }
 
 // Homepage 04 //
-.vl-footer4-section-area {
+.footer4-section-area {
     position: relative;
     z-index: 1;
 
@@ -401,7 +401,7 @@
         }
     }
 
-    .vl-footer-widget {
+    .footer-widget {
         padding-left: 70px;
 
         @media #{$xs} {
@@ -451,7 +451,7 @@
         }
     }
 
-    .vl-copyright-area {
+    .copyright-area {
         p {
             color: var(--ztc-text-text-10);
             font-family: var(--ztc-family-font1);
@@ -471,7 +471,7 @@
 }
 
 // Homepage 05 //
-.vl-footer5-section-area {
+.footer5-section-area {
     position: relative;
     z-index: 1;
 
@@ -519,7 +519,7 @@
         }
     }
 
-    .vl-footer-widget {
+    .footer-widget {
         padding-left: 70px;
 
         @media #{$xs} {
@@ -568,7 +568,7 @@
         }
     }
 
-    .vl-copyright-area {
+    .copyright-area {
         p {
             color: var(--ztc-text-text-15);
             font-family: var(--ztc-family-font1);
