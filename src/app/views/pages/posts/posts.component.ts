@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { butterService } from '@/app/services';
 import { estimateReadingTime } from '@/app/helpers/utils';
+import Fuse from 'fuse.js';
 
 interface Post {
   title: string;
@@ -23,6 +24,7 @@ interface Post {
 })
 export class PostsComponent implements OnInit {
   readonly posts = signal<Post[]>([]);
+  private readonly allPosts = signal<Post[]>([]);
   readonly page = signal(1);
   readonly pageSize = signal(10);
   readonly moreAvailable = signal(false);
@@ -33,27 +35,24 @@ export class PostsComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      const slug = params.get('categorySlug');
-      this.categorySlug.set(slug);
-      this.page.set(1);
-      this.fetchPosts(1, slug);
-    });
-
-    this.route.queryParamMap.subscribe(params => {
-      const searchQuery = params.get('q')?.toLowerCase() ?? '';
-      const slug = this.route.snapshot.paramMap.get('categorySlug');
-      this.categorySlug.set(slug);
-      this.page.set(1);
-      this.fetchPosts(1, slug, searchQuery);
-    });
+    this.route.paramMap.subscribe(() => this.loadData());
+    this.route.queryParamMap.subscribe(() => this.loadData());
   }
 
-  private fetchPosts(
+  private loadData(): void {
+    const slug = this.route.snapshot.paramMap.get('categorySlug');
+    const searchQuery = this.route.snapshot.queryParamMap.get('q')?.toLowerCase() ?? '';
+
+    this.categorySlug.set(slug);
+    this.page.set(1);
+    this.fetchPosts(1, slug, searchQuery);
+  }
+
+  private async fetchPosts(
     page: number,
     categorySlug: string | null = null,
     searchQuery: string = ''
-  ): void {
+  ): Promise<void> {
     this.loading.set(true);
 
     const options = {
@@ -62,36 +61,56 @@ export class PostsComponent implements OnInit {
       ...(categorySlug ? { category_slug: categorySlug } : {})
     };
 
-    butterService.post
-      .list(options)
-      .then((res: any) => {
-        let newPosts: Post[] = (res.data?.data ?? []).map((post: any) => ({
+    try {
+      const res = await butterService.post.list(options);
+
+      const basePosts: Post[] = (res.data?.data ?? []).map((post: any) => ({
+        ...post,
+        readingTime: estimateReadingTime(post.body)
+      }));
+
+      // Fetch full body content
+      const postPromises = basePosts.map(async (post) => {
+        const res = await butterService.post.retrieve(post.slug);
+        return {
           ...post,
-          readingTime: estimateReadingTime(post.body)
-        }));
-
-        if (searchQuery) {
-          newPosts = newPosts.filter(post =>
-            post.title.toLowerCase().includes(searchQuery) ||
-            post.summary.toLowerCase().includes(searchQuery) ||
-            (post['body']?.toLowerCase?.().includes(searchQuery))
-          );
-        }
-
-        if (page === 1) {
-          this.posts.set(newPosts);
-        } else {
-          this.posts.update(existing => [...existing, ...newPosts]);
-        }
-
-        this.moreAvailable.set(newPosts.length === this.pageSize());
-        this.loading.set(false);
-      })
-      .catch(err => {
-        console.error('Error fetching posts:', err);
-        this.moreAvailable.set(false);
-        this.loading.set(false);
+          body: res.data?.data?.body ?? ''
+        };
       });
+
+      const postsWithBody = await Promise.all(postPromises);
+
+      if (page === 1) {
+        this.allPosts.set(postsWithBody);
+        this.posts.set(this.filterPosts(postsWithBody, searchQuery));
+      } else {
+        const updated = [...this.allPosts(), ...postsWithBody];
+        this.allPosts.set(updated);
+        this.posts.set(this.filterPosts(updated, searchQuery));
+      }
+
+      this.moreAvailable.set(postsWithBody.length === this.pageSize());
+    } catch (err) {
+      console.error('Error fetching posts:', err);
+      this.moreAvailable.set(false);
+    } finally {
+      this.loading.set(false);
+    }
+  }
+
+  private filterPosts(posts: Post[], searchQuery: string): Post[] {
+    if (!searchQuery) return posts;
+
+    const fuse = new Fuse(posts, {
+      keys: ['title', 'summary', 'body'],
+      includeScore: true,
+      threshold: 0.4,
+      ignoreLocation: true,
+      useExtendedSearch: true
+    });
+
+    const results = fuse.search(searchQuery);
+    return results.map(result => result.item);
   }
 
   loadMore(): void {
