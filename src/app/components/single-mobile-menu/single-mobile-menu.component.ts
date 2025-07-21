@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class SingleMobileMenuComponent {
     @Input() isMobileMenuOpen!: boolean
-    @Input() className?: string='homepage3-body'
+    @Input() className?: string='homepage-body'
     @Input() menuItems: string[] = ["About Us", "Services", "Works", "Case Study", "Testimonials", "Blogs"]
 
     public scroll = inject(ScrollService)

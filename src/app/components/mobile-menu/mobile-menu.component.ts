@@ -17,7 +17,7 @@ export class MobileMenuComponent {
     }
 
     @Input() themeBtn: string = 'btn1'
-    @Input() mobileMenuClass: string = 'homepage3-body'
+    @Input() mobileMenuClass: string = 'homepage-body'
     @Input() arrow?: boolean = false
     @Input() arrow2?: boolean = false
 
