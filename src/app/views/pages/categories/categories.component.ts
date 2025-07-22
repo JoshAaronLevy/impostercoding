@@ -1,6 +1,5 @@
 import { butterService } from '@/app/services';
 import { ServiceCardComponent } from "@app/components/cards/service-card/service-card.component";
-import { blogs2 } from '@/assets/data';
 import { CommonModule } from '@angular/common';
 import { Component, signal, effect, inject } from '@angular/core';
 import { Router } from '@angular/router';
@@ -19,7 +18,6 @@ interface Category {
 })
 export class CategoriesComponent {
   pageTitle: string = 'Categories';
-  blogs = blogs2;
 
   categories = signal<Category[]>([]);
   page = signal(1);

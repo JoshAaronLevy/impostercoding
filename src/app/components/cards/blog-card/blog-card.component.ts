@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styles: ``
 })
 export class BlogCardComponent {
-@Input() blog!:BlogType
+  @Input() blog!:BlogType
 }

@@ -1,17 +1,17 @@
 <div [class]="mobileMenuClass">
-    <div class="vl-offcanvas" [ngClass]="{ 'vl-offcanvas-open': isMobileMenuOpen }">
-        <div class="vl-offcanvas-wrapper">
-            <div class="vl-offcanvas-header d-flex justify-content-between align-items-center mb-90">
-                <div class="vl-offcanvas-logo">
+    <div class="offcanvas" [ngClass]="{ 'offcanvas-open': isMobileMenuOpen }">
+        <div class="offcanvas-wrapper">
+            <div class="offcanvas-header d-flex justify-content-between align-items-center mb-90">
+                <div class="offcanvas-logo">
                     <a routerLink="/"><img src="assets/img/logo/Imposter-Coding-Logo.png" alt=""></a>
                 </div>
-                <div class="vl-offcanvas-close">
-                    <button class="vl-offcanvas-close-toggle" (click)="toggleMobileMenu()"><i
+                <div class="offcanvas-close">
+                    <button class="offcanvas-close-toggle" (click)="toggleMobileMenu()"><i
                             class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
 
-            <div class="vl-offcanvas-menu d-lg-none mb-40">
+            <div class="offcanvas-menu d-lg-none mb-40">
                 <nav>
                     <ul>
                         @for (item of megaMenu; track $index) {
@@ -19,61 +19,14 @@
                             <a href="javascript:void(0);" (click)="toggleMenu()">Home
                             </a>
 
-                            <div class="vl-mega-menu" [ngStyle]="{ 'display': menuOpen ? 'block' : 'none' }">
-                                <div class="vl-home-menu">
+                            <div class="mega-menu" [ngStyle]="{ 'display': menuOpen ? 'block' : 'none' }">
+                                <div class="home-menu">
                                     <div class="row gx-3 row-cols-1 row-cols-md-1 row-cols-lg-5">
-                                        @for (item of item.subMenu; track $index) {
-                                        <div class="col">
-                                            <div class="vl-home-thumb">
-                                                <div class="img1">
-                                                    <img [src]="item.image" [alt]="">
-                                                </div>
-                                                <a [routerLink]="item.title">{{item.title}} </a>
-                                                <div class="btn-area1">
-                                                    <a [routerLink]="item.link" [class]="themeBtn">
-                                                        <ng-container *ngIf="arrow2; else multiPageSpan">Multi
-                                                            page</ng-container>
-                                                        <ng-template #multiPageSpan><span class="demo">Multi
-                                                                Page</span></ng-template>
-
-                                                        @if (arrow) {
-                                                        <span class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></span>
-                                                        }
-                                                        @if (arrow2) {
-                                                        <span class="arrow1"><i
-                                                                class="fa-solid fa-arrow-right"></i></span>
-                                                        <span class="arrow2"><i
-                                                                class="fa-solid fa-arrow-right"></i></span>
-                                                        }
-                                                    </a>
-                                                    <div class="space16"></div>
-
-                                                    <a [routerLink]="item.singleLink" [class]="themeBtn">
-                                                        <ng-container *ngIf="arrow2; else onePageSpan">One
-                                                            page</ng-container>
-                                                        <ng-template #onePageSpan><span class="demo">One
-                                                                Page</span></ng-template>
-                                                        @if (arrow) {
-                                                        <span class="arrow"><i
-                                                                class="fa-solid fa-arrow-right"></i></span>
-                                                        }
-                                                        @if (arrow2) {
-                                                        <span class="arrow1"><i
-                                                                class="fa-solid fa-arrow-right"></i></span>
-                                                        <span class="arrow2"><i
-                                                                class="fa-solid fa-arrow-right"></i></span>
-                                                        }
-                                                    </a>
-                                                </div>
-                                                <div class="space20 d-lg-none d-block"></div>
-                                            </div>
-                                        </div>}
                                     </div>
                                 </div>
                             </div>
 
-                            <button class="vl-menu-close" (click)="toggleMenu()">
+                            <button class="menu-close" (click)="toggleMenu()">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
                         </li>
@@ -104,7 +57,7 @@
                                         }
                                     </ul>
 
-                                    <button class="vl-menu-close" (click)="toggleSubMenu(subItem, $event)"><i
+                                    <button class="menu-close" (click)="toggleSubMenu(subItem, $event)"><i
                                             class="fas fa-chevron-right"></i></button>
                                     }@else{
                                     <a [href]="subItem.link">{{ subItem.title }}</a>
@@ -112,7 +65,7 @@
                                 </li>
                                 }
                             </ul>
-                            <button class="vl-menu-close" (click)="toggleSubMenu(item, $event)"><i
+                            <button class="menu-close" (click)="toggleSubMenu(item, $event)"><i
                                     class="fas fa-chevron-right"></i></button>
                             }
                         </li>
@@ -122,16 +75,16 @@
             </div>
 
             <div class="space20"></div>
-            <div class="vl-offcanvas-info">
-                <h3 class="vl-offcanvas-sm-title">Contact Us</h3>
+            <div class="offcanvas-info">
+                <h3 class="offcanvas-sm-title">Contact Us</h3>
                 <div class="space20"></div>
                 <span><a href="javascript:void(0)"> <i class="fa-regular fa-envelope"></i> +57 9954 6476</a></span>
                 <span><a href="javascript:void(0)"><i class="fa-solid fa-phone"></i> hello&#64;exdos.com</a></span>
                 <span><a href="javascript:void(0)"><i class="fa-solid fa-location-dot"></i> Bhemeara,Kushtia</a></span>
             </div>
             <div class="space20"></div>
-            <div class="vl-offcanvas-social">
-                <h3 class="vl-offcanvas-sm-title">Follow Us</h3>
+            <div class="offcanvas-social">
+                <h3 class="offcanvas-sm-title">Follow Us</h3>
                 <div class="space20"></div>
                 <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
                 <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
@@ -141,6 +94,6 @@
 
         </div>
     </div>
-    <div class="vl-offcanvas-overlay" [ngClass]="{ 'vl-offcanvas-overlay-open': isMobileMenuOpen }"
+    <div class="offcanvas-overlay" [ngClass]="{ 'offcanvas-overlay-open': isMobileMenuOpen }"
         (click)="toggleMobileMenu()"></div>
 </div>

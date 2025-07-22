@@ -1,53 +1,28 @@
-/* ============ Custom Post Styling ============ */
+.container {
+  max-width: 1500px !important;
+}
 
-.post-img {
-  display: flex;
-  justify-content: center;
+@media (min-width: 1400px) {
 
-  img {
-    width: 650px !important;
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1500px !important;
   }
 }
 
-.post-content {
-  padding: 10px 25px !important;
+.list-item-reading-time {
+  margin-right: 10px;
 }
 
-.post-content h2 {
-  margin-bottom: -20px !important;
-  font-weight: 600 !important;
+.list-item-date {
+  margin-right: 10px;
 }
 
-.post-content h2.indented {
-  margin-bottom: -20px !important;
-  margin-left: 30px !important;
-  font-weight: 600 !important;
-}
-
-.post-content p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 40px 30px;
-}
-
-.post-content ol li {
-  font-size: 1.2rem !important;
-  font-weight: 500 !important;
-}
-
-.post-content ul li {
-  font-size: 1.2rem !important;
-  font-weight: 500 !important;
-}
-
-.post-content p.embedded-image {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-
-.post-content p img {
-  width: 100% !important;
-}
+/* ============ Custom Post Styling ============ */
 
 .code-toolbar>.toolbar {
   top: 0em !important;

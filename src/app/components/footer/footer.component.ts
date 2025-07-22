@@ -17,11 +17,11 @@ export type FooterSection = {
     selector: 'app-footer',
     imports: [CommonModule,RouterLink],
     templateUrl: './footer.component.html',
-    styles: ``
+    styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
     @Input() logo: string = 'assets/img/logo/Imposter-Coding-Logo.png'
-    @Input() containerClass: string = 'vl-footer1-section-area'
+    @Input() containerClass: string = 'footer1-section-area'
     @Input() topSpace: boolean = false
 
 

@@ -9,12 +9,12 @@
         </a>
 
         @if (item.megaMenu) {
-        <div class="vl-mega-menu">
-            <div class="vl-home-menu">
+        <div class="mega-menu">
+            <div class="home-menu">
                 <div class="row gx-3 row-cols-1 row-cols-md-1 row-cols-lg-5">
                     @for (subItem of item.megaMenu; track $index) {
                     <div class="col">
-                        <div class="vl-home-thumb">
+                        <div class="home-thumb">
                             <div class="img1">
                                 <img [src]="subItem.image" [alt]="subItem.title" />
                             </div>

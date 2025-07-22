@@ -1,117 +1,87 @@
 import {
   Component,
   ViewEncapsulation,
-  OnDestroy,
   OnInit,
+  OnDestroy,
   signal,
   inject,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
-import { map, take } from 'rxjs/operators';
 import { firstValueFrom } from 'rxjs';
+import { map, take } from 'rxjs/operators';
 import { butterService, HighlightService } from '@/app/services';
 import { HeroComponent } from '@app/components/hero/hero.component';
+import { estimateReadingTime } from '@/app/helpers/utils';
 
 @Component({
   selector: 'app-post',
   standalone: true,
   encapsulation: ViewEncapsulation.None,
-  providers: [HighlightService],
   imports: [CommonModule, HeroComponent],
+  providers: [HighlightService],
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
 })
 export class PostComponent implements OnInit, OnDestroy {
-  private route = inject(ActivatedRoute);
-  private router = inject(Router);
-  private highlightService = inject(HighlightService);
-  private title = inject(Title);
-  private meta = inject(Meta);
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly meta = inject(Meta);
+  private readonly title = inject(Title);
+  private readonly highlightService = inject(HighlightService);
 
-  post: any;
-  tags: any[] = [];
-  tag: any;
-  loading = signal(true);
-  showData = signal(false);
+  readonly loading = signal(true);
+  readonly showData = signal(false);
+  readonly post = signal<any>(null);
 
-  step1 = signal(true);
-  step2 = signal(false);
-  step3 = signal(false);
-  step4 = signal(false);
-
-  async ngOnInit() {
+  ngOnInit(): void {
     document.body.classList.add('profile-page');
-    this.showData.set(false);
-    this.step1.set(true);
-    this.progressLoaderOne();
+    this.fetchPost();
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     document.body.classList.remove('profile-page');
   }
 
-  private progressLoaderOne() {
-    setTimeout(() => {
-      this.step1.set(false);
-      this.step2.set(true);
-      this.fetchPost();
-    }, 150);
-  }
-
-  private progressLoaderTwo() {
-    setTimeout(() => {
-      this.step3.set(false);
-      this.step4.set(true);
-      this.progressLoaderThree();
-    }, 150);
-  }
-
-  private progressLoaderThree() {
-    setTimeout(() => this.displayData(), 150);
-  }
-
-  private async fetchPost() {
-    const slug$ = this.route.paramMap.pipe(map(params => params.get('slug')));
+  private async fetchPost(): Promise<void> {
     try {
-      const slug: any = await firstValueFrom(slug$.pipe(take(1)));
-      if (slug) {
-        const res: any = await butterService.post.retrieve(slug);
-        this.post = res?.data?.data;
-        this.step2.set(false);
-        this.step3.set(true);
-        this.updateMetaData();
-        this.progressLoaderTwo();
+      const slug = await firstValueFrom(
+        this.route.paramMap.pipe(map(params => params.get('slug')), take(1))
+      );
+
+      if (!slug) return;
+
+      const res = await butterService.post.retrieve(slug);
+      const data = res?.data?.data as any;
+
+      if (data) {
+        data.readingTime = estimateReadingTime(data.body);
+        this.post.set(data);
+        this.updateMetaData(data);
+        this.loading.set(false);
+        this.showData.set(true);
+
+        setTimeout(() => this.highlightService.highlightAll(), 50);
       }
     } catch (err) {
-      console.error(err);
-    }
-  }
-
-  private updateMetaData() {
-    const data: any = this.post;
-    if (data?.title) {
-      this.title.setTitle(`${data.title} - Imposter Coding`);
-      this.meta.updateTag({
-        name: 'description',
-        content: `${data.title} - Imposter Coding`,
-      });
-    }
-  }
-
-  displayData() {
-    if (this.post) {
-      this.step4.set(false);
+      console.error('Failed to fetch post:', err);
       this.loading.set(false);
-      this.showData.set(true);
-      setTimeout(() => this.highlightService.highlightAll(), 50);
     }
   }
 
-  selectTag(tag: { slug: string }) {
-    this.tag.set(tag.slug);
+  private updateMetaData(post: any): void {
+    if (!post?.title) return;
+
+    this.title.setTitle(`${post.title} - Imposter Coding`);
+    this.meta.updateTag({
+      name: 'description',
+      content: `${post.title} - Imposter Coding`,
+    });
+  }
+
+  selectTag(tag: { slug: string }): void {
     localStorage.setItem('tag', tag.slug);
-    this.router.navigate(['/tag/', tag.slug]);
+    this.router.navigate(['/tag', tag.slug]);
   }
 }

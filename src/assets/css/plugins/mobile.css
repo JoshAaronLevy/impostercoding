@@ -44,64 +44,14 @@ ul, li{
 }
 
 
-.mobile-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 17px 0;
-    z-index: 9;
-    
-}
-
-.mobile-header-elements {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.mobile-nav-icon {
-    font-size: 23px;
-    border: 1px solid;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    color: #161616;
-}
 
 
 
-.mobile-sidebar {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background:#F6F6EC;
-    z-index: 99;
-    padding: 40px 30px;
-    left: -100%;
-    top: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s;
-    
-    
-}
-
-.mobile-sidebar .contact-icon{
-    background: #161616;
-}
 
 
-.mobile-sidebar.mobile-menu-active{
-    left: 0;
-    visibility: visible;
-    opacity: 1;
-    transition: all .3s;
-    overflow-y:scroll ;
-}
+
+
+
 
 .menu-close {
     position: absolute;
