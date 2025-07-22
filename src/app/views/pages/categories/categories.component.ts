@@ -1,9 +1,11 @@
-import { butterService } from '@/app/services';
-import { ServiceCardComponent } from "@app/components/cards/service-card/service-card.component";
-import { CommonModule } from '@angular/common';
 import { Component, signal, effect, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
+import { butterService } from '@/app/services';
 import { HeroComponent } from '@app/components/hero/hero.component';
+import { CategoryCardComponent } from "@app/components/cards/category-card/category-card.component";
 
 interface Category {
   name: string;
@@ -12,19 +14,24 @@ interface Category {
 
 @Component({
   selector: 'app-categories',
-  imports: [CommonModule, HeroComponent, ServiceCardComponent],
-  templateUrl: './categories.component.html',
-  styles: ``
+  standalone: true,
+  imports: [CommonModule, HeroComponent, CategoryCardComponent],
+  templateUrl: './categories.component.html'
 })
 export class CategoriesComponent {
   pageTitle: string = 'Categories';
-
   categories = signal<Category[]>([]);
   page = signal(1);
   pageSize = signal(10);
   moreAvailable = signal(false);
 
   private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
+
+  // Tracks current query param value
+  readonly activeCategory = toSignal(
+    this.route.queryParamMap.pipe(map(params => params.get('category')))
+  );
 
   constructor() {
     effect(() => {
@@ -44,6 +51,8 @@ export class CategoriesComponent {
   }
 
   viewCategory(category: Category): void {
-    this.router.navigate(['/posts', category.slug]);
+    this.router.navigate(['/'], {
+      queryParams: { category: category.slug }
+    });
   }
 }

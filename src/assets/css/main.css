@@ -867,6 +867,11 @@ img {
   transition: all 0.4s;
 }
 
+.service1-section-area:hover .category-name {
+  color: #FFFFFF;
+  transition: all 0.4s;
+}
+
 .service1-section-area .service1-boxarea:hover p {
   color: var(--ztc-text-text-1);
   transition: all 0.4s;

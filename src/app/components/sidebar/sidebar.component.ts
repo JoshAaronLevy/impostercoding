@@ -1,26 +1,27 @@
+import { toKebabCase } from '@/app/helpers/utils';
 import { butterService } from '@/app/services';
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-
-interface Category {
-  name: string;
-  slug: string;
-}
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './sidebar.component.html',
   styles: ``
 })
 export class SidebarComponent {
   categories: any;
+  activeCategory: string | null = null;
 
   private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
 
   constructor() {
     this.init();
+    this.route.queryParamMap.subscribe((params) => {
+      this.activeCategory = params.get('category');
+    });
   }
 
   init() {
@@ -37,7 +38,17 @@ export class SidebarComponent {
       });
   }
 
-  viewCategory(category: Category): void {
-    this.router.navigate(['/posts', category.slug]);
+  selectCategory(slug: string): void {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { category: slug },
+      queryParamsHandling: 'merge'
+    });
   }
+
+  isActive(categoryName: string): boolean {
+    return toKebabCase(categoryName) === this.activeCategory;
+  }
+
+  toKebabCase = toKebabCase;
 }

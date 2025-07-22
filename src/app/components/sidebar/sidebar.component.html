@@ -5,7 +5,11 @@
     @if (categories) {
       <ul>
         <li *ngFor="let category of categories">
-          <a [routerLink]="['/posts', category.slug]">{{ category.name }} <span><i class="fa-solid fa-angle-right"></i></span></a>
+          <button class="category-button" [class.active]="isActive(category.name)"
+            (click)="selectCategory(toKebabCase(category.name))">
+            {{ category.name }}
+            <span><i class="fa-solid fa-angle-right"></i></span>
+          </button>
         </li>
       </ul>
     }
