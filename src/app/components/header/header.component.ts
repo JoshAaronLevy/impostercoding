@@ -36,12 +36,12 @@ export class HeaderComponent {
 
     if (query) {
       this.router.navigate([], {
-        queryParams: { q: query },
+        queryParams: { search: query },
         queryParamsHandling: 'merge'
       });
     } else {
       this.router.navigate([], {
-        queryParams: { q: null },
+        queryParams: { search: null },
         queryParamsHandling: 'merge'
       });
     }

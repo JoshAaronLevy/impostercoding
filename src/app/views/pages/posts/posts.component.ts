@@ -14,6 +14,7 @@ interface Post {
   slug: string;
   body?: string;
   readingTime?: string;
+  category?: string;
 }
 
 @Component({
@@ -30,7 +31,8 @@ export class PostsComponent {
   readonly pageSize = signal(10);
   readonly moreAvailable = signal(false);
   readonly loading = signal(true);
-  readonly categorySlug = signal<string | null>(null);
+  readonly category = signal<string | null>(null);
+  readonly search = signal<string>('');
 
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);
@@ -40,29 +42,28 @@ export class PostsComponent {
 
   constructor() {
     effect(() => {
-      const paramMap = this.paramMapSignal();
       const queryParamMap = this.queryParamMapSignal();
 
-      const slug = paramMap?.get('categorySlug') ?? null;
-      const searchQuery = queryParamMap?.get('q')?.toLowerCase() ?? '';
+      const category = queryParamMap?.get('category') ?? null;
+      const searchQuery = queryParamMap?.get('search')?.toLowerCase() ?? '';
 
-      this.categorySlug.set(slug);
+      this.category.set(category);
+      this.search.set(searchQuery);
       this.page.set(1);
-      this.fetchPosts(1, slug, searchQuery);
+      this.fetchPosts(1, category);
     });
   }
 
   private async fetchPosts(
     page: number,
-    categorySlug: string | null = null,
-    searchQuery: string = ''
+    category: string | null = null
   ): Promise<void> {
     this.loading.set(true);
 
     const options = {
       page,
       page_size: this.pageSize(),
-      ...(categorySlug ? { category_slug: categorySlug } : {})
+      ...(category ? { category_slug: category } : {})
     };
 
     try {
@@ -70,7 +71,8 @@ export class PostsComponent {
 
       const basePosts: Post[] = (res.data?.data ?? []).map((post: any) => ({
         ...post,
-        readingTime: estimateReadingTime(post.body)
+        readingTime: estimateReadingTime(post.body),
+        category: post.categories?.[0]?.slug ?? ''  // assumes first category slug is primary
       }));
 
       const postPromises = basePosts.map(async (post) => {
@@ -85,12 +87,14 @@ export class PostsComponent {
 
       if (page === 1) {
         this.allPosts.set(postsWithBody);
-        this.posts.set(this.filterPosts(postsWithBody, searchQuery));
       } else {
         const updated = [...this.allPosts(), ...postsWithBody];
         this.allPosts.set(updated);
-        this.posts.set(this.filterPosts(updated, searchQuery));
       }
+
+      // Apply filtering using AND logic
+      const filtered = this.filterPosts(this.allPosts(), this.search(), this.category());
+      this.posts.set(filtered);
 
       this.moreAvailable.set(postsWithBody.length === this.pageSize());
     } catch (err) {
@@ -101,25 +105,31 @@ export class PostsComponent {
     }
   }
 
-  private filterPosts(posts: Post[], searchQuery: string): Post[] {
-    if (!searchQuery) return posts;
+  private filterPosts(posts: Post[], searchQuery: string, category: string | null): Post[] {
+    const matchesCategory = (post: Post) =>
+      !category || post.category === category;
 
-    const fuse = new Fuse(posts, {
-      keys: ['title', 'summary', 'body'],
-      includeScore: true,
-      threshold: 0.4,
-      ignoreLocation: true,
-      useExtendedSearch: true
-    });
+    const matchesSearch = (post: Post) => {
+      if (!searchQuery) return true;
 
-    const results = fuse.search(searchQuery);
-    return results.map(result => result.item);
+      const fuse = new Fuse([post], {
+        keys: ['title', 'summary', 'body'],
+        includeScore: true,
+        threshold: 0.4,
+        ignoreLocation: true,
+        useExtendedSearch: true
+      });
+
+      return fuse.search(searchQuery).length > 0;
+    };
+
+    return posts.filter(post => matchesCategory(post) && matchesSearch(post));
   }
 
   loadMore(): void {
     const nextPage = this.page() + 1;
     this.page.set(nextPage);
-    this.fetchPosts(nextPage, this.categorySlug());
+    this.fetchPosts(nextPage, this.category());
   }
 
   viewPost(post: Post): void {

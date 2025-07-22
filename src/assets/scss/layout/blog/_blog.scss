@@ -674,7 +674,7 @@
                 li {
                     margin-top: 18px;
 
-                    a {
+                    .category-button {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
@@ -690,6 +690,8 @@
                         transition: all .4s;
                         position: relative;
                         z-index: 1;
+                        border: none;
+                        width: 100%;
 
                         &:hover {
                             transition: all .4s;
@@ -715,6 +717,11 @@
                             z-index: -1;
                             visibility: hidden;
                             opacity: 0;
+                        }
+
+                        &.active {
+                            color: var(--ztc-text-text-1);
+                            background: var(--ztc-bg-bg-5);
                         }
                     }
                 }
