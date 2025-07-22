@@ -1,0 +1,10 @@
+<div *ngIf="showBanner()" class="cookie-banner">
+  <p>
+    This site uses cookies to enhance your experience.
+    <a routerLink="/privacy">Learn more</a>
+  </p>
+  <div class="buttons">
+    <button (click)="accept()">Accept</button>
+    <button (click)="dismiss()">Dismiss</button>
+  </div>
+</div>

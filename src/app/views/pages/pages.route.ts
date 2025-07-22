@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { PostsComponent } from './posts/posts.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { PostComponent } from './post/post.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 export const PAGES_ROUTES: Routes = [
     {
@@ -19,6 +20,11 @@ export const PAGES_ROUTES: Routes = [
         path: 'categories',
         component: CategoriesComponent,
         data: { title: "Categories" }
+    },
+    {
+        path: 'privacy',
+        component: PrivacyComponent,
+        data: { title: "Privacy Policy" }
     },
     {
         path: 'posts/:categorySlug',

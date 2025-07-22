@@ -1,6 +1,7 @@
-import { Component, OnInit, signal, inject } from '@angular/core';
+import { Component, signal, effect, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { butterService } from '@/app/services';
 import { estimateReadingTime } from '@/app/helpers/utils';
 import Fuse from 'fuse.js';
@@ -22,7 +23,7 @@ interface Post {
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss',
 })
-export class PostsComponent implements OnInit {
+export class PostsComponent {
   readonly posts = signal<Post[]>([]);
   private readonly allPosts = signal<Post[]>([]);
   readonly page = signal(1);
@@ -34,18 +35,21 @@ export class PostsComponent implements OnInit {
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);
 
-  ngOnInit(): void {
-    this.route.paramMap.subscribe(() => this.loadData());
-    this.route.queryParamMap.subscribe(() => this.loadData());
-  }
+  private readonly paramMapSignal = toSignal(this.route.paramMap);
+  private readonly queryParamMapSignal = toSignal(this.route.queryParamMap);
 
-  private loadData(): void {
-    const slug = this.route.snapshot.paramMap.get('categorySlug');
-    const searchQuery = this.route.snapshot.queryParamMap.get('q')?.toLowerCase() ?? '';
+  constructor() {
+    effect(() => {
+      const paramMap = this.paramMapSignal();
+      const queryParamMap = this.queryParamMapSignal();
 
-    this.categorySlug.set(slug);
-    this.page.set(1);
-    this.fetchPosts(1, slug, searchQuery);
+      const slug = paramMap?.get('categorySlug') ?? null;
+      const searchQuery = queryParamMap?.get('q')?.toLowerCase() ?? '';
+
+      this.categorySlug.set(slug);
+      this.page.set(1);
+      this.fetchPosts(1, slug, searchQuery);
+    });
   }
 
   private async fetchPosts(
@@ -69,7 +73,6 @@ export class PostsComponent implements OnInit {
         readingTime: estimateReadingTime(post.body)
       }));
 
-      // Fetch full body content
       const postPromises = basePosts.map(async (post) => {
         const res = await butterService.post.retrieve(post.slug);
         return {
