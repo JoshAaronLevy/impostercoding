@@ -996,7 +996,7 @@ img {
 /*============= SERVICE CSS AREA ENDS===============*/
 /*============= HERO CSS AREA ===============*/
 
-.hero1-section-area {
+.hero-section-area {
   position: relative;
   z-index: 2;
   /* background-image: url(../img/all-images/bg/hero-bg1.png); */
@@ -1008,12 +1008,12 @@ img {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero1-section-area {
+  .hero-section-area {
     height: 1374px;
   }
 }
 
-.hero1-section-area .elements4 {
+.hero-section-area .elements4 {
   position: absolute;
   right: 0;
   z-index: -1;
@@ -1021,38 +1021,38 @@ img {
   top: 0;
 }
 
-.hero1-section-area .elements5 {
+.hero-section-area .elements5 {
   position: absolute;
   left: 0;
 }
 
-.hero1-section-area .elements6 {
+.hero-section-area .elements6 {
   position: absolute;
   left: 0;
   bottom: 0;
 }
 
-.hero1-section-area .hero1-header {
+.hero-section-area .hero1-header {
   padding: 0 70px 0 0;
   position: relative;
   margin-top: -50px;
 }
 
 @media (max-width: 767px) {
-  .hero1-section-area .hero1-header {
+  .hero-section-area .hero1-header {
     margin-top: 0;
     padding: 0;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero1-section-area .hero1-header {
+  .hero-section-area .hero1-header {
     margin-top: 0;
     padding: 0;
   }
 }
 
-.hero1-section-area .hero1-header .btn-area1 .popup-youtube {
+.hero-section-area .hero1-header .btn-area1 .popup-youtube {
   color: var(--ztc-text-text-1);
   font-family: var(--ztc-family-font1);
   font-size: var(--ztc-font-size-font-s20);
@@ -1065,13 +1065,13 @@ img {
 }
 
 @media (max-width: 767px) {
-  .hero1-section-area .hero1-header .btn-area1 .popup-youtube {
+  .hero-section-area .hero1-header .btn-area1 .popup-youtube {
     margin-left: 0;
     margin-top: 20px;
   }
 }
 
-.hero1-section-area .hero1-header .btn-area1 .popup-youtube span {
+.hero-section-area .hero1-header .btn-area1 .popup-youtube span {
   height: 56px;
   width: 56px;
   text-align: center;
@@ -1088,7 +1088,7 @@ img {
   z-index: 1;
 }
 
-.hero1-section-area .hero1-header .btn-area1 .popup-youtube span::after {
+.hero-section-area .hero1-header .btn-area1 .popup-youtube span::after {
   position: absolute;
   content: "";
   height: 100%;
@@ -1105,26 +1105,26 @@ img {
   opacity: 40%;
 }
 
-.hero1-section-area .hero-images-area {
+.hero-section-area .hero-images-area {
   position: relative;
   z-index: 1;
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
-  .hero1-section-area .hero-images-area {
+  .hero-section-area .hero-images-area {
     left: -50px;
     top: -8px;
   }
 }
 
 @media only screen and (min-width: 1600px) and (max-width: 1700px) {
-  .hero1-section-area .hero-images-area {
+  .hero-section-area .hero-images-area {
     left: -50px;
     top: -8px;
   }
 }
 
-.hero1-section-area .hero-images-area .img1 img {
+.hero-section-area .hero-images-area .img1 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1132,13 +1132,13 @@ img {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero1-section-area .hero-images-area .img1 img {
+  .hero-section-area .hero-images-area .img1 img {
     -o-object-fit: contain;
        object-fit: contain;
   }
 }
 
-.hero1-section-area .hero-images-area .image-bg1 {
+.hero-section-area .hero-images-area .image-bg1 {
   position: absolute;
   bottom: 0;
   z-index: -1;
@@ -1147,67 +1147,67 @@ img {
 }
 
 @media (max-width: 767px) {
-  .hero1-section-area .hero-images-area .image-bg1 {
+  .hero-section-area .hero-images-area .image-bg1 {
     width: 100%;
   }
 }
 
-.hero1-section-area .hero-images-area .image-bg1 img {
+.hero-section-area .hero-images-area .image-bg1 img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.hero1-section-area .hero-images-area .elements3 {
+.hero-section-area .hero-images-area .elements3 {
   position: absolute;
   right: -140px;
   top: 40%;
 }
 
 @media (max-width: 767px) {
-  .hero1-section-area .hero-images-area .elements3 {
+  .hero-section-area .hero-images-area .elements3 {
     display: none;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero1-section-area .hero-images-area .elements3 {
+  .hero-section-area .hero-images-area .elements3 {
     display: none;
   }
 }
 
-.hero1-section-area .hero-images-area .elements2 {
+.hero-section-area .hero-images-area .elements2 {
   position: absolute;
   bottom: 0;
 }
 
 @media (max-width: 767px) {
-  .hero1-section-area .hero-images-area .elements2 {
+  .hero-section-area .hero-images-area .elements2 {
     display: none;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero1-section-area .hero-images-area .elements2 {
+  .hero-section-area .hero-images-area .elements2 {
     display: none;
   }
 }
 
-.hero1-section-area .hero-images-area .elements1 {
+.hero-section-area .hero-images-area .elements1 {
   position: absolute;
   top: 0;
   left: -110px;
 }
 
 @media (max-width: 767px) {
-  .hero1-section-area .hero-images-area .elements1 {
+  .hero-section-area .hero-images-area .elements1 {
     left: -40px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero1-section-area .hero-images-area .elements1 {
+  .hero-section-area .hero-images-area .elements1 {
     left: -40px;
   }
 }

@@ -1,7 +1,12 @@
 .service1-boxarea {
   font-size: 1.2rem;
   font-weight: bold;
+  span {
+    color: #000000;
+  }
   &:hover {
-    color: #FFFFFF;
+    span {
+      color: #FFFFFF;
+    }
   }
 }
