@@ -62,7 +62,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #f4f5f7;
+  color: var(--code-text, #f4f5f7);
   background: none;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
@@ -92,7 +92,8 @@ pre[class*='language-'] {
 
 :not(pre)>code[class*='language-'],
 pre[class*='language-'] {
-  background: #2d2d2d;
+  background: var(--code-bg, #2d2d2d);
+  border: 1px solid var(--code-border, transparent);
 }
 
 /* Inline code */
@@ -451,4 +452,62 @@ pre>code.diff-highlight .token.inserted:not(.prefix) {
   background-color: rgba(0, 255, 128, 0.1);
   color: inherit;
   display: block;
+}
+
+/* Theme-aware styling for blog content */
+.blog-details-section {
+  color: var(--text-color);
+  
+  .list-author {
+    color: var(--text-color-secondary);
+    
+    a {
+      color: var(--link-color);
+      
+      &:hover {
+        color: var(--link-hover-color);
+      }
+    }
+  }
+}
+
+/* Override PrismJS colors for light theme */
+:root:not(.dark-theme) {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    color: #2d2d2d;
+  }
+  
+  :not(pre)>code[class*='language-'],
+  pre[class*='language-'] {
+    background: #f8f9fa;
+    border-color: #dee2e6;
+  }
+  
+  .token.comment,
+  .token.block-comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #6c757d;
+  }
+  
+  .token.punctuation {
+    color: #495057;
+  }
+  
+  .line-numbers-rows>span:before {
+    color: #6c757d;
+  }
+  
+  .line-numbers .line-numbers-rows {
+    border-right-color: #dee2e6;
+  }
+  
+  div.code-toolbar>.toolbar a,
+  div.code-toolbar>.toolbar button,
+  div.code-toolbar>.toolbar span {
+    color: #495057;
+    background: rgba(0, 0, 0, 0.05);
+  }
 }

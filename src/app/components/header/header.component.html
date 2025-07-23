@@ -15,19 +15,23 @@
             </nav>
           </div>
 
-          <div class="search-wrapper d-flex align-items-center ms-3">
-            <button
-              (click)="toggleSearch()"
-              class="search-btn"
-              aria-label="Toggle Search"
-            >
-              <i class="fa fa-search"></i>
-            </button>
+          <div class="header-actions d-flex align-items-center">
+            <app-theme-toggle />
+            
+            <div class="search-wrapper d-flex align-items-center ms-2">
+              <button
+                (click)="toggleSearch()"
+                class="search-btn"
+                aria-label="Toggle Search"
+              >
+                <i class="fa fa-search"></i>
+              </button>
 
-            @if (searchOpen) {
-              <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="submitSearch()" placeholder="Search posts..."
-                class="search-input ms-2" />
-            }
+              @if (searchOpen) {
+                <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="submitSearch()" placeholder="Search posts..."
+                  class="search-input ms-2" />
+              }
+            </div>
           </div>
         </div>
       </div>

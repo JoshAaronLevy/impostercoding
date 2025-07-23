@@ -1,0 +1,505 @@
+/* Theme Variables */
+:root,
+.light-theme {
+  /* Light Theme (Default) */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #ffffff;
+  --surface-color: #f8f9fa;
+  --text-color: #212529;
+  --text-color-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  
+  /* Header specific */
+  --header-bg: #ffffff;
+  --header-text: #212529;
+  --header-border: #dee2e6;
+  
+  /* Card specific */
+  --card-bg: #ffffff;
+  --card-border: #dee2e6;
+  --card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  
+  /* Button specific */
+  --btn-bg: #007bff;
+  --btn-text: #ffffff;
+  --btn-hover-bg: #0056b3;
+  
+  /* Code block specific */
+  --code-bg: #f8f9fa;
+  --code-text: #212529;
+  --code-border: #dee2e6;
+  
+  /* Hero section specific */
+  --hero-bg: #1a237e;
+  --hero-text: #ffffff;
+}
+/* Dark Theme */
+:root.dark-theme,
+.dark-theme {
+  --primary-color: #4dabf7;
+  --secondary-color: #adb5bd;
+  --background-color: #1a1a1a;
+  --surface-color: #2d2d2d;
+  --text-color: #e9ecef;
+  --text-color-secondary: #adb5bd;
+  --border-color: #495057;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --link-color: #4dabf7;
+  --link-hover-color: #74c0fc;
+  
+  /* Header specific */
+  --header-bg: #2d2d2d;
+  --header-text: #e9ecef;
+  --header-border: #495057;
+  
+  /* Card specific */
+  --card-bg: #2d2d2d;
+  --card-border: #495057;
+  --card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  
+  /* Button specific */
+  --btn-bg: #4dabf7;
+  --btn-text: #1a1a1a;
+  --btn-hover-bg: #74c0fc;
+  
+  /* Code block specific */
+  --code-bg: #2d2d2d;
+  --code-text: #e9ecef;
+  --code-border: #495057;
+  
+  /* Hero section specific */
+  --hero-bg: #0d47a1;
+  --hero-text: #ffffff;
+}
+
+/* Apply theme variables to common elements */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Header theme styles */
+.header-area {
+  background-color: var(--header-bg);
+  border-bottom-color: var(--header-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-area .logo a,
+.header-area .main-menu a {
+  color: var(--header-text);
+  transition: color 0.3s ease;
+}
+
+/* Card theme styles */
+.card,
+.blog-card,
+.category-card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-color-secondary);
+}
+
+/* Code blocks */
+pre,
+code {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  border-color: var(--code-border);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-color: var(--btn-bg);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover-bg);
+  border-color: var(--btn-hover-bg);
+}
+
+/* Footer */
+.footer-area {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  background-color: var(--surface-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Search input in header */
+.search-input {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Additional dark theme specific overrides */
+.dark-theme .homepage-body,
+.dark-theme body {
+  background-color: var(--background-color) !important;
+}
+
+.dark-theme .transparent-header {
+  background-color: var(--header-bg) !important;
+}
+
+.dark-theme .blog-content img {
+  opacity: 0.9;
+}
+
+.dark-theme .blog-content blockquote {
+  border-left-color: var(--primary-color);
+  background-color: var(--surface-color);
+}
+
+/* Hero section theme styles */
+.hero-area,
+.hero-section {
+  background-color: var(--hero-bg) !important;
+  color: var(--hero-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure all text elements inherit theme colors */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme p,
+.dark-theme span,
+.dark-theme div,
+.dark-theme li,
+.dark-theme a {
+  color: var(--text-color);
+}
+
+/* Category cards and other cards */
+.dark-theme .category-card,
+.dark-theme .post-card,
+.dark-theme .card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  color: var(--text-color) !important;
+}
+
+/* Sidebar */
+.dark-theme .sidebar,
+.dark-theme .widget {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Cookie banner */
+.dark-theme .cookie-banner {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Mobile menu */
+.dark-theme .offcanvas {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+}
+
+.dark-theme .offcanvas a {
+  color: var(--text-color) !important;
+}
+
+/* Override existing theme variables with our theme colors */
+:root, .light-theme {
+  --ztc-text-text-1: var(--text-color);
+  --ztc-text-text-2: var(--text-color);
+  --ztc-text-text-3: var(--text-color-secondary);
+  --ztc-text-text-7: var(--text-color);
+  --ztc-text-text-8: var(--text-color-secondary);
+  --ztc-text-text-10: var(--text-color);
+  --ztc-text-text-11: var(--text-color-secondary);
+  --ztc-text-text-13: var(--text-color);
+  --ztc-text-text-14: var(--text-color);
+  --ztc-text-text-15: var(--text-color-secondary);
+}
+
+.dark-theme {
+  --ztc-text-text-1: var(--text-color);
+  --ztc-text-text-2: var(--text-color);
+  --ztc-text-text-3: var(--text-color-secondary);
+  --ztc-text-text-7: var(--text-color);
+  --ztc-text-text-8: var(--text-color-secondary);
+  --ztc-text-text-10: var(--text-color);
+  --ztc-text-text-11: var(--text-color-secondary);
+  --ztc-text-text-13: var(--text-color);
+  --ztc-text-text-14: var(--text-color);
+  --ztc-text-text-15: var(--text-color-secondary);
+}
+
+/* Blog post content (innerHTML from ButterCMS) - More specific selectors */
+/* Exclude code blocks and their children from color override */
+.blog-details-section [innerHTML] {
+  color: var(--text-color) !important;
+}
+
+.blog-details-section [innerHTML] *:not(code):not(pre):not(pre *):not(code *):not(.token) {
+  color: var(--text-color) !important;
+}
+
+.blog-details-section [innerHTML] h1,
+.blog-details-section [innerHTML] h2,
+.blog-details-section [innerHTML] h3,
+.blog-details-section [innerHTML] h4,
+.blog-details-section [innerHTML] h5,
+.blog-details-section [innerHTML] h6,
+.blog-others-sidebar h1,
+.blog-others-sidebar h2,
+.blog-others-sidebar h3,
+.blog-others-sidebar h4,
+.blog-others-sidebar h5,
+.blog-others-sidebar h6 {
+  color: var(--text-color) !important;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.blog-details-section [innerHTML] p,
+.blog-others-sidebar p {
+  color: var(--text-color) !important;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+/* Dark theme specific overrides for innerHTML content */
+/* Exclude code blocks and syntax highlighting from color overrides */
+.dark-theme .blog-details-section [innerHTML] h1,
+.dark-theme .blog-details-section [innerHTML] h2,
+.dark-theme .blog-details-section [innerHTML] h3,
+.dark-theme .blog-details-section [innerHTML] h4,
+.dark-theme .blog-details-section [innerHTML] h5,
+.dark-theme .blog-details-section [innerHTML] h6,
+.dark-theme .blog-others-sidebar h1,
+.dark-theme .blog-others-sidebar h2,
+.dark-theme .blog-others-sidebar h3,
+.dark-theme .blog-others-sidebar h4,
+.dark-theme .blog-others-sidebar h5,
+.dark-theme .blog-others-sidebar h6 {
+  color: var(--text-color) !important;
+}
+
+.dark-theme .blog-details-section [innerHTML] p,
+.dark-theme .blog-others-sidebar p {
+  color: var(--text-color) !important;
+}
+
+.dark-theme .blog-details-section [innerHTML] span:not(.token),
+.dark-theme .blog-details-section [innerHTML] div:not(.code-toolbar),
+.dark-theme .blog-others-sidebar span:not(.token),
+.dark-theme .blog-others-sidebar div:not(.code-toolbar) {
+  color: var(--text-color) !important;
+}
+
+.blog-details-section [innerHTML] a {
+  color: var(--link-color) !important;
+  text-decoration: underline;
+}
+
+.blog-details-section [innerHTML] a:hover {
+  color: var(--link-hover-color) !important;
+}
+
+.blog-details-section [innerHTML] ul,
+.blog-details-section [innerHTML] ol {
+  color: var(--text-color) !important;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.blog-details-section [innerHTML] li {
+  color: var(--text-color) !important;
+  margin-bottom: 0.5em;
+}
+
+.dark-theme .blog-details-section [innerHTML] ul,
+.dark-theme .blog-details-section [innerHTML] ol,
+.dark-theme .blog-details-section [innerHTML] li {
+  color: var(--text-color) !important;
+}
+
+.blog-details-section [innerHTML] blockquote {
+  border-left: 4px solid var(--primary-color) !important;
+  background-color: var(--surface-color) !important;
+  padding: 1em;
+  margin: 1.5em 0;
+  color: var(--text-color) !important;
+}
+
+.blog-details-section [innerHTML] blockquote * {
+  color: var(--text-color) !important;
+}
+
+/* Code blocks - only change background, preserve syntax highlighting */
+.blog-details-section [innerHTML] code:not([class*="language-"]) {
+  /* Only for inline code without syntax highlighting */
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.blog-details-section [innerHTML] pre {
+  background-color: var(--code-bg) !important;
+  border: 1px solid var(--code-border) !important;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+/* Preserve PrismJS syntax highlighting colors */
+.blog-details-section [innerHTML] pre[class*="language-"],
+.blog-details-section [innerHTML] code[class*="language-"] {
+  /* Don't override text color for syntax highlighted code */
+  color: inherit;
+}
+
+.blog-details-section [innerHTML] pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Ensure syntax highlighting tokens are not affected */
+.blog-details-section [innerHTML] .token {
+  color: inherit !important;
+}
+
+.blog-details-section [innerHTML] table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+.blog-details-section [innerHTML] table th,
+.blog-details-section [innerHTML] table td {
+  border: 1px solid var(--border-color);
+  padding: 0.5em;
+  color: var(--text-color);
+}
+
+.blog-details-section [innerHTML] table th {
+  background-color: var(--surface-color);
+  font-weight: bold;
+}
+
+.blog-details-section [innerHTML] img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+.dark-theme .blog-details-section [innerHTML] img {
+  opacity: 0.9;
+}
+
+.blog-details-section [innerHTML] hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2em 0;
+}
+
+/* Strong and emphasis */
+.blog-details-section [innerHTML] strong,
+.blog-details-section [innerHTML] b {
+  color: var(--text-color) !important;
+  font-weight: bold;
+}
+
+.blog-details-section [innerHTML] em,
+.blog-details-section [innerHTML] i {
+  color: var(--text-color) !important;
+  font-style: italic;
+}
+
+/* Ensure all text nodes inherit color */
+.blog-details-section [innerHTML],
+.blog-details-section [innerHTML] * {
+  color: inherit;
+}
+
+/* Force color inheritance for dark theme */
+.dark-theme .blog-details-section [innerHTML],
+.dark-theme .blog-details-section [innerHTML] * {
+  color: var(--text-color) !important;
+}
+
+/* Light theme explicit colors */
+.light-theme .blog-details-section [innerHTML],
+.light-theme .blog-details-section [innerHTML] * {
+  color: var(--text-color) !important;
+}
+
+/* Footer */
+.dark-theme .footer-area {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition-property: background-color, color, border-color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* Prevent transition on page load */
+.no-transition * {
+  transition: none !important;
+}

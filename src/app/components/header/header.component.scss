@@ -34,3 +34,15 @@
 .search-btn i {
   font-size: 1.2rem;
 }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Ensure theme toggle is visible in both themes */
+app-theme-toggle {
+  display: flex;
+  align-items: center;
+}

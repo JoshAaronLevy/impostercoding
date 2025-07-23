@@ -5,10 +5,11 @@ import { Router, RouterLink } from '@angular/router';
 import { MobileMenuComponent } from "../mobile-menu/mobile-menu.component";
 import { NavItemsComponent } from "../nav-items/nav-items.component";
 import { FormsModule } from '@angular/forms';
+import { ThemeToggleComponent } from "../theme-toggle/theme-toggle.component";
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, FormsModule, RouterLink, NavItemsComponent, StickyScrollDirective, CommonModule, MobileMenuComponent],
+  imports: [CommonModule, FormsModule, RouterLink, NavItemsComponent, StickyScrollDirective, CommonModule, MobileMenuComponent, ThemeToggleComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
