@@ -5,6 +5,7 @@ import { PreloaderComponent } from "./components/preloader/preloader.component";
 import { ScrollToTopComponent } from "./components/scroll-to-top/scroll-to-top.component";
 import { Title } from '@angular/platform-browser';
 import { filter, map, mergeMap } from 'rxjs';
+import { ThemeService } from './services/theme.service';
 
 @Component({
     selector: 'app-root',
@@ -16,8 +17,12 @@ export class AppComponent implements OnInit {
     private titleService = inject(Title)
     private router = inject(Router)
     private activatedRoute = inject(ActivatedRoute)
+    private themeService = inject(ThemeService)
 
     ngOnInit(): void {
+        // Initialize theme service to apply saved theme or system preference
+        this.themeService.listenToSystemThemeChanges();
+        
         Aos.init()
         this.router.events
             .pipe(

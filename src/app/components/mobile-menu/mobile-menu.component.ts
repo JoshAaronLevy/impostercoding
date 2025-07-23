@@ -2,10 +2,11 @@ import type { MenuItem } from '@/types';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 @Component({
     selector: 'app-mobile-menu',
-    imports: [CommonModule, RouterLink],
+    imports: [CommonModule, RouterLink, ThemeToggleComponent],
     templateUrl: './mobile-menu.component.html',
     styles: ``
 })
